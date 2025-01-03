@@ -2976,4 +2976,7 @@ spriteTypes = {
 		name = "GFX_idea_SAU_Imam_Abdulrahman"
 		textureFile = "gfx/interface/ideas/SAU/SAU_Imam_Abdulrahman.png"
 	}
+		name = "GFX_modifier_generic_famine_modifier"
+		textureFile = "gfx/interface/ideas/generic_famine_modifier.png"
+	}
 }
