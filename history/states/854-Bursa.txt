@@ -10,11 +10,16 @@ state={
 
 	state_category = city
 
-	history={
+	history = {
+		set_state_flag = TUR_turkish_state
+		set_variable = { TUR_turkish_state_level = 5 }
+
+		set_state_flag = TUR_hudavendigar
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		owner = TUR
 		buildings={
 			infrastructure = 2
-			arms_factory = 1
+			arms_factory = 2
 			industrial_complex = 1
 		}
 		

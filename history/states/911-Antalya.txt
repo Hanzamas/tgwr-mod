@@ -4,14 +4,19 @@ state={
 	resources={
 		chromium=7.000
 	}
-	history={
+	history = {
+		set_state_flag = TUR_turkish_state
+		set_variable = { TUR_turkish_state_level = 5 }
+
+		set_state_flag = TUR_konya
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		victory_points = {
 			1005 3 
 		}
 		owner = TUR
 		add_core_of = TUR
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			1005 = {
 				naval_base = 4
 			}

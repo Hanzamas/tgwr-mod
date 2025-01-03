@@ -251,16 +251,7 @@ leader_traits = {
 			factor = 0
 		}
 	}
-	trait_TUR_ittihadist_radical_sympathies = {
-
-		type = all
-		trait_type = personality_trait
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-	trait_TUR_halaskar_zabitan_member = {
+	trait_TUR_itilafist_sympathies = {
 
 		type = all
 		trait_type = personality_trait
@@ -270,15 +261,6 @@ leader_traits = {
 		}
 	}
 	TUR_Loyal_Reformist = {
-
-		type = all
-		trait_type = personality_trait
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-	trait_TUR_reactionaries_sympathies = {
 
 		type = all
 		trait_type = personality_trait

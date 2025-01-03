@@ -136,12 +136,11 @@ bookmarks = {
 			history = "TUR_POWDERKEG_DESC"
 			ideology = neutrality
 			ideas = {
-				TUR_sick_man
-				TUR_harbiyeli_officers_extended_power_neutral
-				TUR_minorities_idea
+				TUR_sick_man_of_europe
+				TUR_army_factionalism_2
+				TUR_sublime_realm_idea
 			}
 			focuses = {
-				TUR_empower_the_sultan
 				TUR_our_place_in_the_world
 				TUR_three_pasha_government
 			}

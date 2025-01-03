@@ -2,6 +2,33 @@ state={
 	id=828
 	name="STATE_828" # Hakkari
 	history = {
+		add_dynamic_modifier = { modifier = TUR_kurdish_minority }
+		add_dynamic_modifier = { modifier = TUR_assyrian_minority }
+		set_variable = { TUR_ottoman_recruitable_population_factor_assyrian = -0.1 }
+		set_variable = { TUR_ottoman_local_building_slots_factor_assyrian = -0.1 }
+		set_variable = { TUR_ottoman_local_resources_factor_kurdish = -0.15 }
+		set_variable = { TUR_ottoman_non_core_manpower_kurdish = 0.15 }
+		set_variable = { TUR_assyrian_state_level = 2 }
+		set_variable = { TUR_kurdish_state_level = 3 }
+		set_variable = { TUR_kurdish_population_stability_factor = -0.005 }
+		set_variable = { TUR_kurdish_population_war_support_factor = -0.005 }
+		divide_variable = { TUR_kurdish_population_stability_factor = 5 }
+		divide_variable = { TUR_kurdish_population_war_support_factor = 5 }
+		divide_variable = { TUR_kurdish_population_political_power_factor = 5 }
+		multiply_variable = { TUR_kurdish_population_stability_factor = 3 }
+		multiply_variable = { TUR_kurdish_population_war_support_factor = 3 }
+		multiply_variable = { TUR_kurdish_population_political_power_factor = 3 }
+		set_variable = { TUR_assyrian_population_stability_factor = -0.01 }
+		set_variable = { TUR_assyrian_population_war_support_factor = -0.01 }
+		divide_variable = { TUR_assyrian_population_stability_factor = 5 }
+		divide_variable = { TUR_assyrian_population_war_support_factor = 5 }
+		divide_variable = { TUR_assyrian_population_political_power_factor = 5 }
+		multiply_variable = { TUR_assyrian_population_stability_factor = 2 }
+		multiply_variable = { TUR_assyrian_population_war_support_factor = 2 }
+		multiply_variable = { TUR_assyrian_population_political_power_factor = 2 }
+
+		set_state_flag = TUR_van
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		victory_points={ 
 			12476 1 
 		}

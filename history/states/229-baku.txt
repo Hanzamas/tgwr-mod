@@ -5,7 +5,13 @@ state={
 	resources={
 		oil=72.000
 	}
-	history={
+	history = {
+		set_state_flag = TUR_azerbaijani_state
+		set_state_flag = TUR_azerbaijani_state_no_control
+		set_variable = { TUR_azerbaijani_state_level = 5 }
+
+		set_state_flag = TUR_baku
+		set_state_flag = TUR_vilayet_centralization_no_control
 		victory_points = {
 			7661 5
 		}

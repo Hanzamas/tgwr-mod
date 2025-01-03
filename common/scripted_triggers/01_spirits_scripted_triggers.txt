@@ -121,13 +121,12 @@ has_air_academy = {
 		limit = { 
 			tag = TUR
 			NOT = {
-				has_country_flag = TUR_revolter_flag
 				has_country_flag = TUR_kostantiniye_government_tag
 				has_country_flag = TUR_national_movement_tag
 			}
 			#has_focus_tree = ottoman_focus_tree
 		}
-		has_completed_focus = TUR_yesilkoy_airbase
+		has_completed_focus = TUR_tayyare_mektebi
 	}
 }
 # Does anyone have an established Air Force? 
@@ -201,13 +200,12 @@ has_air_force_command = {
 		limit = { 
 			tag = TUR
 			NOT = {
-				has_country_flag = TUR_revolter_flag
 				has_country_flag = TUR_kostantiniye_government_tag
 				has_country_flag = TUR_national_movement_tag
 			}
 			#has_focus_tree = ottoman_focus_tree
 		}
-		has_completed_focus = TUR_tayyare_mektebi
+		has_completed_focus = TUR_general_inspectorate_of_air_forces
 	}
 	IF = {
 		limit = { 

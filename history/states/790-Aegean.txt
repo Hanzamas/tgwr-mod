@@ -4,7 +4,25 @@ state={
 	manpower=244417
 	state_category=small_island
 	provinces={ 6550 8435 }
-	history={
+	history = {
+		add_dynamic_modifier = { modifier = TUR_greek_minority }
+		set_variable = { TUR_ottoman_recruitable_population_factor_greek = -0.2 }
+		set_variable = { TUR_ottoman_local_intel_to_enemies_greek = 0.4 }
+		set_variable = { TUR_ottoman_state_production_speed_buildings_factor_greek = 0.08 }
+		set_variable = { TUR_ottoman_local_factories_greek = -0.2 }
+		set_variable = { TUR_greek_state_level = 4 }
+		set_variable = { TUR_turkish_state_level = 1 }
+		set_variable = { TUR_greek_population_stability_factor = -0.01 }
+		set_variable = { TUR_greek_population_war_support_factor = -0.01 }
+		divide_variable = { TUR_greek_population_stability_factor = 5 }
+		divide_variable = { TUR_greek_population_war_support_factor = 5 }
+		divide_variable = { TUR_greek_population_political_power_factor = 5 }
+		multiply_variable = { TUR_greek_population_stability_factor = 4 }
+		multiply_variable = { TUR_greek_population_war_support_factor = 4 }
+		multiply_variable = { TUR_greek_population_political_power_factor = 4 }
+
+		set_state_flag = TUR_archipelago
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		victory_points = {
 			6550 1
 		}
@@ -15,7 +33,7 @@ state={
 		add_core_of=TUR
 		add_core_of = GRE
 		buildings={
-			infrastructure = 2
+			infrastructure = 1
 			8435={ naval_base=1 }
 			6550={ naval_base=1 }
 		}

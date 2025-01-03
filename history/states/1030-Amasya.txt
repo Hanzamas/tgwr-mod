@@ -2,6 +2,11 @@ state={
 	id=1030
 	name="STATE_1030"
 	history={
+		set_state_flag = TUR_turkish_state
+		set_variable = { TUR_turkish_state_level = 5 }
+
+		set_state_flag = TUR_sivas
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		victory_points={ 
 			11897 3
 		}

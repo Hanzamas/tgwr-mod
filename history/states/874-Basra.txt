@@ -4,7 +4,16 @@ state={
 	resources={
 		oil = 2
 	}
-	history={
+	history = {
+		add_dynamic_modifier = { modifier = TUR_arab_minority }
+		set_variable = { TUR_ottoman_local_supplies_for_controller_arab = -0.25 }
+		set_variable = { TUR_ottoman_non_core_manpower_arab = 0.1 }
+		set_variable = { TUR_arab_state_level = 5 }
+		set_variable = { TUR_arab_population_stability_factor = -0.005 }
+		set_variable = { TUR_arab_population_war_support_factor = -0.005 }
+
+		set_state_flag = TUR_basra
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		victory_points = {
 			8001 3
 		}
@@ -16,7 +25,7 @@ state={
 		add_core_of = TUR
 		buildings={
 			infrastructure = 2
-			2089={ naval_base=1 }
+			2089={ naval_base=2 }
 		}
 	}
 	provinces={

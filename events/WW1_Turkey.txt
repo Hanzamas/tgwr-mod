@@ -50,58 +50,8 @@ country_event = {
 			communism = 5
 		}
 		if = {
-			limit = {
-				OR = {
-					has_country_flag = TUR_three_pasha_government
-				}
-			}
+			limit = { has_country_flag = TUR_three_pasha_government }
 			set_country_flag = no_enver_nationalmovement
-			every_unit_leader = {
-				limit = {
-					has_trait = trait_TUR_ittihadist_radical_sympathies
-				}
-				remove_unit_leader_role = yes
-			}
-		}
-		if = {
-			limit = {
-				has_power_balance = {
-					id = TUR_inner_party_factionalism
-				}
-			}
-			remove_power_balance = {
-				id = TUR_inner_party_factionalism
-			}
-		}
-		if = {
-			limit = {
-				has_power_balance = {
-					id = TUR_anti_imperialist_revanchist_struggle
-				}
-			}
-			remove_power_balance = {
-				id = TUR_anti_imperialist_revanchist_struggle
-			}
-		}
-		if = {
-			limit = {
-				has_power_balance = {
-					id = TUR_army_civilian_struggle
-				}
-			}
-			remove_power_balance = {
-				id = TUR_army_civilian_struggle
-			}
-		}
-		if = {
-			limit = {
-				has_power_balance = {
-					id = TUR_leftist_coalition
-				}
-			}
-			remove_power_balance = {
-				id = TUR_leftist_coalition
-			}
 		}
 		every_country = {
 			limit = {
@@ -479,7 +429,6 @@ country_event = {
 						state = 349
 						state = 49
 						state = 346
-						state = 830
 						state = 340
 						state = 911
 						state = 854
@@ -601,10 +550,10 @@ country_event = {
 				character = TUR_osman_iv
 			}
 			has_country_leader = {
-				character = TUR_abdulmecid_ii
+				character = TUR_abdulmecid_II
 			}
 			has_country_leader = {
-				character = TUR_abdulhamid_ii
+				character = TUR_abdulhamid_II
 			}
 			has_country_leader = {
 				character = TUR_yusuf_izzeddin
@@ -669,26 +618,6 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				has_power_balance = {
-					id = TUR_seyhulislam_sultan
-				}
-			}
-			remove_power_balance = {
-				id = TUR_seyhulislam_sultan
-			}
-		}
-		if = {
-			limit = {
-				has_power_balance = {
-					id = TUR_parliament_sultan
-				}
-			}
-			remove_power_balance = {
-				id = TUR_parliament_sultan
-			}
-		}
 		set_politics = {
 			ruling_party = neutrality
 			elections_allowed = no
@@ -697,9 +626,9 @@ country_event = {
 			ideology = neutrality
 			popularity = -0.35
 		}
-		TUR_mehmed_vi = {
+		TUR_mehmed_VI = {
 			promote_character = yes
-			set_character_name = "TUR_mehmed_vi"
+			set_character_name = "TUR_mehmed_VI"
 		}
 		hidden_effect = {
 			country_event = {
@@ -796,7 +725,6 @@ country_event = {
 	picture = GFX_report_event_generic_parliament
 	trigger = {
 		has_country_flag = damat_ferid_secured_power
-		has_idea = TUR_legitimacy_terrible
 	}
 	mean_time_to_happen = {
 		days = 34
@@ -810,7 +738,6 @@ country_event = {
 		add_political_power = -15
 		set_country_flag = ahmet_izzettin_secured_power
 		custom_effect_tooltip = ahmet_izzettin_secured_power_tt
-		TUR_legitimacy_level_down = yes
 	}
 }
 
@@ -839,7 +766,7 @@ country_event = {
 					fascism = 12
 					communism = 5
 				}
-				add_dynamic_modifier = { modifier = TUR_minorities }
+				add_dynamic_modifier = { modifier = TUR_the_sublime_realm }
 				set_country_flag = great_war_loser
 				set_country_flag = interbellum
 				set_country_flag = TUR_not_agreed_on_debts
@@ -874,7 +801,6 @@ country_event = {
 						promote_leader = yes
 						country_leader = {
 							ideology = vanguardism
-							traits = { mustafasuphi }
 						}
 					}
 				}
@@ -943,7 +869,6 @@ country_event = {
 							promote_leader = yes
 							country_leader = {
 								ideology = authoritarian_democracy
-								traits = { ataturk }
 							}
 						}
 					}
@@ -967,7 +892,6 @@ country_event = {
 			is_ai = no
 		}
 		hidden_effect = {
-			add_ideas = TUR_legitimacy_normal
 		}
 	}
 	option = {
@@ -988,7 +912,6 @@ country_event = {
 							promote_leader = yes
 							country_leader = {
 								ideology = authoritarian_democracy
-								traits = { ataturk }
 							}
 						}
 					}
@@ -1009,7 +932,6 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			add_ideas = TUR_legitimacy_normal
 		}
 	}
 }
@@ -1089,9 +1011,6 @@ country_event = {
 			country_event = {
 				id = ww1_turkey.16
 				days = 8
-			}
-			TRR = {
-				add_ideas = TUR_war_of_independence
 			}
 		}	
 		news_event = {
@@ -1198,7 +1117,6 @@ country_event = {
 				remove_core_of = OTT
 				start_resistance = yes
 			}
-			TUR_legitimacy_level_up = yes
 		}
 	}
 }
@@ -1470,7 +1388,6 @@ country_event = {
 			limit = {
 				tag = OTT
 			}
-			TUR_legitimacy_level_up = yes
 		}
 	}
 }
@@ -4914,9 +4831,6 @@ country_event = {
 			}
 			modifier = {
 				factor = 10000
-				TRR = {
-					has_completed_focus = TUR_no_need_to_spill_more_blood
-				}
 				NOT = {
 					has_game_rule = {
 						rule = TUR_ai_behavior
@@ -4997,9 +4911,6 @@ country_event = {
 			}
 			modifier = {
 				factor = 100
-				TRR = {
-					has_completed_focus = TUR_no_need_to_spill_more_blood
-				}
 				has_game_rule = {
 					rule = TUR_ai_behavior
 					option = DEFAULT
@@ -7093,7 +7004,6 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = TUR_lozan_engkeepsmarmara
-				has_completed_focus = TUR_no_need_to_spill_more_blood
 			}
 			if = {
 				limit = {
@@ -8011,7 +7921,7 @@ country_event = {
 					}
 				}
 			}
-			add_ideas = TUR_sultan_mehmed_v
+			add_ideas = TUR_mehmed_V
 		}
 		else_if = {
 			limit = {
@@ -8037,7 +7947,7 @@ country_event = {
 					}
 				}
 			}
-			add_ideas = TUR_sultan_mehmed_vi
+			add_ideas = TUR_mehmed_VI
 		}
 		set_country_flag = TUR_kept_sultanate
 		ai_chance = {
@@ -8071,42 +7981,6 @@ country_event = {
 			}
 		}
 		add_political_power = 100
-		if = {
-			limit = {
-				has_completed_focus = TUR_ask_for_the_kurdish_support
-			}
-			every_state = {
-				limit = {
-					state = 680
-					state = 829
-					state = 676
-					state = 853
-					state = 421
-					state = 419
-					state = 828
-					state = 350
-					if = {
-						limit = {
-							352 = {
-								NOT = {
-									has_state_flag = TUR_armenian_minority
-								}
-							}
-						}
-						state = 352
-					}
-				}
-				set_state_flag = TUR_kurd_minority
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_dynamic_modifier = {
-						modifier = TUR_kurd_minority
-					}
-				}
-			}
-		}
 		every_state = {
 			if = {
 				limit = {
@@ -8163,30 +8037,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_turkey.97.a
-		if = {
-			limit = {
-				has_country_flag = TUR_abolished_sultanate
-			}
-			set_cosmetic_tag = TUR_REP
-		}
-		if = {
-			limit = {
-				has_country_flag = TUR_kept_sultanate
-			}
-			set_cosmetic_tag = TUR_Sultanate
-		}
-		if = {
-			limit = {
-				has_country_flag = TUR_abolished_caliph
-			}
-			add_ideas = TUR_secular
-		}
-		if = {
-			limit = {
-				has_country_flag = TUR_kept_caliph
-			}
-			add_ideas = TUR_caliphate
-		}
+		
 	}
 }
 
@@ -8519,7 +8370,6 @@ country_event = { #fall of our domain
 						state = 854
 						state = 340
 						state = 911
-						state = 830
 						state = 49
 						state = 346
 						state = 344
@@ -8568,9 +8418,9 @@ country_event = { #fall of our domain
 				}
 				if = {
 					limit = {
-						has_dynamic_modifier  = { modifier = TUR_southslav_minority }
+						has_dynamic_modifier  = { modifier = TUR_south_slavic_minority }
 					}
-					remove_dynamic_modifier = { modifier = TUR_southslav_minority }
+					remove_dynamic_modifier = { modifier = TUR_south_slavic_minority }
 				}
 				if = {
 					limit = {
@@ -8580,9 +8430,9 @@ country_event = { #fall of our domain
 				}
 				if = {
 					limit = {
-						has_dynamic_modifier  = { modifier = TUR_kurd_minority }
+						has_dynamic_modifier  = { modifier = TUR_kurdish_minority }
 					}
-					remove_dynamic_modifier = { modifier = TUR_kurd_minority }
+					remove_dynamic_modifier = { modifier = TUR_kurdish_minority }
 				}
 				if = {
 					limit = {
@@ -8604,15 +8454,21 @@ country_event = { #fall of our domain
 				}
 				if = {
 					limit = {
-						has_dynamic_modifier  = { modifier = TUR_autonomous_region scope = TUR }
+						has_dynamic_modifier  = { modifier = TUR_autonomous_vilayet_lebanon }
 					}
-					remove_dynamic_modifier = { modifier = TUR_autonomous_region scope = TUR }
+					remove_dynamic_modifier = { modifier = TUR_autonomous_vilayet_lebanon }
 				}
 				if = {
 					limit = {
-						has_dynamic_modifier  = { modifier = TUR_ottoman_claimed_state }
+						has_dynamic_modifier  = { modifier = TUR_autonomous_vilayet }
 					}
-					remove_dynamic_modifier = { modifier = TUR_ottoman_claimed_state }
+					remove_dynamic_modifier = { modifier = TUR_autonomous_vilayet }
+				}
+				if = {
+					limit = {
+						has_dynamic_modifier  = { modifier = TUR_semi_autonomous_vilayet }
+					}
+					remove_dynamic_modifier = { modifier = TUR_semi_autonomous_vilayet }
 				}
 				clr_state_flag = TUR_armenian_state
 				clr_state_flag = TUR_armenian_state_nocontrol
@@ -8630,8 +8486,12 @@ country_event = { #fall of our domain
 				clr_state_flag = TUR_georgian_state_nocontrol
 				clr_state_flag = TUR_romanian_state
 				clr_state_flag = TUR_romanian_state_nocontrol
-				clr_state_flag = TUR_autonomous_region
-				clr_state_flag = TUR_autonomous_region_not_control
+				clr_state_flag = TUR_autonomous_vilayet_lebanon
+				clr_state_flag = TUR_autonomous_vilayet_lebanon_not_control
+				clr_state_flag = TUR_autonomous_vilayet
+				clr_state_flag = TUR_autonomous_vilayet_not_control
+				clr_state_flag = TUR_semi_autonomous_vilayet
+				clr_state_flag = TUR_semi_autonomous_vilayet_not_control
 				clr_state_flag = TUR_turkish_state
 				clr_state_flag = TUR_turkish_state_nocontrol
 				clr_state_flag = TUR_ottomans_control_their_claimed_state

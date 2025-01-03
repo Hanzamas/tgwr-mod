@@ -43,8 +43,9 @@ division_template = {
 }
 
 division_template = {
-	name = "Aşiret Süvari Tümeni"
+	name = "Aşiret Hafif Süvari Alayları"
 	division_names_group = TUR_CAV_01
+    is_locked = yes
 	regiments = {
 		irregular_cavalry = { x = 0 y = 0 }
 		irregular_cavalry = { x = 0 y = 1 }
@@ -55,7 +56,7 @@ division_template = {
 		cavalry = { x = 2 y = 0 }
 	}
 	support = 	{
-		military_police = { x = 0 y = 0 }
+		recon = { x = 0 y = 0 }
 	}
 	priority = 0
 }
@@ -698,62 +699,32 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "1. Aşiret Süvari Tümeni"
+		name = "1. Aşiret Hafif Süvari Alayları"
 		location = 11853
-		division_template = "Aşiret Süvari Tümeni"
+		division_template = "Aşiret Hafif Süvari Alayları"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "2. Aşiret Süvari Tümeni"
+		name = "2. Aşiret Hafif Süvari Alayları"
 		location = 652
-		division_template = "Aşiret Süvari Tümeni"
+		division_template = "Aşiret Hafif Süvari Alayları"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "3. Aşiret Süvari Tümeni"
+		name = "3. Aşiret Hafif Süvari Alayları"
 		location = 7470
-		division_template = "Aşiret Süvari Tümeni"
+		division_template = "Aşiret Hafif Süvari Alayları"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "4. Aşiret Süvari Tümeni"
+		name = "4. Aşiret Hafif Süvari Alayları"
 		location = 12416
-		division_template = "Aşiret Süvari Tümeni"
+		division_template = "Aşiret Hafif Süvari Alayları"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
-	}
-}
-
- #air squadrons formed before 1910
-air_wings = {  
-	553 = {
-		scout_plane_equipment_1 = {
-			owner = "TUR"
-			amount = 3
-		}
-		airship_equipment_1 = {
-			owner = "TUR"
-			amount = 2
-		}
-	}
-	347 = {
-		scout_plane_equipment_1 = {
-			owner = "TUR"
-			amount = 7
-		}
-		airship_equipment_1 = {
-			owner = "TUR"
-			amount = 4
-		}
-	}
-	448 = {
-		scout_plane_equipment_1 = {
-			owner = "TUR"
-			amount = 2
-		}
 	}
 }
 

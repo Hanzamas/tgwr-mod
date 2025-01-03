@@ -1,7 +1,16 @@
 state={
 	id=356
 	name="STATE_356" # Kastamonu
-	history={
+	resources={
+		chromium=9
+		steel = 4
+	}
+	history = {
+		set_state_flag = TUR_turkish_state
+		set_variable = { TUR_turkish_state_level = 5 }
+
+		set_state_flag = TUR_kastamonu
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		victory_points={ 
 			6938 3
 		}

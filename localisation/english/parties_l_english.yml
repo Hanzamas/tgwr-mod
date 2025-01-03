@@ -29,6 +29,8 @@
 
  absolute_monarchy:0 "Absolute Monarchy"
  absolute_monarchy_desc:0 "An absolute monarchy is a form of government in which a single person—usually a king or queen—holds absolute, autocratic power. In absolute monarchies, the succession of power is typically hereditary, with the throne passing among members of a ruling family."
+ absolute_monarchy_reserve:0 "Absolute Monarchy"
+ absolute_monarchy_reserve_desc:0 "An absolute monarchy is a form of government in which a single person—usually a king or queen—holds absolute, autocratic power. In absolute monarchies, the succession of power is typically hereditary, with the throne passing among members of a ruling family."
  semi_constitutional_monarchy:0 "Semi-Constitutional Monarchy"
  semi_constitutional_monarchy_desc:0 "A semi-constitutional monarchy is a form of authoritarian government where the constitution guarantees basic rights and liberties, as well as some degree of representation for the people, but the Monarch retains the main portion of political power in the state, usually by unilaterally appointing the government responsible to them."
  semi_constitutional_monarchy_reserve:0 "$semi_constitutional_monarchy$"
@@ -924,8 +926,10 @@
  TUR_CUP_democratic_party_long:0 "İttihat ve Terakki Fırkası"
  TUR_neutrality_party:0 "İTF"
  TUR_neutrality_party_long:0 "İttihat ve Terakki Fırkası"
- TUR_communism_party:0 "FMC"
- TUR_communism_party_long:0 "Fedakâran-ı Millet Cemiyeti"
+ TUR_communism_party:0 "SİF"
+ TUR_communism_party_long:0 "Sosyalist İşçi Federasyonu"
+ TUR_proto_socialist_party:0 "FMC"
+ TUR_proto_socialist_party_long:0 "Fedakâran-ı Millet Cemiyeti"
  TUR_socialist_party:0 "OSF"
  TUR_socialist_party_long:0 "Osmanlı Sosyalist Fırkası"
  TUR_democratic_party:0 "HİF"
@@ -939,7 +943,7 @@
  TUR_turkish_communist_party_long:0 "Türk Komünist Fırkası"
  TUR_sultanate_party:0 "Devlet-i Ebed-müddet"
  TUR_sultanate_precursor_party:0 "Geçici Hükûmet"
- TUR_ottoman_dynasty_party:0 "Osmanoğlu Dynasty"
+ TUR_ottoman_dynasty_party:0 "Hanedan-ı Âl-i Osman"
  TUR_cancelation_of_annexation_party:0 "Redd-i İlhak"
  TUR_cancelation_of_annexation_party_long:0 "Redd-i İlhak Cemiyeti"
  TUR_renewal_party:0 "TF"
@@ -952,6 +956,7 @@
  TUR_al_qahtaniya_party_long:0 "Hizb al-lamarkaziyya al-idariyya al'Uthmani"
  TUR_anti_arab_party:0 "MBF"
  TUR_anti_arab_party_long:0 "Milli Birlik Fırkası"
+ TUR_djemali_dynasty_party:0 "Hanedan-ı Âl-i Cemâl"
 
  HUN_neutrality_party:0 "NMP"
  HUN_neutrality_party_long:0 "Nemzeti Munkapárt"
@@ -1377,6 +1382,8 @@
  SYR_communism_party:0 "Syrian Communist Party"
  SYR_democratic_party:0 "National Bloc"
  SYR_neutrality_party:0 "Al Hashimiyyun"
+ SYR_young_arab_party:0 "Al-Fatat"
+ SYR_young_arab_party_long:0 "Al-Fatat"
  
  LEB_fascism_party:0 "Kataeb"
  LEB_neutrality_party:0 "Maronite Patriarchy"
@@ -1388,9 +1395,14 @@
  JOR_democratic_party:0 "National Liberal Party"
  JOR_communism_party:0 "Jordanian Workers Society"
  
- EGY_communism_party:0 "al-Hizb al-Aishtirakiu al-Misriu"
- EGY_democratic_party:0 "Hizb al-Wafd"
- EGY_neutrality_party:0 "Al Usrah Al Alawiyya"
+ EGY_communism_party:0 "HAM"
+ EGY_communism_party_long:0 "al-Hizb al-Aishtirakiu al-Misriu"
+ EGY_democratic_party:0 "HW"
+ EGY_democratic_party_long:0 "Hizb al-Wafd"
+ EGY_neutrality_party:0 "UA"
+ EGY_neutrality_party_long:0 "al-Usrah al-Alawiyya"
+ EGY_fascism_party:0 "HW"
+ EGY_fascism_party_long:0 "al-Hizb al-Watani"
  
  PAL_democratic_party:0 "Muslim-Christian Society"
  PAL_democratic_party_long:0 "Jerusalem Muslim-Christian Society"
@@ -1594,6 +1606,8 @@
  ISR_neutrality_party_long:0 "Jewish Territorial Organization"
  ISR_communism_party:0 "Zionist-Socialists"
  ISR_communism_party_long:0 "Zionist Socialist Workers Party"
+ ISR_poale_zion:0 "Poale Zion"
+ ISR_poale_zion_long:0 "Poale Zion"
  #Fascist party is 0% fictional.
  ISR_fascism_party:0 "Betar"
  
@@ -1653,7 +1667,9 @@
  KUR_democratic_party:0 "CTK"
  KUR_democratic_party_long:0 "Cemîyeta Tealîya Kurdistanê"
  KUR_neutrality_party:0 "Berzincî Klik"
- 
+ KUR_kurdish_society_for_cooperation_and_progress:0 " Civaka Hevgirtin û Pêşverû ya Kurd"
+ KUR_kurdish_society_for_cooperation_and_progress_long:0 " Civaka Hevgirtin û Pêşverû ya Kurd"
+
  PHI_fascism_party:0 "AVR"
  PHI_fascism_party_long:0 "Asociación de los Veteranos de la Revolución"
  PHI_democratic_party:0 "NP"
@@ -1716,7 +1732,8 @@
  AIN_fascism_party:0 "Militarists"
  AIN_neutrality_party:0 "Independentists"
  
- PON_democratic_party:0 "Kòmma Pontìon"
+ PON_democratic_party:0 "KP"
+ PON_democratic_party_long:0 "Kòmma Pontìon"
  PON_neutrality_party:0 "Mitrópolis"
  PON_neutrality_party_long:0 "Mitrópolis Trapezoúntas"
  PON_fascism_party:0 "EE"
@@ -1836,7 +1853,8 @@
 
  WTH_democratic_party:0 "Batı Trakya Hükûmeti"
  WTH_neutrality_party:0 "Batı Trakya Hükûmeti"
- WTH_fascism_party:0 "Kuvâ-yi Milliye"
+ WTH_fascism_party:0 "Milli Meşrutiyet Fırkası"
+ WTH_fascism_party_long:0 "Milli Meşrutiyet Fırkası"
 
  CER_neutrality_party:0 "AO «KVZhD»"
  CER_neutrality_party_long:0 "Aktsionernoye Obshchestvo Kitayskoy Vostochnoy Zheleznoy Dorogi"

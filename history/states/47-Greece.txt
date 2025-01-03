@@ -7,7 +7,17 @@ state={
 		steel=2.000
 		aluminium=6.000
 	}
-	history={
+	history = {
+		set_variable = { TUR_ottoman_recruitable_population_factor_greek = -0.25 }
+		set_variable = { TUR_ottoman_local_intel_to_enemies_greek = 0.5 }
+		set_variable = { TUR_ottoman_state_production_speed_buildings_factor_greek = 0.1 }
+		set_variable = { TUR_ottoman_local_factories_greek = -0.25 }
+		set_variable = { TUR_greek_state_level = 5 }
+		set_variable = { TUR_greek_population_stability_factor = -0.01 }
+		set_variable = { TUR_greek_population_war_support_factor = -0.01 }
+
+		set_state_flag = TUR_attika
+		set_state_flag = TUR_vilayet_centralization_no_control
 		victory_points = {
 			3988 1 
 		}
@@ -20,7 +30,7 @@ state={
 		owner = GRE
 		add_core_of = GRE
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			1205 = {
 				naval_base = 1

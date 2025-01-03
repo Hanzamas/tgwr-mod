@@ -2,14 +2,42 @@
 state={
 	id=200
 	name="STATE_200"
-	history={
+	history = {
+		add_dynamic_modifier = { modifier = TUR_greek_minority }
+		add_dynamic_modifier = { modifier = TUR_south_slavic_minority }
+		set_variable = { TUR_ottoman_recruitable_population_factor_greek = -0.1 }
+		set_variable = { TUR_ottoman_local_intel_to_enemies_greek = 0.2 }
+		set_variable = { TUR_ottoman_state_production_speed_buildings_factor_greek = 0.04 }
+		set_variable = { TUR_ottoman_local_factories_greek = -0.1 }
+		set_variable = { TUR_ottoman_recruitable_population_factor_south_slavic = -0.05 }
+		set_variable = { TUR_ottoman_required_garrison_factor_south_slavic = 0.05 }
+		set_variable = { TUR_ottoman_resistance_decay_south_slavic = -0.1 }
+		set_variable = { TUR_greek_state_level = 2 }
+		set_variable = { TUR_south_slavic_state_level = 1 }
+		set_variable = { TUR_turkish_state_level = 2 }
+		set_variable = { TUR_greek_population_stability_factor = -0.01 }
+		set_variable = { TUR_greek_population_war_support_factor = -0.01 }
+		divide_variable = { TUR_greek_population_stability_factor = 5 }
+		divide_variable = { TUR_greek_population_war_support_factor = 5 }
+		divide_variable = { TUR_greek_population_political_power_factor = 5 }
+		multiply_variable = { TUR_greek_population_stability_factor = 2 }
+		multiply_variable = { TUR_greek_population_war_support_factor = 2 }
+		multiply_variable = { TUR_greek_population_political_power_factor = 2 }
+		set_variable = { TUR_south_slavic_population_stability_factor = -0.01 }
+		set_variable = { TUR_south_slavic_population_war_support_factor = -0.01 }
+		divide_variable = { TUR_south_slavic_population_stability_factor = 5 }
+		divide_variable = { TUR_south_slavic_population_war_support_factor = 5 }
+		divide_variable = { TUR_south_slavic_population_political_power_factor = 5 }
+
+		set_state_flag = TUR_edirne
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		owner = TUR
 		add_core_of = TUR
 		add_claim_by = GRE
 		add_claim_by = BUL
 		add_core_of = BUL
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 		}
 	}
 	provinces={

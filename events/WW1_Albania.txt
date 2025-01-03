@@ -463,6 +463,7 @@ country_event = {
 				modifier = TUR_albanian_minority
 			}
 		}
+		always = no
 	}
 	immediate = {
 		set_global_flag = ALB_revolt_of_1912
@@ -1492,8 +1493,8 @@ country_event = {
 # 					is_controlled_by = TUR
 # 				}
 # 				remove_dynamic_modifier = { modifier = TUR_albanian_minority }
-# 				add_dynamic_modifier = { modifier = TUR_autonomous_region scope = TUR }
-# 				set_state_flag = TUR_autonomous_region
+# 				add_dynamic_modifier = { modifier = TUR_autonomous_vilayet }
+# 				set_state_flag = TUR_autonomous_vilayet
 # 			}
 # 			if = {
 # 				limit = {
@@ -1501,9 +1502,9 @@ country_event = {
 # 						is_controlled_by = TUR
 # 					}
 # 				}
-# 				clr_state_flag = TUR_albanian_state_nocontrol
-# 				set_state_flag = TUR_autonomous_region_not_control
-# 				set_state_flag = TUR_autonomous_region
+# 				clr_state_flag = TUR_albanian_state_no_control
+# 				set_state_flag = TUR_autonomous_vilayet_no_control
+# 				set_state_flag = TUR_autonomous_vilayet
 # 			}
 # 		}
 # 		custom_effect_tooltip = ww1_albania.18.tt

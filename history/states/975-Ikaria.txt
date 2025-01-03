@@ -5,11 +5,23 @@ state={
 	state_category=tiny_island
 	provinces={ 13280 }
 	history={
+		add_dynamic_modifier = { modifier = TUR_greek_minority }
+		set_variable = { TUR_ottoman_recruitable_population_factor_greek = -0.25 }
+		set_variable = { TUR_ottoman_local_intel_to_enemies_greek = 0.5 }
+		set_variable = { TUR_ottoman_state_production_speed_buildings_factor_greek = 0.1 }
+		set_variable = { TUR_ottoman_local_factories_greek = -0.25 }
+		set_variable = { TUR_greek_state_level = 5 }
+		set_variable = { TUR_greek_population_stability_factor = -0.01 }
+		set_variable = { TUR_greek_population_war_support_factor = -0.01 }
+		
+		set_state_flag = TUR_archipelago
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		victory_points = { 13280 1 }
 		owner = TUR
 		# by event
 		# add_core_of=IKR
-		add_core_of=TUR
+		#add_core_of = TUR
+		add_claim_by = TUR
 		add_core_of = GRE
 		buildings={
 			infrastructure = 1

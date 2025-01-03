@@ -4,12 +4,24 @@ state={
 	resources={
 		oil = 5
 	}
-	history={
+	history = {
+		add_dynamic_modifier = { modifier = TUR_arab_minority }
+		set_variable = { TUR_ottoman_local_supplies_for_controller_arab = -0.25 }
+		set_variable = { TUR_ottoman_non_core_manpower_arab = 0.15 }
+		set_variable = { TUR_arab_state_level = 5 }
+		set_variable = { TUR_arab_population_stability_factor = -0.005 }
+		set_variable = { TUR_arab_population_war_support_factor = -0.005 }
+
+		set_state_flag = TUR_baghdad
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		victory_points = {
 			2097 15
 		}
 		victory_points = {
-			7994 1
+			7994 2
+		}
+		victory_points = {
+			12855 1
 		}
 		owner=TUR
 		add_core_of = IRQ

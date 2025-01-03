@@ -1,105 +1,112 @@
 characters = {
 	TUR_prens_sabahattin = {
-		name = "TUR_prens_sabahattin"
+		name = "Prens Sabahattin"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_prens_sabahattin_advisor"
+				large = "gfx/leaders/TUR/TUR_prens_sabahaddin.png"
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_prens_sabahattin
-			allowed = {
-				original_tag = TUR
-			}
+			allowed = { original_tag = TUR }
 			traits = {
-				decentralist_liberal 
+				TUR_decentralist_liberal 
 			}
 			available = {
 				has_government = democratic
 				is_country_leader = no	
 			}
-			visible = {
-				not = {
-					has_country_flag = TUR_purge_hurriyetveitifak 
-				}
-			}
 			ai_will_do = {
 				factor = 2.000
 			}
 		}
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_prens_sabahattin_advisor"
-			}
-			civilian = {
-				large = "gfx/leaders/TUR/TUR_prens_sabahaddin.png"
-			}
-		}
 		country_leader = {
 			ideology = classical_liberalism
-			traits = { sabahattin grand_vizier }
+			traits = { TUR_decentralist_prince }
 		}
 	}
 	TUR_ismail_enver = {
-		name = "TUR_ismail_enver"
+		name = "İsmail Enver Bey"
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_enver_pasha.png"
+				small = "GFX_idea_TUR_ismail_enver"
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_ismail_enver
-			traits = {
-				tur_national_hero 
-			}
 			visible = {
-				not = {
-					hidden_trigger = { has_character_flag = TUR_in_libya }
+				NOT = {
+					has_character_flag = TUR_in_libya
 					has_country_flag = TUR_communist_purge
-					and = {
-						not = {
+					AND = {
+						NOT = {
 							has_country_flag = TUR_national_movement_tag
 						}
 						has_country_flag = amasya_decleration 
 					}
-					and = {
-						NOT = { has_country_flag = no_enver_nationalmovement  }
+					AND = {
+						NOT = { has_country_flag = no_enver_nationalmovement }
 						has_country_flag = TUR_national_movement_tag 
 					}
 					has_country_flag = TUR_purge_radical_ittihadists 
 					has_country_flag = TUR_purge_ittihadists 
-					and = {
-						not = {
-							has_country_flag = TUR_national_movement_tag 
-						}
+					AND = {
+						NOT = { has_country_flag = TUR_national_movement_tag }
 						has_country_flag = had_ittihadist_government 
 					}
 				}
 			}
 			available = {
 				is_country_leader = no	
-				or = {
+				OR = {
 					has_government = fascism
 					has_government = neutrality
 				}
-				NOT = {
-					has_completed_focus = TUR_vatan_ve_hurriyet_cemiyeti
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
 				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_ismail_enver_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_ismail_enver }
+					}
+				}
+			}
+			traits = {
+				TUR_national_hero 
 			}
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/TUR/TUR_enver_pasha.png"
-				small = "GFX_idea_TUR_ismail_enver"
-			}
-		}
-		corps_commander = {
-			traits = { media_personality harsh_leader politically_connected trait_TUR_ittihadist_radical_sympathies aggressive_assaulter }
-			visible = { NOT = { hidden_trigger = { has_character_flag = TUR_in_libya } } }
-			skill = 1
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 2
-			#legacy_id = 90007
-		}
 		country_leader = {
-			ideology = ittihadism
+			ideology = stratocracy
 			traits = { TUR_hero_of_freedom }
 		}
 		country_leader = {
@@ -107,8 +114,29 @@ characters = {
 			traits = { TUR_hero_of_freedom }
 		}
 	}
+	TUR_nuri_killigil = {
+		name = "Nuri Bey"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_nuri_killigil.png"
+				large = "gfx/leaders/TUR/TUR_nuri_killigil.png"
+			}
+		}
+	}
+	TUR_avnullah_kazimi = {
+		name = "Avnullah el Kâzımî"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_avnullah_kazimi.png"
+			}
+		}
+		country_leader = {
+			ideology = reformist_socialism
+			traits = { TUR_early_era_socialist }
+		}
+	}
 	TUR_refik_nevzat = {
-		name = "TUR_refik_nevzat"
+		name = "Refik Nevzat Bey"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TUR/TUR_Refik_Nevzat.png"
@@ -116,11 +144,11 @@ characters = {
 		}
 		country_leader = {
 			ideology = market_socialism
-			traits = { refiknevzat }
+			traits = { TUR_fransiz_ekolu }
 		}
 	}
 	TUR_huseyin_hilmi = {
-		name = "TUR_huseyin_hilmi"
+		name = "Hüseyin Hilmi Bey"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TUR/TUR_Huseyin_Hilmi.png"
@@ -128,177 +156,60 @@ characters = {
 		}
 		country_leader = {
 			ideology = reformist_socialism
-			traits = { istirakci_hilmi }
+			traits = { TUR_istirakci }
 		}
 	}
 	TUR_mustafa_suphi = {
+		name = "Mehmed Mustafa Bey"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_mustafa_suphi"
+				large = "gfx/leaders/TUR/TUR_Mustafa_Suphi.png"
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_mustafa_suphi
-			allowed = {
-				original_tag = TUR
+			allowed = { original_tag = TUR }
+			available = {
+				is_country_leader = no
+				has_government = communism
 			}
 			traits = {
-				marxist_academic 
-			}
-			available = {
-				NOT = {
-					has_country_leader = {
-						character = TUR_mustafa_suphi
-						ruling_only = yes 
-					}
-				}
-				if = {
-					limit = {
-						has_focus_tree = ottoman_focus_tree
-					}
-					OR = {
-						has_government = communism
-						has_completed_focus = TUR_form_a_leftist_parliament
-					}
-				}
-				if = {
-					limit = {
-						has_focus_tree = turkey_focus_tree
-					}
-					OR = {
-						has_government = communism
-						has_completed_focus = TUR_approach_to_soviets
-					}
-				}
-			}
-			visible = {
-				not = {
-					has_country_flag = TUR_suphi_gone 
-				}
+				marxist_academic
 			}
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
-		name = "TUR_mustafa_suphi"
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_mustafa_suphi"
-			}
-			civilian = {
-				large = "gfx/leaders/TUR/TUR_Mustafa_Suphi.png"
-			}
-		}
 		country_leader = {
-			ideology = revolutionary_socialism
-			traits = { mustafasuphi }
-		}
-	}
-	TUR_ali_ihsan_iloglu = {
-		name = TUR_ali_ihsan_bey
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_ali_ihsan_iloglu
-			allowed = {
-				original_tag = TUR
-			}
-			visible = {
-				not = {
-					has_country_flag = TUR_suphi_gone 
-				}
-			}
-			available = {
-				NOT = {
-					has_country_leader = {
-						character = TUR_ali_ihsan_iloglu
-						ruling_only = yes 
-					}
-				}
-				if = {
-					limit = {
-						has_focus_tree = ottoman_focus_tree
-					}
-					OR = {
-						has_government = communism
-						has_completed_focus = TUR_form_a_leftist_parliament
-					}
-				}
-				if = {
-					limit = {
-						has_focus_tree = turkey_focus_tree
-					}
-					OR = {
-						has_government = communism
-						has_completed_focus = TUR_approach_to_soviets
-					}
-				}
-			}
-			traits = {
-				TUR_turk_marx_advisor
-			}
-			ai_will_do = {
-				factor = 10.000
-			}
-		}
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ideas/TUR/TUR_ali_ihsan_iloglu_advisor.png"
-				large = "gfx/leaders/TUR/TUR_ali_ihsan_iloglu.png"
-			}
-		}
-		country_leader = {
-			ideology = revolutionary_socialism
-			traits = { TUR_turk_marx_advisor }
+			ideology = vanguardism
+			traits = { TUR_milli_lenin }
 		}
 	}
 	TUR_ethem_nejat = {
+		name = "Ethem Bey"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_ethem_nejat"
+				large = "gfx/leaders/TUR/TUR_ethem_nejat.png"
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_ethem_nejat
 			allowed = {
 				original_tag = TUR
 			}
-			visible = {
-				not = {
-					has_country_flag = TUR_suphi_gone 
-				}
-			}
 			available = {
-				not = {
-					has_country_leader = {
-						character = TUR_ethem_nejat
-						ruling_only = yes 
-					}
-				}
-				if = {
-					limit = {
-						has_focus_tree = ottoman_focus_tree
-					}
-					OR = {
-						has_government = communism
-						has_completed_focus = TUR_form_a_leftist_parliament
-					}
-				}
-				if = {
-					limit = {
-						has_focus_tree = turkey_focus_tree
-					}
-					OR = {
-						has_government = communism
-						has_completed_focus = TUR_approach_to_soviets
-					}
-				}
+				is_country_leader = no
+				has_government = communism
 			}
 			traits = {
-				TUR_milliyetci_sosyalist_advisor 
+				TUR_nationalist_socialist 
 			}
 			ai_will_do = {
 				factor = 10.000
-			}
-		}
-		name = TUR_edhem_bey
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_ethem_nejat"
-			}
-			civilian = {
-				large = "gfx/leaders/TUR/TUR_ethem_nejat.png"
 			}
 		}
 		country_leader = {
@@ -306,164 +217,561 @@ characters = {
 			traits = { TUR_milliyetci_sosyalist }
 		}
 	}
-	TUR_ahmet_izzet = {
-		name = "TUR_ahmet_izzet"
+	TUR_ahmet_kemal = {
+		name = "Ahmet Kemal Bey"
 		portraits = {
 			civilian = {
+				small = "GFX_idea_TUR_ahmet_kemal"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ahmet_kemal
+			allowed = { original_tag = TUR }
+			available = {
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_ahmet_kemal_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_ahmet_kemal }
+					}
+				}
+			}
+			traits = {
+				TUR_kucuk_efendi
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_ali_ihsan_iloglu = {
+		name = "Ali İhsan Bey"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/TUR_ali_ihsan_iloglu_advisor.png"
+				large = "gfx/leaders/TUR/TUR_ali_ihsan_iloglu.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ali_ihsan_iloglu
+			allowed = {
+				original_tag = TUR
+			}
+			visible = {
+				NOT = { has_country_flag = TUR_suphi_gone }
+			}
+			available = {
+				NOT = { has_government = democratic }
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_ali_ihsan_iloglu_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_ali_ihsan_iloglu }
+					}
+				}
+			}
+			traits = {
+				TUR_turkish_marx
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+		country_leader = {
+			ideology = vanguardism
+			traits = { TUR_turkish_marx }
+		}
+	}
+	TUR_kara_vasif = {
+		name = "Mustafa Vasıf Paşa"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_kara_vasif"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_kara_vasif
+			allowed = { original_tag = TUR }
+			available = {
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_kara_vasif_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_kara_vasif }
+					}
+				}
+			}
+			traits = {
+				TUR_resistance_organizer
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_mithat_sukru_bleda = {
+		name = "Mithat Şükrü Bey"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_mithat_sukru_bleda"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_mithat_sukru_bleda
+			allowed = { original_tag = TUR }
+			available = {
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_mithat_sukru_bleda_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_mithat_sukru_bleda }
+					}
+				}
+				has_government = fascism
+			}
+			traits = {
+				TUR_general_secretary_of_ittihadists
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_huseyin_cahit_yalcin = {
+		name = "Hüseyin Cahit Bey"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_huseyin_cahit_yalcin"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_huseyin_cahit_yalcin
+			allowed = { original_tag = TUR }
+			available = {
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_huseyin_cahit_yalcin_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_huseyin_cahit_yalcin }
+					}
+				}
+			}
+			traits = {
+				TUR_ittihadist_propagandist
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_ahmet_izzet = {
+		name = "Ahmet İzzet Paşa"
+		portraits = {
+			army = {
 				large = "gfx/leaders/TUR/TUR_ahmet_izzet.png"
 				small = "GFX_idea_TUR_ahmet_izzet"
 			}
-		}
-		field_marshal = {
-			traits = { artillery_officer trait_cautious artillery_specialist trait_TUR_ittihadist_sympathies }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 1
-			#legacy_id = 90513
 		}
 		advisor = {
 			slot = high_command
 			idea_token = TUR_ahmed_izzet
 			allowed = {
-					original_tag = TUR
-				}
-				ledger = army 
-				traits = {
-					army_entrenchment_2 
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+				original_tag = TUR
+			}
+			ledger = army 
+			traits = {
+				army_entrenchment_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
-		country_leader = {
-			ideology = authoritarian_democracy
-			traits = { TUR_marshal_vezier grand_vizier }
+		corps_commander = {
+			traits = { artillery_officer trait_cautious artillery_specialist old_guard }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
 		}
 	}
 	TUR_ahmet_tevfik = {
-		name = TUR_ahmed_tevfik_pasha
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_ahmet_tevfik
-			allowed = {
-				original_tag = TUR
-			}
-			traits = {
-				old_figurehead 
-			}
-			visible = {
-				not = {
-					has_country_flag = TUR_purge_ittihadists 
-				}
-			}
-			available = {
-				not = {
-					has_country_leader = {
-						character = TUR_ahmet_tevfik
-						ruling_only = yes 
-					}
-				}
-				or = {
-					has_government = democratic 
-					has_government = neutrality 
-				}
-			}
-			ai_will_do = {
-					factor = 1.000
-			}
-		}
+		name = "Ahmet Tevfik Paşa"
 		portraits = {
 			civilian = {
 				small = "GFX_idea_TUR_ahmed_tevfik"
 				large = "gfx/leaders/TUR/TUR_ahmet_tevfik_politican.png"
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ahmet_tevfik
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				is_country_leader = no
+				TUR_ziya_gokalp = { is_political_advisor = no }
+				OR = {
+					has_government = democratic 
+					has_government = neutrality 
+				}
+			}
+			traits = {
+				old_figurehead 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 		country_leader = {
 			ideology = authoritarian_democracy
-			traits = { tevfik grand_vizier }
+			traits = { TUR_non_partisan_candidate grand_vizier }
 		}
 	}
 	TUR_huseyin_hilmi_pasha = {
-		name = TUR_huseyin_hilmi
+		name = "Hüseyin Hilmi Paşa"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TUR/TUR_huseyin_hilmi_pasha.png"
+				small = "gfx/interface/ideas/TUR/TUR_huseyin_hilmi_pasha.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ahmet_riza
+			allowed = { original_tag = TUR }
+			available = {
+				is_country_leader = no
+				NOT = { has_government = fascism }
+			}
+			traits = {
+				TUR_progressive_statesman 
+			}
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 		country_leader = {
 			ideology = authoritarian_democracy
-			traits = { huseyin_hilmi_vizier grand_vizier }
+			traits = { TUR_progressive_statesman_leader grand_vizier }
 		}
 	}
 	TUR_riza_nur = {
-		name = TUR_riza_nur
+		name = "Rıza Bey"
 		portraits = {
 			civilian = {
+				small = "GFX_idea_TUR_riza_nur"
 				large = "gfx/leaders/TUR/TUR_riza_nur.png"
 			}
 		}
-		country_leader = {
-			ideology = authoritarian_democracy
-			traits = { riza_nur_trait TUR_anti_german grand_vizier }
-		}
-		country_leader = {
-			ideology = classical_liberalism
-			traits = { TUR_racial_supremacist TUR_anti_german grand_vizier }
-		}
-	}
-	TUR_riza_tevfik = {
-		name = TUR_riza_tevfik
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/TUR/TUR_riza_tevfik.png"
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_riza_nur
+			allowed = {
+				original_tag = TUR
 			}
-		}
-		country_leader = {
-			ideology = authoritarian_democracy
-			traits = { riza_tevfik_trait grand_vizier }
-		}
-	}
-	TUR_abdulaziz_mecdi = {
-		name = TUR_abdulaziz_mecdi
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/TUR/TUR_abdulaziz_mecdi.png"
+			available = {
+				is_country_leader = no
+				has_government = democratic
 			}
-		}
-		country_leader = {
-			ideology = authoritarian_democracy
-			traits = { abdulaziz_mecdi_trait grand_vizier }
-		}
-	}
-	TUR_ismail_kemal = {
-		name = "İsmail Kemal Bey"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/TUR/TUR_ismail_kemal.png"
+			traits = {
+				TUR_pluralist_nationalist
+			}
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 		country_leader = {
 			ideology = social_liberalism
-			traits = { TUR_ismail_kemal_trait grand_vizier }
+			traits = { TUR_pluralist_nationalist_2 TUR_anti_german grand_vizier }
 		}
 	}
-	TUR_mehmet_sadik = {
-		name = "Mehmet Sadık Efendi"
+	TUR_ahmet_ferit_tek = {
+		name = "Ahmet Ferit Bey"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/TUR/TUR_mehmet_sadik.png"
+				small = "GFX_idea_ahmet_ferit_tek"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ahmet_ferit_tek
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				is_country_leader = no
+				NOT = { has_government = fascism }
+			}
+			traits = {
+				TUR_conservative_nationalist
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_riza_tevfik = {
+		name = "Rıza Tevfik Bey"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_riza_tevfik"
+				large = "gfx/leaders/TUR/TUR_riza_tevfik.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_riza_tevfik
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				is_country_leader = no
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			traits = {
+				TUR_feylesof_riza
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_abdulaziz_mecdi = {
+		name = "Abdülaziz Mecdi Efendi"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_abdulaziz_mecdi"
+				large = "gfx/leaders/TUR/TUR_abdulaziz_mecdi.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_abdulaziz_mecdi
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				is_country_leader = no
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_abdulaziz_mecdi_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_abdulaziz_mecdi }
+					}
+				}
+			}
+			traits = {
+				TUR_mystic_ittihadist
+			}
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 		country_leader = {
 			ideology = authoritarian_democracy
-			traits = { mehmet_sadik_trait grand_vizier }
+			traits = { TUR_mystic_ittihadist_2 grand_vizier }
+		}
+	}
+	TUR_miralay_sadik = {
+		name = "Miralay Sadık Bey"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_miralay_sadik"
+				large = "gfx/leaders/TUR/TUR_miralay_sadik.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_miralay_sadik
+			allowed = { original_tag = TUR }
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			traits = {
+				TUR_conservative_merchant
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	TUR_ibrahim_hakki = {
-		name = "TUR_ibrahim_hakki"
+		name = "İbrahim Hakkı Paşa"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TUR/TUR_Ibrahim_Hakki_Pasa.png"
@@ -471,39 +779,16 @@ characters = {
 		}
 		country_leader = {
 			ideology = authoritarian_democracy
-			traits = { TUR_inner_party_factionalism grand_vizier }
+			traits = { TUR_joint_hariciye_naziri TUR_joint_nafia_naziri TUR_defeatist_vizier grand_vizier }
 		}
 	}
 	TUR_mehmed_said = {
-		name = "TUR_mehmed_said"
+		name = "Mehmed Said Paşa"
 		portraits = {
 			civilian = {
 				small = "GFX_idea_TUR_Mehmed_Said_Pasha"
 				large = "gfx/leaders/TUR/TUR_Mehmed_Said_Pasha.png"
 			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_mehmed_said
-			allowed = {
-				original_tag = TUR
-			}
-			visible = {
-				has_completed_focus = TUR_reopen_the_parliament
-			}
-			available = {
-				is_country_leader = no
-			}
-			traits = {
-				grand_vizier_mehmed_said 
-			}
-			ai_will_do = {
-				factor = 10.000
-			}
-		}
-		country_leader = {
-			ideology = authoritarian_democracy
-			traits = { grand_vizier }
 		}
 	}
 	TUR_ali_riza = {
@@ -520,73 +805,177 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 2
-			#legacy_id = 90509
 		}
-		country_leader = {
-			ideology = authoritarian_democracy
-			traits = { grand_vizier }
+	}
+	TUR_ali_kemal = {
+		name = "Ali Kemal Bey"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_ali_kemal"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ali_kemal
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				has_government = democratic
+			}
+			traits = {
+				TUR_liberal_editor
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_refik_halit_karay = {
+		name = "Refik Halit Bey"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_refik_halit_karay"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_refik_halit_karay
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				has_government = democratic
+			}
+			traits = {
+				TUR_anatolian_literaturist
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	TUR_fethi_okyar={
-		name=TUR_fethi_okyar
+		name= "Ali Fethi Bey"
 		portraits={
 			civilian = {
+				small = "GFX_idea_TUR_fethi_okyar"
 				large = "gfx/leaders/TUR/TUR_ali_fethi_okyar.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_fethi_okyar
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				is_country_leader = no
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_fethi_okyar_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_fethi_okyar }
+					}
+				}
+			}
+			traits = {
+				TUR_pluralist_ittihadist
+			}
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 	}
 	TUR_huseyin_husnu_pasha={
-		name= TUR_huseyin_husnu_pasha
+		name= "Hüseyin Hüsnü Paşa"
 		portraits={
 			civilian = {
+				small = "GFX_idea_TUR_huseyin_husnu_pasha"
 				large = "gfx/leaders/TUR/TUR_huseyin_husnu_pasha.png"
 			}
 		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
 	}
 	TUR_salih_hulusi = {
-		name = "TUR_salih_hulusi"
+		name = "Salih Hulusi Paşa"
 		portraits = {
 			civilian = {
+				small = "gfx/interface/ideas/TUR/TUR_salih_hulusi_Pasha.png"
 				large = "gfx/leaders/TUR/TUR_Salih_Hulusi_Pasha.png"
 			}
 		}
-		country_leader = {
-			ideology = authoritarian_democracy
-			traits = { grand_vizier }
+		navy_leader = {
+			traits = { politically_connected }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
 		}
 	}
 	TUR_mehmed_v = {
-		name = "TUR_mehmed_v"
+		name = "Mehmed V"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TUR/TUR_mehmed_v.png"
-				small = GFX_idea_sultan_mehmed_v
+				small = GFX_idea_TUR_mehmed_v
 			}
 		}
 		country_leader = {
 			ideology = semi_constitutional_monarchy
-			traits = { mehmed_v }
+			traits = { TUR_fatherly_figure tgwr_caliph }
 		}
 	}
-	TUR_abdulhamid_ii = {
-		name = "TUR_abdulhamid_ii"
+	TUR_abdulhamid_II = {
+		name = "TUR_abdulhamid_II"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/TUR/TUR_abdulhamid_ii.png"
+				large = "gfx/leaders/TUR/TUR_abdulhamid_II.png"
 			}
 		}
 	}
-	TUR_mehmed_vi = {
-		name = "TUR_vahideddin_mehmed"
+	TUR_mehmed_VI = {
+		name = "Mehmed VI"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/TUR/TUR_mehmed_vi.png"
-				small = GFX_idea_sultan_mehmed_vi
+				large = "gfx/leaders/TUR/TUR_mehmed_VI.png"
+				small = GFX_idea_TUR_mehmed_VI
 			}
 		}
 		country_leader = {
 			ideology = semi_constitutional_monarchy
-			traits = { mehmed_vi }
+			traits = { mehmed_vi tgwr_caliph }
 		}
 	}
 	TUR_yusuf_izzeddin = {
@@ -604,27 +993,21 @@ characters = {
 		country_leader = {
 			ideology = semi_constitutional_monarchy
 		}
-		field_marshal = { 
-			traits = {
-				trait_royal
-			}
+		field_marshal = {
+			visible = { NOT = { has_government = communism } }
+			traits = { trait_royal }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 1
-			visible = {
-				NOT = {				
-					has_government = communism
-				}
-			}
 		}
 	}
-	TUR_abdulmecid_ii = {
-		name = "TUR_abdulmecid_ii"
+	TUR_abdulmecid_II = {
+		name = "TUR_abdulmecid_II"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/TUR/TUR_Abdulmecid_II.png"
+				large = "gfx/leaders/TUR/TUR_abdulmecid_II.png"
 			}
 		}
 		country_leader = {
@@ -655,38 +1038,6 @@ characters = {
 			ideology = semi_constitutional_monarchy
 			traits = { inexperienced_imperialist }
 		}
-		corps_commander = {
-			visible = {
-				OR = {
-					has_country_flag = TUR_call_for_the_trablusgarp_war
-					has_country_flag = TUR_commanders_within_the_family
-				}
-			}
-			traits = {
-				cavalry_leader
-				desert_fox
-				media_personality
-				trait_royal
-			}
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 4
-			logistics_skill = 4
-			#legacy_id = 90518
-		}
-	}
-	TUR_meclisi_mebusan = {
-		name = "TUR_meclisi_mebusan"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/TUR/TUR_meclis_mebusan.png"
-			}
-		}
-		country_leader = {
-			ideology = civilian_dictatorship
-			traits = { meclis_mebusan TUR_a_voice_from_everyone }
-		}
 	}
 	TUR_ahmed_muhtar = {
 		name = "TUR_ahmed_muhtar"
@@ -697,7 +1048,7 @@ characters = {
 		}
 	}
 	TUR_mehmed_kamil = {
-		name = TUR_mehmed_kamil
+		name = "Mehmet Kâmil Paşa"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TUR/TUR_kamil_pasha.png"
@@ -705,41 +1056,11 @@ characters = {
 		}
 		country_leader = {
 			ideology = classical_liberalism
-			traits = { kamil grand_vizier }
+			traits = { TUR_ingiliz_kamil grand_vizier }
 		}
 	}
 	TUR_damad_ferid = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_damad_ferid
-			allowed = {
-				original_tag = TUR
-			}
-			traits = {
-				sharp_tongued_lawyer 
-			}
-			available = {
-				or = {
-					has_government = democratic 
-					has_country_leader_ideology = authoritarian_democracy
-				}
-				not = {
-					has_country_leader = {
-						character = TUR_damad_ferid
-						ruling_only = yes 
-					}
-				}
-			}
-			visible = {
-				not = {
-					has_country_flag = TUR_purge_hurriyetveitifak 
-				}
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		name = "TUR_damad_ferid"
+		name = "Damad Ferid Paşa"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_damad_ferid_advisor"
@@ -748,74 +1069,108 @@ characters = {
 				large = "gfx/leaders/TUR/TUR_damat_ferid.png"
 			}
 		}
-		country_leader = {
-			ideology = classical_liberalism
-			traits = { ferit grand_vizier }
-		}
-		country_leader = {
-			ideology = authoritarian_democracy
-			traits = { ferit grand_vizier }
-		 }
-	}
-	TUR_mahmud_sevket = {
-		name = "TUR_mahmud_sevket"
 		advisor = {
 			slot = political_advisor
-			idea_token = TUR_mahmud_sevket
+			idea_token = TUR_damad_ferid
 			allowed = {
 				original_tag = TUR
 			}
-			traits = {
-				voice_of_restraint 
+			available = {
+				OR = {
+					has_government = democratic 
+					has_country_leader_ideology = authoritarian_democracy
+				}
+				is_country_leader = no
 			}
+			traits = {
+				sharp_tongued_lawyer 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			traits = { TUR_concessionist grand_vizier }
+		}
+	}
+	TUR_mahmud_sevket = {
+		name = "Mahmud Şevket Paşa"
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_mahmud_sevket.png"
+				small = "GFX_idea_TUR_sevket_pasha"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_mahmud_sevket
+			allowed = { original_tag = TUR }
+			traits = { TUR_hero_of_31_march_advisor }
 			visible = {
-				not = {
-					has_global_flag = shevket_pasha_dead 
+				NOT = {
 					has_country_flag = TUR_purge_radical_ittihadists 
 					has_country_flag = TUR_purge_ittihadists 
 					has_country_flag = had_ittihadist_government 
 				}
 			}
 			available = {
-				not = {
-					has_country_leader = {
-						character = TUR_mahmud_sevket
-						ruling_only = yes 
-					}
-				}
-				or = {
+				NOT_already_hired_except_as = political_advisor
+				NOT = { has_country_leader = { character = TUR_mahmud_sevket } }
+				OR = {
 					has_government = democratic 
 					has_government = neutrality 
 				}
+				if = {
+					limit = { has_completed_focus = TUR_early_elections }
+					NOT = { has_active_mission = TUR_saviour_officer_coup }
+				}
 			}
-			ai_will_do = {
-				factor = 1.000
+			on_add = {
+				hidden_effect = {
+					add_to_variable = { TUR_government_stability_var = 10 }
+					TUR_government_stability_calculate = yes
+				}
 			}
+			on_remove = {
+				hidden_effect = {
+					add_to_variable = { TUR_government_stability_var = -10 }
+					TUR_government_stability_calculate = yes
+				}
+			}
+			ai_will_do = { factor = 1.000 }
 		}
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/TUR/TUR_Mahmud_Shevket_Pasha.png"
+		advisor = {
+			slot = army_chief
+			cost = 200
+			idea_token = TUR_mahmud_sevket_army_chief
+			allowed = { original_tag = TUR }
+			visible = {
+				NOT = {
+					has_country_flag = TUR_purge_radical_ittihadists 
+					has_country_flag = TUR_purge_ittihadists 
+					has_country_flag = had_ittihadist_government 
+				}
 			}
-			army = {
-				small = "GFX_idea_TUR_sevket_pasha"
-			}
+			available = { NOT_already_hired_except_as = army_chief }
+			traits = { army_chief_organizational_3 }
+			ai_will_do = { factor = 5.000 }
 		}
-		field_marshal = {
-			traits = { politically_connected war_hero inspirational_leader }
-			skill = 3
+		corps_commander = {
+			traits = { politically_connected war_hero }
+			skill = 4
 			attack_skill = 4
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 2
-			#legacy_id = 90507
 		}
 		country_leader = {
 			ideology = authoritarian_democracy
-			traits = { sevket grand_vizier }
+			traits = { TUR_hero_of_31_march grand_vizier }
 		}
 	}
 	TUR_mehmed_talat = {
-		name = "TUR_mehmed_talat"
+		name = "Mehmed Talat Paşa"
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_mehmed_talat
@@ -823,25 +1178,56 @@ characters = {
 				original_tag = TUR
 			}
 			visible = {
-				not = {
+				NOT = {
 					has_country_flag = TUR_purge_radical_ittihadists 
 					has_country_flag = TUR_purge_ittihadists 
 					has_country_flag = had_ittihadist_government 
 				}
 			}
 			available = {
-				not = {
-					has_country_leader = {
-						character = TUR_mehmed_talat
-						ruling_only = yes 
-					}
-				}
-				or = {
+				is_country_leader = no
+				OR = {
 					has_government = fascism 
 					has_government = neutrality 
 				}
-				NOT = {
-					has_completed_focus = TUR_vatan_ve_hurriyet_cemiyeti
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_mehmed_talat_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_mehmed_talat }
+					}
 				}
 			}
 			traits = {
@@ -862,7 +1248,7 @@ characters = {
 			traits = { TUR_ruthless_revanchist_leader }
 		}
 		country_leader = {
-			ideology = ittihadism
+			ideology = revolutionary_nationalism
 			traits = { TUR_ruthless_revanchist_leader }
 		}
 	}
@@ -875,7 +1261,13 @@ characters = {
 		}
 	}
 	TUR_mustafa_kemal = {
-		name = "TUR_mustafa_kemal"
+		name = "Mustafa Kemal Bey"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_mustafa_kemal"
+				large = "gfx/leaders/TUR/TUR_mustafa_kemal.png"
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_mustafa_kemal_advisor
@@ -883,89 +1275,88 @@ characters = {
 				original_tag = TUR
 			}
 			visible = {
-				not = {
+				NOT = {
 					has_country_flag = TUR_communist_purge
 					has_country_flag = TUR_purge_ittihadists
 					has_country_flag = had_ittihadist_government
-					hidden_trigger = { has_character_flag = TUR_in_libya }
+					has_character_flag = TUR_in_libya
 				}
 			}
 			available = {
-				not = {
-					has_country_leader = {
-						character = TUR_mustafa_kemal
-						ruling_only = yes 
+				is_country_leader = no
+				NOT_already_hired_except_as = political_advisor
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
 					}
-					has_idea = TUR_mustafa_kemal
-					has_completed_focus = TUR_three_pasha_government
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_mustafa_kemal_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_mustafa_kemal }
+					}
 				}
 			}
-			traits = {
-				reformist_nationalist 
-			}
-			ai_will_do = {
-				factor = 0.000
-			}
+			traits = { TUR_reformist_nationalist }
+			ai_will_do = { factor = 0.000 }
 		}
 		advisor = {
 			slot = army_chief
 			idea_token = TUR_mustafa_kemal
-			allowed = {
-				original_tag = TUR
-			}
-			traits = {
-				army_chief_organizational_3 
-			}
+			allowed = { original_tag = TUR }
+			traits = { army_chief_reform_2 }
 			cost = 200
+			visible = { NOT = { has_character_flag = TUR_in_libya } }
 			available = {
-				not = {
-					has_country_leader = {
-						character = TUR_mustafa_kemal
-						ruling_only = yes 
+				is_country_leader = no
+				NOT_already_hired_except_as = army_chief
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
 					}
-					has_idea = TUR_mustafa_kemal_advisor 
-				}
-			}
-			visible = {
-				not = {
-					has_country_flag = TUR_communist_purge
-					has_country_flag = TUR_purge_ittihadists
-					has_country_flag = had_ittihadist_government
-					hidden_trigger = { has_character_flag = TUR_in_libya }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
 				}
 			}
 			ai_will_do = {
 				factor = 5.000
 			}
 		}
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_mustafa_kemal"
-				large = "gfx/leaders/TUR/TUR_mustafa_kemal.png"
-			}
-			civilian = {
-				large = "gfx/leaders/TUR/TUR_mustafa_kemal_civil.png"
-			}
-		}
-		corps_commander = {
-			visible = {
-				NOT = { hidden_trigger = { has_character_flag = TUR_in_libya } }
-			}
-			traits = { brilliant_strategist trait_cautious trait_TUR_ittihadist_sympathies }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 4
-			planning_skill = 4
-			logistics_skill = 5
-			#legacy_id = 90013
-		}
-		country_leader = {
-			ideology = personalistic_dictatorship
-			traits = { ataturk }
-		}
 	}
 	TUR_mehmed_esad = {
-		name = "TUR_mehmed_esad"
+		name = "Mehmet Esat Paşa"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_mehmed_esad"
@@ -973,17 +1364,16 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { inflexible_strategist career_officer hill_fighter }
+			traits = { inflexible_strategist career_officer hill_fighter old_guard }
 			skill = 3
 			attack_skill = 1
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 4
-			#legacy_id = 90008
 		}
 	}
 	TUR_hasan_tahsin = {
-		name = "TUR_hasan_tahsin"
+		name = "Hasan Tahsin Paşa"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_hasan_tahsin_pasha"
@@ -991,91 +1381,188 @@ characters = {
 			}
 		}
 		corps_commander = {
+			visible = { NOT = { has_global_flag = TUR_retire_the_old_generation } }
 			traits = { old_guard politically_connected }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 2
-			#legacy_id = 90138
 		}
 	}
-	TUR_kolemen_abdullah = {
-		name = "TUR_kolemen_abdullah"
+	TUR_ismail_fazil = {
+		name = "İsmail Fazıl Paşa"
 		portraits = {
 			army = {
-				small = "GFX_idea_TUR_kolemen_abdullah_pasha"
-				large = "gfx/leaders/TUR/TUR_kolemen_abdullah_pasha.png"
+				small = "gfx/interface/ideas/TUR/TUR_ismail_fazil.png"
+				large = "gfx/leaders/TUR/TUR_ismail_fazil.png"
 			}
 		}
 		corps_commander = {
-			traits = { politically_connected }
+			visible = { NOT = { has_global_flag = TUR_retire_the_old_generation } }
+			traits = { cavalry_leader politically_connected career_officer }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
 			planning_skill = 2
-			logistics_skill = 2
-			#legacy_id = 90508
+			logistics_skill = 1
+		}
+	}
+	TUR_kolemen_abdullah = {
+		name = "Kölemen Abdullah Paşa"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_kolemen_abdullah_pasha.png"
+				large = "gfx/leaders/TUR/TUR_kolemen_abdullah_pasha.png"
+			}
+		}
+		corps_commander = {
+			visible = { NOT = { has_global_flag = TUR_retire_the_old_generation } }
+			traits = { career_officer politically_connected }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	TUR_hasan_izzet = {
+		name = "Hasan İzzet Bey"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_hasan_izzet"
+				large = "gfx/leaders/TUR/TUR_hasan_izzet.png"
+			}
 		}
 	}
 	TUR_ahmed_cemal = {
-		name = TUR_ahmed_cemal
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_ahmed_cemal
-			visible = {
-				not = {
-					has_country_flag = TUR_purge_radical_ittihadists 
-					has_country_flag = TUR_purge_ittihadists 
-					has_country_flag = had_ittihadist_government 
-					AND = {
-						has_country_flag = TUR_three_pasha_government 
-						has_country_leader = {
-							character = TUR_mehmed_talat
-							ruling_only = yes 
-						}
-					}
-				}
-			}
-			available = {
-				or = {
-					has_government = fascism 
-					has_government = neutrality 
-				}
-				NOT = {
-					has_completed_focus = TUR_vatan_ve_hurriyet_cemiyeti
-				}
-			}
-			traits = {
-				TUR_butcher 
-			}
-			ai_will_do = {
-				factor = 0.000
-			}
-		}
+		name = "Ahmed Cemâl Bey"
 		portraits = {
 			army = {
 				large = "gfx/leaders/TUR/TUR_cemal_pasha.png"
 				small = "GFX_idea_TUR_ahmed_djemal"
 			}
 		}
-		corps_commander = {
-			visible = { 
-				NOT = {
-					has_country_flag = TUR_ahmed_cemal_in_damascus
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ahmed_cemal
+			visible = { NOT = { tag = TRS } }
+			available = {
+				is_country_leader = no
+				OR = {
+					has_government = fascism 
+					has_government = neutrality 
+				}
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_ahmed_cemal_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_ahmed_cemal }
+					}
 				}
 			}
-			traits = { harsh_leader politically_connected trait_TUR_ittihadist_radical_sympathies organizer desert_fox }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
-			#legacy_id = 90511
+			traits = {
+				TUR_kasap_cemal 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+		country_leader = {
+			ideology = personalistic_dictatorship
+			traits = { TUR_connections_on_all_sides TUR_kasap_cemal }
+		}
+	}
+	TUR_halil_mentese = {
+		name = "Halil Bey"
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_halil_mentese.png"
+				small = "GFX_idea_TUR_halil_mentese"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_halil_mentese
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = neutrality 
+				}
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_halil_mentese_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_halil_mentese }
+					}
+				}
+			}
+			traits = {
+				TUR_unionist_minister
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
 		}
 	}
 	TUR_mustafa_fevzi = {
-		name = "TUR_mustafa_fevzi"
+		name = "Mustafa Fevzi Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_fevzi_cakmak"
@@ -1085,46 +1572,29 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = TUR_fevzi_cakmak
-			allowed = {
-					original_tag = TUR
-				}
-				traits = {
-					army_chief_defensive_2 
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 5.000
-				}
-		}
-		corps_commander = {
-			traits = { trait_reckless harsh_leader }
-			skill = 3
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 3
-			#legacy_id = 90515
+			allowed = { original_tag = TUR }
+			traits = { army_chief_defensive_2 }
+			cost = 100
+			ai_will_do = { factor = 5.000 }
 		}
 	}
 	TUR_cevat_cobanli = {
-		name = "TUR_cevat_cobanli"
+		name = "Cevat Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_cevat_cobanli"
 				large = "gfx/leaders/TUR/TUR_cevat_cobanli.png"
 			}
 		}
-		corps_commander = {
-			traits = { inflexible_strategist desert_fox }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
-			#legacy_id = 90516
-		}
 	}
 	TUR_halil_kut = {
+		name = "Halil Bey"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_halil_kut_advisor.png"
+				large = "gfx/leaders/TUR/TUR_halil_kut.png"
+			}
+		}
 		advisor = {
 			slot = high_command
 			idea_token = TUR_halil_kut
@@ -1140,25 +1610,9 @@ characters = {
 				factor = 1.000
 			}
 		}
-		name = "TUR_halil_pasha"
-		portraits = {
-			army = {
-				small = "gfx/interface/ideas/TUR/TUR_halil_kut_advisor.png"
-				large = "gfx/leaders/TUR/TUR_halil_kut.png"
-			}
-		}
-		corps_commander = {
-			traits = { trait_TUR_ittihadist_radical_sympathies trickster trait_engineer }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 4
-			#legacy_id = 90517
-		}
 	}
 	TUR_mehmed_cemal = {
-		name = TUR_mehmed_cemal
+		name = "Mehmed Cemal Paşa"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_mehmed_cemal_pasha"
@@ -1175,7 +1629,7 @@ characters = {
 		}
 	}
 	TUR_suleyman_sefik = {
-		name = "TUR_suleyman_sefik"
+		name = "Süleyman Şefik Paşa"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_suleyman_sefik"
@@ -1189,29 +1643,19 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 2
-			#legacy_id = 90520
 		}
 	}
 	TUR_ahmet_fevzi = {
-		name = "TUR_ahmet_fevzi"
+		name = "Ahmet Fevzi Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_ahmet_fevzi_bey"
 				large = "gfx/leaders/TUR/TUR_ahmet_fevzi_bey.png"
 			}
 		}
-		corps_commander = {
-			traits = { trait_reckless }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 1
-			#legacy_id = 90521
-		}
 	}
 	TUR_ali_fuat = {
-		name = "TUR_ali_fuat"
+		name = "Ali Fuat Bey"
 		portraits = {
 			army = {
 				small = "gfx/interface/ideas/TUR/idea_TUR_ali_fuat.png"
@@ -1233,18 +1677,9 @@ characters = {
 				factor = 1.000
 			}
 		}
-		corps_commander = {
-			traits = { trait_TUR_ittihadist_sympathies skirmisher guerilla_fighter }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
-			#legacy_id = 90522
-		}
 	}
 	TUR_cafer_tayyar = {
-		name = "TUR_cafer_tayyar"
+		name = "Cafer Tayyar Paşa"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_cafer_tayyar"
@@ -1252,17 +1687,16 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_TUR_ittihadist_sympathies }
+			traits = { inflexible_strategist politically_connected trait_TUR_ittihadist_sympathies }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 3
-			#legacy_id = 90523
 		}
 	}
 	TUR_fahrettin_altay = {
-		name = TUR_fahrettin_altay
+		name = "Fahrettin Paşa"
 		portraits = {
 			army = {
 				small = "gfx/interface/ideas/TUR/idea_TUR_fahrettin_altay.png"
@@ -1283,30 +1717,20 @@ characters = {
 		}
 		corps_commander = {
 			traits = { cavalry_leader hill_fighter }
-			skill = 3
+			skill = 2
 			attack_skill = 4
 			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 2
-			#legacy_id = 90525
 		}
 	}
 	TUR_mustafa_ismet = {
-		name = TUR_mustafa_ismet
+		name = "Mustafa İsmet Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_ismet_inonu"
 				large = "gfx/leaders/TUR/TUR_ismet_inonu.png"
 			}
-		}
-		corps_commander = {
-			traits = { artillery_officer trait_engineer trait_TUR_ittihadist_sympathies fortress_buster }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 1
-			#legacy_id = 90527
 		}
 		advisor = {
 			slot = high_command
@@ -1325,40 +1749,31 @@ characters = {
 		}
 	}
 	TUR_musa_kazim = {
-		name = "TUR_musa_kazim"
+		name = "Musa Kâzım Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_kazim_karabekir"
 				large = "gfx/leaders/TUR/TUR_kazim_karabekir.png"
 			}
 		}
-		corps_commander = {
-			traits = { winter_specialist trait_TUR_ittihadist_sympathies }
-			skill = 3
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-			#legacy_id = 905312
-		}
 		advisor = {
 			slot = theorist
 			idea_token = TUR_kazim_karabekir
 			allowed = {
-					original_tag = TUR
-				}
-				ledger = army 
-				traits = {
-					military_theorist 
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+				original_tag = TUR
+			}
+			ledger = army 
+			traits = {
+				military_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	TUR_vecihi_hurkus={
-		name=TUR_vecihi_hurkus
+		name = "Vecihi Paşa"
 		portraits={
 			army={
 				small="GFX_idea_tur_vecihi_hurkus"
@@ -1372,14 +1787,13 @@ characters = {
 			allowed = {
 				original_tag = TUR
 			}
-			
 			traits = {
 				air_warfare_theorist
 			}
 		}
 	}
 	TUR_yusuf_izzet = {
-		name = "TUR_yusuf_izzet"
+		name = "Yusuf İzzet Paşa"
 		portraits = {
 			army = {				
 				large = "gfx/leaders/TUR/TUR_yusuf_izzet.png"
@@ -1393,29 +1807,45 @@ characters = {
 			defense_skill = 1
 			planning_skill = 2
 			logistics_skill = 3
-			#legacy_id = 90533
 		}
 	}
-	TUR_nurettin_ibrahim = {
-		name = "TUR_nurettin_ibrahim"
+	TUR_nurettin_konyar = {
+		name = "Mehmed Nureddin Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_nureddin_pasha"
 				large = "gfx/leaders/TUR/TUR_Nureddin_Pasha.png"
 			}
 		}
+	}
+	TUR_mahmud_kamil = {
+		name = "Mahmud Kâmil Paşa"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_mahmud_kamil.png"
+				large = "gfx/leaders/TUR/TUR_mahmud_kamil.png"
+			}
+		}
 		corps_commander = {
-			traits = { harsh_leader commando desert_fox }
-			skill = 2
+			traits = { harsh_leader }
+			skill = 1
 			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 4
-			#legacy_id = 90535
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	TUR_mustafa_hilmi_altinoklu = {
+		name = "Mustafa Hilmi Bey"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/TUR_mustafa_hilmi_altinoklu.png"
+				large = "gfx/leaders/TUR/TUR_mustafa_hilmi_altinoklu.png"
+			}
 		}
 	}
 	TUR_omer_fahreddin = {
-		name = "TUR_omer_fahreddin_pasha"
+		name = "Ömer Fahreddin Paşa"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_fakhri_pasha"
@@ -1443,87 +1873,98 @@ characters = {
 			defense_skill = 4
 			planning_skill = 3
 			logistics_skill = 4
-			#legacy_id = 90536
 		}
 	}
 	TUR_ibrahim_refet = {
-		name = "TUR_ibrahim_refet"
+		name = "İbrahim Refet Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_refet_bele_pasha"
 				large = "gfx/leaders/TUR/TUR_refet_bele_pasha.png"
 			}
 		}
-		corps_commander = {
-			traits = { trait_TUR_ittihadist_sympathies commando guerilla_fighter }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 5
-			logistics_skill = 4
-			#legacy_id = 90538
-		}
 	}
 	TUR_selahattin_adil = {
-		name = "TUR_selahattin_adil"
+		name = "Selâhattin Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_selahattin_adil"
 				large = "gfx/leaders/TUR/TUR_selahattin_adil.png"
 			}
 		}
-		corps_commander = {
-			traits = { harsh_leader trait_TUR_ittihadist_sympathies }
-			skill = 3
-			attack_skill = 1
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
-			#legacy_id = 90540
-		}
 	}
 	TUR_kazim_orbay = {
-		name = "TUR_kazim_pasha"
+		name = "Mehmet Kâzım Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_kazim_orbay"
 				large = "gfx/leaders/TUR/TUR_kazim_orbay.png"
 			}
 		}
-		corps_commander = {
-			traits = { trait_TUR_ittihadist_sympathies }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 2
-			#legacy_id = 90543
-		}
 	}
 	TUR_hafiz_hakki = {
-		name = "TUR_hafiz_hakki"
+		name = "Hafız Hakkı Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_hafiz_hakki"
 				large = "gfx/leaders/TUR/TUR_hafiz_hakki.png"
 			}
 		}
+	}
+	TUR_ali_galip_pasiner = {
+		name = "Hafız Hakkı Paşa"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_ali_galip_pasiner.png"
+				large = "gfx/leaders/TUR/TUR_ali_galip_pasiner.png"
+			}
+		}
 		corps_commander = {
-			skill = 1
+			skill = 2
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			#legacy_id = 90546
-			visible = {
-				NOT = {
-					has_character_flag = character_died
-				}
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	TUR_suleyman_faik = {
+		name = "Süleyman Faik Bey"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_suleyman_faik.png"
+				large = "gfx/leaders/TUR/TUR_suleyman_faik.png"
+			}
+		}
+	}
+	TUR_ali_sait_akbaytogan = {
+		name = "Ali Sait Bey"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_ali_sait_akbaytogan.png"
+				large = "gfx/leaders/TUR/TUR_ali_sait_akbaytogan.png"
+			}
+		}
+	}
+	TUR_abdulkerim_pasha = {
+		name = "Abdülkerim Bey"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_abdulkerim_pasha.png"
+				large = "gfx/leaders/TUR/TUR_abdulkerim_pasha.png"
+			}
+		}
+	}
+	TUR_muhittin_akyuz = {
+		name = "Muhittin Bey"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_muhittin_akyuz.png"
+				large = "gfx/leaders/TUR/TUR_muhittin_akyuz.png"
 			}
 		}
 	}
 	TUR_mehmed_vehip = {
-		name = "TUR_mehmed_vehip"
+		name = "Mehmet Vehip Paşa"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_vehip_pasha"
@@ -1537,27 +1978,40 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 2
-			#legacy_id = 90547
 		}
 	}
 	TUR_mahmud_muhtar = {
-		name = "TUR_mahmud_muhtar"
+		name = "Mahmud Muhtar Paşa"
 		portraits = {
 			army = {
-				large = "gfx/leaders/TUR/TUR_Mahmud_Muhtar_Pasha.png"
 				small = "GFX_idea_TUR_mahmud_muhtar_pasha"
+				large = "gfx/leaders/TUR/TUR_Mahmud_Muhtar_Pasha.png"
 			}
 		}
-		corps_commander = {
+		advisor = {
+			slot = navy_chief
+			idea_token = TUR_mahmud_muhtar
+			allowed = {
+					original_tag = TUR
+				}
+				traits = {
+					navy_chief_reform_1 
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		navy_leader = {
+			traits = { battleship_adherent }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 3
-			logistics_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
 		}
 	}
 	TUR_nazim_pasha = {
-		name = "TUR_nazim_pasha"
+		name = "Hüseyin Nâzım Paşa"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_nazim_pasa"
@@ -1578,18 +2032,89 @@ characters = {
 				factor = 5.000
 			}
 		}
+		corps_commander = {
+			traits = { old_guard politically_connected }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	TUR_deli_fuad_pasa = {
+		name = "Fuad Paşa"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_deli_fuad_pasa.png"
+				large = "gfx/leaders/TUR/TUR_deli_fuad_pasa.png"
+			}
+		}
 		field_marshal = {
-			traits = { old_guard trait_TUR_halaskar_zabitan_member }
+			visible = { NOT = { has_global_flag = TUR_retire_the_old_generation } }
+			traits = { old_guard defensive_doctrine harsh_leader trait_TUR_itilafist_sympathies }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 3
 			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	TUR_kazim_alpan = {
+		name = "Kâzım Paşa"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_kazim_alpan.png"
+				large = "gfx/leaders/TUR/TUR_kazim_alpan.png"
+			}
+		}
+		field_marshal = {
+			visible = { NOT = { has_global_flag = TUR_retire_the_old_generation } }
+			traits = { old_guard trait_reckless trait_TUR_itilafist_sympathies }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
 			logistics_skill = 1
-			#legacy_id = 90161
+		}
+	}
+	TUR_mehmed_sukru = {
+		name = "Mehmed Şükrü Paşa"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_mehmed_sukru.png"
+				large = "gfx/leaders/TUR/TUR_mehmed_sukru.png"
+			}
+		}
+		corps_commander = {
+			visible = { NOT = { has_global_flag = TUR_retire_the_old_generation } }
+			traits = { old_guard artillery_officer trait_cautious brilliant_strategist career_officer }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	TUR_yakup_sevki_subasi = {
+		name = "Yakup Şevki Paşa"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_yakup_sevki_subasi.png"
+				large = "gfx/leaders/TUR/TUR_yakup_sevki_subasi.png"
+			}
+		}
+	}
+	TUR_hasan_riza = {
+		name = "Mehmed Şükrü Paşa"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/TUR/TUR_hasan_riza.png"
+				large = "gfx/leaders/TUR/TUR_hasan_riza.png"
+			}
 		}
 	}
 	TUR_zeki_pasha = {
-		name = TUR_zeki_pasha
+		name = "Zeki Paşa"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_zeki_pasha"
@@ -1606,7 +2131,7 @@ characters = {
 		}
 	}
 	TUR_henry_felix_woods = {
-		name = TUR_henry_felix_woods
+		name = "Sir Henry Felix Woods Paşa"
 		portraits = {
 			army = {
 				small = "gfx/interface/ideas/TUR/TUR_henry_felix_woods_advisor.png"
@@ -1628,389 +2153,827 @@ characters = {
 		}
 	}
 	TUR_tevfik_fikret = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_tevfik_fikret
-			allowed = {
-					original_tag = TUR
-				}
-				traits = {
-					freedom_poet 
-				}
-				available = {
-					custom_trigger_tooltip = {
-						tooltip = character_not_dead
-						date < 1922.8.19
-					}
-				}
-				visible = {
-					date < 1922.8.19
-				}
-				available = {
-					NOT = {
-						has_government = fascism
-						has_country_leader = {
-							character = TUR_abdulhamid_ii
-							ruling_only = yes 
-						}
-					}
-				}
-				ai_will_do = {
-					base = 0.000
-					modifier = {
-						add = 1.000
-						has_government = democratic 
-					}
-				}
-		}
-		name = TUR_tevfik_fikret
+		name = "Mehmed Tevfik Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_tevfik_fikret"
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_tevfik_fikret
+			allowed = {
+				original_tag = TUR
+			}
+			visible = {
+				date < 1915.8.19
+			}
+			available = {
+					NOT = {
+					has_government = fascism
+					has_country_leader = { character = TUR_abdulhamid_II ruling_only = yes  }
+				}
+			}
+			traits = {
+				TUR_freedom_poet 
+			}
+			ai_will_do = {
+				base = 0.000
+				modifier = {
+					add = 1.000
+					has_government = democratic 
+				}
+			}
+		}
 	}
 	TUR_cemil_ucman = {
-		advisor = {
-			slot = air_chief
-			idea_token = TUR_cemil_ucman
-			allowed = {
-					original_tag = TUR
-				}
-				available = {
-					if = {
-						limit = {
-							has_focus_tree = ottoman_focus_tree
-						}
-						has_completed_focus = TUR_tayyare_mektebi
-					}
-				}
-				traits = {
-					air_chief_ground_support_2 
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name = TUR_cemil_ucman
+		name = "Cemil Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_cemil_ucman"
 			}
 		}
+		advisor = {
+			slot = air_chief
+			idea_token = TUR_cemil_ucman
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				if = {
+					limit = {
+						has_focus_tree = ottoman_focus_tree
+					}
+					has_completed_focus = TUR_tayyare_mektebi
+				}
+			}
+			traits = {
+				air_chief_ground_support_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 	TUR_bahattin_bey = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_bahattin_bey
-			allowed = {
-					original_tag = TUR
-				}
-				traits = {
-					education_reformer 
-				}
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name = "TUR_bahattin_bey"
+		name = "Bahaddin Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_bahattin_bey"
 			}
 		}
-	}
-	TUR_ziya_gokalp = {
 		advisor = {
 			slot = political_advisor
-			idea_token = TUR_ziya_gokalp
-			allowed = {
-					original_tag = TUR
-				}
-				traits = {
-					ittihadist_ideologue 
-				}
-				available = {
-					OR = {
-						has_government = neutrality
-						has_government = fascism
-						AND = {
-							has_completed_focus = TUR_rebrand_the_party
-							has_government = communism
-						}
-					}
-					NOT = {
-						has_completed_focus = TUR_legacy_of_the_4th_lancers
-					}
-				}
-				ai_will_do = {
-					factor = 2.000
-				}
-		}
-		name = "TUR_ziya_gokalp"
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_ziya_gokalp"
-			}
-		}
-	}
-	TUR_gabriel_noradunkyan = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_gabriel_noradunkyan
-			allowed = {
-					original_tag = TUR
-				}
-				available = {
-					not = {
-						has_government = fascism 
-						has_government = communism
-					}
-				}
-				traits = {
-					compassionate_gentleman 
-				}
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name = "TUR_gabriel_noradunkyan"
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_gabriel_noradunkyan"
-			}
-		}
-	}
-	TUR_avraam_benaroya = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_avraam_benaroya
-			allowed = {
-				original_tag = TUR
-			}
-			visible = {
-				NOT = {
-					country_exists = ISR
-				}
-			}
-			available = {
-				NOT = {
-					country_exists = ISR
-				}
-				OR = {
-					has_government = communism
-					has_completed_focus = TUR_permit_minority_parties
-				}
-			}
-			traits = {
-				minority_revolutionary 
-			}
-			on_add = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 454
-							state = 858
-							state = 856
-						}
-					}
-					add_to_variable = {
-						TUR_ottoman_recruitable_population_factor = 0.05
-					}
-					custom_effect_tooltip = TUR_ottoman_arab_recruitable_population_factor05
-				}
-			}
-			on_remove = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 454
-							state = 858
-							state = 856
-						}
-					}
-					add_to_variable = {
-						TUR_ottoman_recruitable_population_factor = -0.05
-					}
-					custom_effect_tooltip = TUR_ottoman_arab_recruitable_population_factor052
-				}
-			}
-			ai_will_do = {
-				factor = 10.000
-			}
-		}
-		name = "TUR_avraam_benaroya"
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_Avraam_Benaroya"
-			}
-		}
-	}
-	TUR_mekertich_portukalian = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_mekertich_portukalian
-			allowed = {
-				original_tag = TUR
-			}
-			available = {
-				has_completed_focus = TUR_permit_minority_parties
-				OR = {
-					controls_state = 352
-					controls_state = 353
-					controls_state = 348
-					controls_state = 349
-				}
-			}
-			traits = {
-				minority_reformer 
-			}
-			on_add = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 352
-							state = 353
-							state = 348
-							state = 349
-						}
-					}
-					add_to_variable = {
-						TUR_ottoman_recruitable_population_factor = 0.05
-					}
-					custom_effect_tooltip = TUR_ottoman_armenian_recruitable_population_factor05
-				}
-			}
-			on_remove = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 352
-							state = 353
-							state = 348
-							state = 349
-						}
-					}
-					add_to_variable = {
-						TUR_ottoman_recruitable_population_factor = -0.05
-					}
-					custom_effect_tooltip = TUR_ottoman_armenian_recruitable_population_factor052
-				}
-			}
-			ai_will_do = {
-				factor = 10.000
-			}
-		}
-		name = TUR_mekertich_portukalian
-		portraits = {
-			army = {
-				small = "gfx/interface/ideas/TUR/idea_TUR_mekertich_portukalian.png"
-			}
-		}
-	}
-	TUR_dimo_hadzhidimov = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_dimo_hadzhidimov
+			idea_token = TUR_bahattin_bey
 			allowed = {
 				original_tag = TUR
 			}
 			available = {
 				OR = {
-					owns_state = 184
-					owns_state = 788
-					owns_state = 225
-					owns_state = 759
-					owns_state = 203
-					owns_state = 106
+					has_government = neutrality
+					has_government = fascism
 				}
-				has_completed_focus = TUR_permit_minority_parties
-			}
-			traits = {
-				minority_revolutionary
-			}
-			on_add = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 184
-							state = 788
-							state = 225
-							state = 759
-							state = 203
-							state = 106
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
 						}
 					}
-					add_to_variable = {
-						TUR_ottoman_recruitable_population_factor = 0.05
-					}
-					custom_effect_tooltip = TUR_ottoman_southslav_recruitable_population_factor05
-				}
-			}
-			on_remove = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 184
-							state = 788
-							state = 225
-							state = 759
-							state = 203
-							state = 106
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
 						}
 					}
-					add_to_variable = {
-						TUR_ottoman_recruitable_population_factor = -0.05
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
 					}
-					custom_effect_tooltip = TUR_ottoman_southslav_recruitable_population_factor052
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_bahattin_bey_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_bahattin_bey }
+					}
 				}
-			}
-			ai_will_do = {
-				factor = 10.000
-			}
-		}
-		name = TUR_dimo_hadzhidimov
-		portraits = {
-			army = {
-				small = "gfx/interface/ideas/TUR/idea_TUR_dimo_hadzhidimov.png"
-			}
-		}
-	}
-	TUR_ahmet_riza = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_ahmet_riza
-			allowed = {
-				original_tag = TUR
-			}
-			visible = {
-				NOT = {
-					has_country_flag = TUR_purge_ittihadists 
-				}
-			}
-			available = {
-				is_country_leader = no
 			}
 			traits = {
-				erudite_ideologue 
+				TUR_directorate_of_forensic_medicine 
 			}
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
-		name = "TUR_ahmet_riza"
+	}
+	TUR_ziya_gokalp = {
+		name = "Mehmet Ziya Bey"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUR_ziya_gokalp"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ziya_gokalp
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				OR = {
+					has_government = fascism
+					has_completed_focus = TUR_national_education
+				}
+				TUR_ahmet_tevfik = { is_political_advisor = no }
+				TUR_mahmud_halil_el_husari = { is_political_advisor = no }
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_ziya_gokalp_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_ziya_gokalp }
+					}
+				}
+			}
+			traits = {
+				TUR_ittihadist_ideologue 
+			}
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	TUR_mahmud_halil_el_husari = {
+		name = "Mahmud Halil el-Husari"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/TUR_mahmud_halil_el_husari.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_mahmud_halil_el_husari
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				has_completed_focus = TUR_education_and_suggestion
+				TUR_ziya_gokalp = { is_political_advisor = no }
+			}
+			traits = {
+				TUR_patriotic_education_theorist
+			}
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	TUR_abdullah_cevdet = {
+		name = "Abdullah Cevdet Bey"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_abdullah_cevdet"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_abdullah_cevdet
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+				NOT = { has_idea_with_trait = TUR_ittihadist_ideologue }
+			}
+			traits = {
+				TUR_democratic_ideologue 
+			}
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	TUR_gabriel_noradunkyan = {
+		name = "Gabriel Efendi Noradunkyan"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_gabriel_noradunkyan"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_gabriel_noradunkyan
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				NOT = {
+					has_government = fascism 
+					has_government = communism
+				}
+			}
+			traits = {
+				compassionate_gentleman 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_avraam_benaroya = { #Socialist Workers' Federation
+		name = "Avraam Benaroya"
+		portraits = {
+			civilian = {			
+				large = "gfx/leaders/GRE/GRE_benaroya.png"
+				small = "GFX_idea_TUR_Avraam_Benaroya"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_avraam_benaroya
+			allowed = {
+				OR = {
+					original_tag = TUR
+					original_tag = GRE
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = TUR
+					AND = {
+						original_tag = GRE
+						NOT = { has_country_leader = { character = TUR_avraam_benaroya } }
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { original_tag = TUR }
+					has_government = communism
+				}
+				if = {
+					limit = { original_tag = GRE }
+					OR = {
+						has_completed_focus = GRE_invite_federacion_to_coalition
+						has_government = communism
+					}
+				}
+			}
+			traits = { TUR_minority_revolutionary }
+			on_add = {
+				if = {
+					limit = { owner = { original_tag = TUR } }
+					owner = { ottoman_minority_variable_check = yes }
+					every_state = {
+						limit = { check_variable = { TUR_jewish_state_level > 0 } }
+						custom_effect_tooltip = TUR_israeli_minority_politician_tt
+						add_to_variable = { TUR_ottoman_recruitable_population_factor_jewish = 0.05 }
+						custom_effect_tooltip = TUR_israeli_minority_politician_tt2
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { original_tag = TUR } }
+					owner = { ottoman_minority_variable_check = yes }
+					every_state = {
+						limit = { check_variable = { TUR_jewish_state_level > 0 } }
+						custom_effect_tooltip = TUR_israeli_minority_politician_tt3
+						add_to_variable = { TUR_ottoman_recruitable_population_factor_jewish = -0.05 }
+						custom_effect_tooltip = TUR_israeli_minority_politician_tt4
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+		country_leader={
+			ideology= reformist_socialism
+			traits = { TUR_minority_revolutionary_leader }
+		}
+	}
+	TUR_sava_stojanovic = { #Serb Democratic League
+		name = "Sava Stojanović"
+		portraits = { civilian = { small = "gfx/interface/ideas/TUR/idea_TUR_sava_stojanovic.png" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_sava_stojanovic
+			allowed = { original_tag = TUR }
+			visible = {
+				OR = {
+					owns_state = 847
+					owns_state = 848
+					owns_state = 106
+					owns_state = 761
+					owns_state = 760
+				}
+			}
+			available = {
+				OR = {
+					owns_state = 847
+					owns_state = 848
+					owns_state = 106
+					owns_state = 761
+					owns_state = 760
+				}
+			}
+			traits = { TUR_minority_reformer }
+			on_add = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 847
+							state = 848
+							state = 106
+							state = 761
+							state = 760
+						}
+						check_variable = { TUR_south_slavic_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_south_slavic = 0.05 }
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt2
+				}
+			}
+			on_remove = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 847
+							state = 848
+							state = 106
+							state = 761
+							state = 760
+						}
+						check_variable = { TUR_south_slavic_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt3
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_south_slavic = -0.05 }
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt4
+				}
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+	}
+	TUR_todor_pavlof = { #Bulgarian Constitutional Clubs
+		name = "Todor Pavlof"
+		portraits = { civilian = { small = "gfx/interface/ideas/TUR/idea_TUR_todor_pavlof.png" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_todor_pavlof
+			allowed = { original_tag = TUR }
+			visible = {
+				OR = {
+					owns_state = 184
+					owns_state = 788
+					owns_state = 225
+					owns_state = 759
+					owns_state = 731
+					owns_state = 203
+					owns_state = 106
+				}
+			}
+			available = {
+				TUR_dimitar_vlahov = { is_hired_as_advisor = no }
+				OR = {
+					owns_state = 184
+					owns_state = 788
+					owns_state = 225
+					owns_state = 759
+					owns_state = 731
+					owns_state = 203
+					owns_state = 106
+				}
+			}
+			traits = { TUR_minority_reformer }
+			on_add = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 184
+							state = 788
+							state = 225
+							state = 759
+							state = 731
+							state = 203
+							state = 106
+						}
+						check_variable = { TUR_south_slavic_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_south_slavic = 0.05 }
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt2
+				}
+			}
+			on_remove = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 184
+							state = 788
+							state = 225
+							state = 759
+							state = 731
+							state = 203
+							state = 106
+						}
+						check_variable = { TUR_south_slavic_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt3
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_south_slavic = -0.05 }
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt4
+				}
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+	}
+	TUR_dimitar_vlahov = { #People's Federative Party
+		name = "Dimitar Vlahov"
+		portraits = { civilian = { small = "gfx/interface/ideas/TUR/idea_TUR_dimitar_vlahov.png" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_dimitar_vlahov
+			allowed = { original_tag = TUR }
+			visible = {
+				OR = {
+					owns_state = 184
+					owns_state = 788
+					owns_state = 225
+					owns_state = 759
+					owns_state = 731
+					owns_state = 203
+					owns_state = 106
+				}
+			}
+			available = {
+				TUR_todor_pavlof = { is_hired_as_advisor = no }
+				OR = {
+					owns_state = 184
+					owns_state = 788
+					owns_state = 225
+					owns_state = 759
+					owns_state = 731
+					owns_state = 203
+					owns_state = 106
+				}
+			}
+			traits = { TUR_minority_revolutionary }
+			on_add = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 184
+							state = 788
+							state = 225
+							state = 759
+							state = 731
+							state = 203
+							state = 106
+						}
+						check_variable = { TUR_south_slavic_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_south_slavic = 0.05 }
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt2
+				}
+			}
+			on_remove = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 184
+							state = 788
+							state = 225
+							state = 759
+							state = 731
+							state = 203
+							state = 106
+						}
+						check_variable = { TUR_south_slavic_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt3
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_south_slavic = -0.05 }
+					custom_effect_tooltip = TUR_south_slavic_minority_politician_tt4
+				}
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+	}
+	TUR_hampartsoum_boyadjian = { #Hunchakian Party
+		name = "Hampartsoum Boyadjian"
+		portraits = { civilian = { small = "gfx/interface/ideas/TUR/idea_TUR_hampartsoum_boyadjian.png" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_hampartsoum_boyadjian
+			allowed = { original_tag = TUR }
+			visible = {
+				OR = {
+					owns_state = 344
+					owns_state = 857
+					owns_state = 1057
+					owns_state = 1058
+					owns_state = 1024
+				}
+			}
+			available = {
+				OR = {
+					owns_state = 344
+					owns_state = 857
+					owns_state = 1057
+					owns_state = 1058
+					owns_state = 1024
+				}
+			}
+			traits = { TUR_minority_revolutionary }
+			on_add = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 344
+							state = 857
+							state = 1057
+							state = 1058
+							state = 1024
+						}
+						check_variable = { TUR_armenian_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_armenian = 0.05 }
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt2
+				}
+			}
+			on_remove = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 344
+							state = 857
+							state = 1057
+							state = 1058
+							state = 1024
+						}
+						check_variable = { TUR_armenian_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt3
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_armenian = -0.05 }
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt4
+				}
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+	}
+	TUR_nazaret_daghavarian = { #Armenakan Party
+		name = "Nazaret Daghavarian"
+		portraits = { civilian = { small = "gfx/interface/ideas/TUR/idea_TUR_nazaret_daghavarian.png" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_nazaret_daghavarian
+			allowed = { original_tag = TUR }
+			visible = {
+				OR = {
+					owns_state = 349
+					owns_state = 1026
+					owns_state = 1025
+					owns_state = 1033
+					owns_state = 348
+					owns_state = 881
+				}
+			}
+			available = {
+				OR = {
+					owns_state = 349
+					owns_state = 1026
+					owns_state = 1025
+					owns_state = 1033
+					owns_state = 348
+					owns_state = 881
+				}
+			}
+			traits = { TUR_minority_reformer }
+			on_add = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 349
+							state = 1026
+							state = 1025
+							state = 1033
+							state = 348
+							state = 881
+						}
+						check_variable = { TUR_armenian_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_armenian = 0.05 }
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt2
+				}
+			}
+			on_remove = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 349
+							state = 1026
+							state = 1025
+							state = 1033
+							state = 348
+							state = 881
+						}
+						check_variable = { TUR_armenian_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt3
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_armenian = -0.05 }
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt4
+				}
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+	}
+	TUR_karakin_pastermadjian = { #Armenian Revolutionary Federation
+		name = "Karakin Pastermadjian"
+		portraits = { civilian = { small = "gfx/interface/ideas/TUR/idea_TUR_karakin_pastermadjian.png" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_karakin_pastermadjian
+			allowed = { original_tag = TUR }
+			visible = {
+				OR = {
+					owns_state = 353
+					owns_state = 1022
+					owns_state = 352
+					owns_state = 806
+					owns_state = 816
+				}
+			}
+			available = {
+				OR = {
+					owns_state = 353
+					owns_state = 1022
+					owns_state = 352
+					owns_state = 806
+					owns_state = 816
+				}
+			}
+			traits = { TUR_minority_revolutionary }
+			on_add = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 353
+							state = 1022
+							state = 352
+							state = 806
+							state = 816
+						}
+						check_variable = { TUR_armenian_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_armenian = 0.05 }
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt2
+				}
+			}
+			on_remove = {
+				owner = { ottoman_minority_variable_check = yes }
+				every_state = {
+					limit = {
+						OR = {
+							state = 353
+							state = 1022
+							state = 352
+							state = 806
+							state = 816
+						}
+						check_variable = { TUR_armenian_state_level > 0 }
+					}
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt3
+					add_to_variable = { TUR_ottoman_recruitable_population_factor_armenian = -0.05 }
+					custom_effect_tooltip = TUR_armenian_minority_politician_tt4
+				}
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+	}
+	TUR_ahmet_riza = {
+		name = "Ahmed Rıza Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_ahmet_riza"
+				large = "gfx/leaders/TUR/TUR_ahmet_riza.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ahmet_riza
+			allowed = { original_tag = TUR }
+			available = {
+				is_country_leader = no
+				NOT = { has_government = fascism }
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_ahmet_riza_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_ahmet_riza }
+					}
+				}
+			}
+			traits = {
+				TUR_positivist_figurehead 
+			}
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 		country_leader = {
 			ideology = authoritarian_democracy
-			traits = { TUR_positivist grand_vizier }
+			traits = { TUR_positivist_figurehead_leader grand_vizier }
 		}
 	}
 	TUR_ahmed_nessimy = {
+		name = "Ahmet Nessimy Bey"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_ahmed_nessimy"
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_ahmed_nessimy
@@ -2021,22 +2984,20 @@ characters = {
 				diplomatic_minister 
 			}
 			available = {
-				not = {
-					has_government = communism
-				}
+				NOT = { has_government = communism }
 			}
 			ai_will_do = {
 				factor = 2.000
 			}
 		}
-		name = "TUR_ahmed_nessimy"
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_ahmed_nessimy"
-			}
-		}
 	}
 	TUR_sureyya_ilmen = {
+		name = "Ferik Süreyya Paşa"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_sureyya_ilmen"
+			}
+		}
 		advisor = {
 			slot = air_chief
 			idea_token = TUR_sureyya_ilmen
@@ -2059,41 +3020,79 @@ characters = {
 					factor = 1.000
 				}
 		}
-		name = TUR_sureyya_ilmen
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_sureyya_ilmen"
-			}
-		}
 	}
 	TUR_celal_bayar = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_celal_bayar
-			allowed = {
-					original_tag = TUR
-				}
-				traits = {
-					captain_of_industry 
-				}
-				available = {
-					not = {
-						has_government = communism
-					}
-				}
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name = "TUR_celal_bayar"
+		name = "Mahmut Celâlettin Beys"
 		portraits = {
 			army = {
 				large = "gfx/leaders/TUR/TUR_celal_bayar.png"
 				small = "GFX_idea_tur_celal_bayar"
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_celal_bayar
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				NOT = { has_government = communism }
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_celal_bayar_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_celal_bayar }
+					}
+				}
+			}
+			traits = {
+				TUR_national_industrialist
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 	TUR_izzettin_calislar = {
+		name = "İzzettin Paşa"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_izzettin_calislar"
+				large = "gfx/leaders/TUR/TUR_izzettin_calislar.png"
+			}
+		}
 		advisor = {
 			slot = high_command
 			idea_token = TUR_izzettin_calislar
@@ -2109,13 +3108,6 @@ characters = {
 					factor = 1.000
 				}
 		}
-		name = "TUR_izzettin_calislar"
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_izzettin_calislar"
-				large = "gfx/leaders/TUR/TUR_izzettin_calislar.png"
-			}
-		}
 		corps_commander = {
 			traits = { harsh_leader infantry_officer trait_TUR_ittihadist_sympathies }
 			skill = 2
@@ -2123,135 +3115,250 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 1
-			#legacy_id = 90529
 		}
 	}
 	TUR_huseyin_rauf = {
-		advisor = {
-			slot = navy_chief
-			idea_token = TUR_huseyin_rauf
-			allowed = {
-					original_tag = TUR
-				}
-				traits = {
-					navy_chief_decisive_battle_2 
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name = "TUR_huseyin_rauf"
+		name = "Hüseyin Rauf Paşa"
 		portraits = {
 			army = {
 				small = "gfx/interface/ideas/TUR/idea_TUR_huseyin_rauf.png"
 				large = "gfx/leaders/TUR/TUR_huseyin_rauf.png"
 			}
 		}
-		navy_leader = {
-			traits = { gunnery_expert inshore_fighter big_guns_expert crisis_magician }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			maneuvering_skill = 1
-			coordination_skill = 1
+		advisor = {
+			slot = navy_chief
+			idea_token = TUR_huseyin_rauf
+			allowed = {
+				original_tag = TUR
+			}
+			traits = {
+				navy_chief_decisive_battle_2 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	TUR_mehmet_emin_yurdakul = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_mehmet_emin_yurdakul
-			allowed = {
-					original_tag = TUR
-				}
-				available = {
-					or = {
-						has_country_leader = {
-							character = TUR_mustafa_kemal
-							ruling_only = yes 
-						}
-						has_government = fascism
-						has_completed_focus = TUR_invigorate_turkish_nationalism
-					}
-				}
-				traits = {
-					vatan_ideologue 
-				}
-				cost = 250.000
-				ai_will_do = {
-					factor = 10.000
-				}
-		}
-		name = TUR_mehmet_emin_yurdakul
+		name = "Mehmet Emin Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_mehmet_emin_yurdakul"
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_mehmet_emin_yurdakul
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_mehmet_emin_yurdakul_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_mehmet_emin_yurdakul }
+					}
+				}
+			}
+			traits = {
+				TUR_vatan_ideologue 
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
 	}
-	TUR_nazim_bey = {
+	TUR_nazim_bey = { #ethnic engineer, bringing muslim families from romania and bulgaria to macedonia
+		name = "Nâzım Bey"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_nazim_bey"
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_nazim_bey
 			allowed = {
 				original_tag = TUR
 			}
-			traits = {
-				pan_nationalist_doctor 
-			}
 			available = {
-				has_government = fascism 
-			}
-			visible = {
-				not = {
-					has_country_flag = had_ittihadist_government 
+				has_government = fascism
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
 				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_nazim_bey_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_nazim_bey }
+					}
+				}
+			}
+			traits = {
+				TUR_pan_nationalist_doctor 
 			}
 			ai_will_do = {
 				factor = 10.000
 			}
 		}
-		name = "TUR_nazim_bey"
+	}
+	TUR_ismail_canbolat = {
+		name = "İsmail Hakkı Bey"
 		portraits = {
-			army = {
-				small = "GFX_idea_TUR_nazim_bey"
+			civilian = {
+				small = "GFX_idea_TUR_ismail_canbolat"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ismail_canbolat
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_ismail_canbolat_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_ismail_canbolat }
+					}
+				}
+			}
+			traits = {
+				TUR_head_of_the_police_force
+			}
+			ai_will_do = {
+				factor = 10.000
 			}
 		}
 	}
 	TUR_ali_ihsan = {
-		advisor = {
-			slot = army_chief
-			idea_token = TUR_ali_ihsan
-				allowed = {
-					original_tag = TUR
-				}
-				traits = {
-					army_chief_planning_2 
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name = "TUR_ali_ihsan"
+		name = "Ali İhsan Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_ali_ihsan"
 				large = "gfx/leaders/TUR/TUR_ali_ihsan.png"
 			}
 		}
-		corps_commander = {
-			traits = { harsh_leader trait_TUR_ittihadist_radical_sympathies }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 1
-			logistics_skill = 4
-			#legacy_id = 90542
+		advisor = {
+			slot = army_chief
+			idea_token = TUR_ali_ihsan
+			allowed = {
+				original_tag = TUR
+			}
+			traits = {
+				army_chief_planning_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
+#		corps_commander = { #1.11.1917
+#			traits = { harsh_leader trait_TUR_ittihadist_sympathies }
+#			skill = 3
+#			attack_skill = 2
+#			defense_skill = 3
+#			planning_skill = 1
+#			logistics_skill = 4
+#		}
 	}
 	TUR_said_halim = {
-		name = "TUR_said_halim"
+		name = "Mehmed Said Halim Paşa"
 		portraits = {
 			army = {
 				large = "gfx/leaders/TUR/TUR_said_halim.png"
@@ -2264,24 +3371,150 @@ characters = {
 			allowed = {
 				original_tag = TUR
 			}
-			visible = {
-				has_completed_focus = TUR_reopen_the_parliament
-				NOT = { has_idea = TUR_mehmed_said }
+			available = {
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_said_halim_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_said_halim }
+					}
+				}
 			}
-			available = { is_country_leader = no }
 			traits = {
-				grand_vizier_said_halim
+				TUR_conservative_ittihadist
 			}
 			ai_will_do = {
 				factor = 10.000
 			}
 		}
-		country_leader = {
-			ideology = civilian_dictatorship
-			traits = { TUR_conservative_politician grand_vizier }
+	}
+	TUR_hamdullah_suphi_tanriover = {
+		name= "Hamdullah Suphi Bey"
+		portraits = {
+			civilian = {
+				small="GFX_idea_TUR_hamdullah_suphi_tanriover"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = TUR_hamdullah_suphi_tanriover
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_hamdullah_suphi_tanriover_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_hamdullah_suphi_tanriover }
+					}
+				}
+			}
+			traits = {
+				TUR_head_of_the_turkish_hearts
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+	}
+	TUR_halide_edib_adivar = {
+		name= "Halide Edib Hanım"
+		portraits = { civilian = { small="GFX_idea_TUR_halide_edib_adivar" } }
+		gender = female
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_halide_edib_adivar
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_halide_edib_adivar_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_halide_edib_adivar }
+					}
+				}
+			}
+			traits = {
+				feminist_ultranationalist 
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+	}
+	TUR_mustafa_asim = {
+		name = "Mustafa Asım Bey"
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_mustafa_asim.png"
+				small = "GFX_idea_TUR_mustafa_asim"
+			}
 		}
 	}
 	TUR_said_i_nursi = {
+		name = "Mirzazâde Said"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_said_i_nursi"
+				large = "gfx/leaders/TUR/TUR_said_i_nursi.png"
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_said_i_nursi
@@ -2289,57 +3522,75 @@ characters = {
 				original_tag = TUR
 			}
 			traits = {
-				islamist_modern 
+				TUR_modern_islamist 
 			}
-			available = {
-				OR = {
-					has_completed_focus = TUR_pardon_conservatives
-					has_completed_focus = TUR_end_of_the_young_turks
-				}
-			}
+			available = { has_government = democratic }
 			ai_will_do = {
 				factor = 10.000
 			}
 		}
-		name = "TUR_said_i_nursi"
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_said_i_nursi"
-				large = "gfx/leaders/TUR/TUR_said_i_nursi.png"
-			}
-		}
 	}
 	TUR_cavid_bey = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_cavid_bey
-			allowed = {
-					original_tag = TUR
-				}
-				traits = {
-					liberal_economist
-				}
-				available = {
-					OR = {
-						has_government = democratic
-						has_government = neutrality
-					}
-					NOT = {
-						has_completed_focus = TUR_undermine_democracy
-					}
-				}
-				ai_will_do = {
-					factor = 10.000
-				}
-		}
-		name = "TUR_cavid_bey"
+		name = "Mehmed Cavid Bey"
 		portraits = {
 			army = {
 				small = "GFX_idea_TUR_cavid_bey"
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_cavid_bey
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_enver_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_enver_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_cavid_bey_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_cavid_bey }
+					}
+				}
+			}
+			traits = {
+				TUR_liberal_economist
+			}
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
 	}
 	TUR_mehemmed_naby = {
+		name = "Mehemmed Naby Bey"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_mehemmed_naby"
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_mehemmed_naby
@@ -2347,25 +3598,130 @@ characters = {
 					original_tag = TUR
 				}
 				traits = {
-					smooth_talking_charmer 
+					smooth_talking_charmer
 				}
 				ai_will_do = {
 					factor = 1.000
 				}
 		}
-		name = "TUR_mehemmed_naby"
+	}
+	TUR_suleyman_askeri = {
+		name = "Süleyman Askerî Bey"
 		portraits = {
 			army = {
-				small = "GFX_idea_TUR_mehemmed_naby"
+				small = "GFX_idea_TUR_suleyman_askeri"
+				large = "gfx/leaders/TUR/TUR_suleyman_askeri.png" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_suleyman_askeri
+			available = {
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_suleyman_askeri_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_suleyman_askeri }
+					}
+				}
+			}
+			allowed = {
+				original_tag = TUR
+			}
+			traits = {
+				TUR_head_of_the_paramilitary 
+			}
+		}
+	}
+	TUR_yakub_cemil = {
+		name = "Yakub Cemil Paşa"
+		portraits = {
+			army = {
+				large = "gfx/leaders/TUR/TUR_yakub_cemil.png" 
+				small = "GFX_idea_TUR_yakub_cemil"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_yakub_cemil
+			available = {
+				has_government = fascism
+				if = {
+					limit = { has_power_balance = { id = TUR_unionist_struggle } }
+					is_power_balance_in_range = {
+						id = TUR_unionist_struggle
+						range < TUR_unionist_struggle_talat_pasha_high_control
+					}
+					if = {
+						limit = {
+							is_power_balance_side_active = {
+								id = TUR_unionist_struggle
+								side = TUR_unionist_struggle_cemal_pasha
+							}
+						}
+						is_power_balance_in_range = {
+							id = TUR_unionist_struggle
+							range > TUR_unionist_struggle_cemal_pasha_high_control
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TUR_position_of_the_committee
+							has_completed_focus = TUR_inner_party_cult
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = TUR_utilize_yakub_cemil_trigger_tt
+						NOT = { has_country_flag = TUR_utilize_yakub_cemil }
+					}
+				}
+			}
+			allowed = {
+				original_tag = TUR
+			}
+			traits = {
+				TUR_brutal_paramilitary_officer
 			}
 		}
 	}
 	TUR_esref_kuscu_basi = {
+		name = "Eşref Sencer Paşa"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_esref_kuscu_basi"
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_esref_kuscu_basi
 			available = {
-				has_intelligence_agency = yes 
+				has_intelligence_agency = yes
 			}
 			allowed = {
 				original_tag = TUR
@@ -2375,70 +3731,58 @@ characters = {
 				head_of_intelligence 
 			}
 		}
-		name = "TUR_esref_kuscu_basi"
-		portraits = {
-			army = {
-				small = "GFX_idea_TUR_Esref_Kuscu_Basi"
-			}
-		}
 	}
 	TUR_omer_faruk = {
-		name = TUR_omer_faruk
+		name = "Ömer Faruk Efendi"
 		portraits = {
 			army = {
 				large = "gfx/leaders/TUR/TUR_omer_faruk.png"
 				small = "GFX_idea_TUR_omer_faruk"
 			}
 		}
-		corps_commander = {
-			traits = {
-				trait_royal
-				politically_connected
-			}
-			visible = {
-				OR = {
-					has_completed_focus = TUR_commanders_within_the_family
-					has_completed_focus = TUR_accept_sultans_help
-				}
-			}
-			skill = 1
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 3
-			logistics_skill = 1
-			#legacy_id = 90537
-		}
+#		corps_commander = {
+#			traits = { trait_royal politically_connected }
+#			skill = 1
+#			attack_skill = 2
+#			defense_skill = 1
+#			planning_skill = 3
+#			logistics_skill = 1
+#		}
 	}
 	TUR_mustafa_sabri = {
-		advisor = {
-			slot = political_advisor
-			idea_token = TUR_mustafa_sabri
-			allowed = {
-				original_tag = TUR
-			}
-			traits = {
-				TUR_seyhulislam
-			}
-			available = {
-				OR = {
-					has_completed_focus = TUR_end_of_the_young_turks
-					has_completed_focus = TUR_pardon_conservatives
-				}
-				is_country_leader = no
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		name = TUR_mustafa_sabri
+		name = "Mustafa Sabri Efendi"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TUR/TUR_mustafa_sabri.png"
 				small = "GFX_idea_TUR_mustafa_sabri"
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_mustafa_sabri
+			allowed = {
+				original_tag = TUR
+			}
+			available = {
+				has_government = democratic
+				is_country_leader = no
+			}
+			traits = {
+				TUR_seyhulislam
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 	TUR_arthur_limpus = {
+		name = "Arthur Limpus Paşa"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/ENG_arthur_limpus.png"
+				small = "GFX_idea_ENG_arthur_limpus"
+			}
+		}
 		advisor = {
 			slot = navy_chief
 			idea_token = TUR_arthur_limpus
@@ -2459,7 +3803,6 @@ characters = {
 				factor = 1.000
 			}
 		}
-		name = ENG_arthur_limpus
 		navy_leader = {
 			visible = {
 				has_completed_focus = TUR_british_naval_mission
@@ -2473,12 +3816,6 @@ characters = {
 			defense_skill = 1
 			maneuvering_skill = 2
 			coordination_skill = 1
-		}
-		portraits = {
-			army = {
-				large = "gfx/leaders/ENG/ENG_arthur_limpus.png"
-				small = "GFX_idea_ENG_arthur_limpus"
-			}
 		}
 	}
 	TUR_rafiq_bey_bin_mahmud_al_azm = {
@@ -2498,11 +3835,11 @@ characters = {
 		}
 	}
 	TUR_aziz_ali_al_masry = {
-		name = TUR_aziz_ali_al_masry
+		name = "Aziz Ali Al Masry"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TUR/TUR_aziz_ali_al_masry.png"
-				small = GFX_idea_tur_halil_kut
+				small = "gfx/interface/ideas/TUR/TUR_aziz_ali_al_masry.png"
 			}
 		}
 		advisor = {
@@ -2515,9 +3852,7 @@ characters = {
 				army_chief_morale_2
 			}
 			cost = 100
-			visible = {
-				has_completed_focus = TUR_support_the_paramilitaries
-			}
+			visible = {always = no }
 			ai_will_do = {
 				factor = 2.000
 			}
@@ -2555,9 +3890,7 @@ characters = {
 			traits = {
 				journalist_arab
 			}
-			visible = {
-				has_completed_focus = TUR_elevate_arabic_literature_societies
-			}
+			visible = {always = no }
 			ai_will_do = {
 				factor = 2.000
 			}
@@ -2579,9 +3912,7 @@ characters = {
 			traits = {
 				nationalist_poet_arab
 			}
-			visible = {
-				has_completed_focus = TUR_elevate_arabic_literature_societies
-			}
+			visible = {always = no }
 			ai_will_do = {
 				factor = 2.000
 			}
@@ -2604,9 +3935,7 @@ characters = {
 			traits = {
 				army_cavalry_1
 			}
-			visible = {
-				has_completed_focus = TUR_support_the_paramilitaries
-			}
+			visible = {always = no }
 			ai_will_do = {
 				factor = 2.000
 			}
@@ -2628,11 +3957,1023 @@ characters = {
 			traits = {
 				revolutionary_lawyer
 			}
-			visible = {
-				has_completed_focus = TUR_elevate_arabic_literature_societies
-			}
+			visible = {always = no }
 			ai_will_do = {
 				factor = 2.000
+			}
+		}
+	}
+	#syria
+	TUR_izzet_darwaza = { #syrian opposition
+		name = "Muhammad 'Izzat Darwaza"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_izzet_darwaza.png"
+			}
+		}
+	}
+	TUR_israel_shochat = { #communist israeli opposition
+		name = "Israel Shochat"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_israel_shochat.png"
+			}
+		}
+	}
+	TUR_bekir_sami = { #first governor of aleppo, protected armenians
+		name = "Bekir Sami Bey"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/TUR_bekir_sami.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_bekir_sami
+			allowed = { tag = TRS }
+			available = {
+				OR = {
+					has_completed_focus = TUR_governor_of_aleppo
+					TUR_bekir_sami = { is_hired_as_advisor = yes }
+				}
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_governor_of_aleppo
+					NOT = {
+						has_idea = TUR_hasan_mazhar
+						has_idea = TUR_huseyin_kazim_kadri
+						has_idea = TUR_abdulhalik_renda
+					}
+				}
+			}
+			traits = {
+				TUR_governor_of_aleppo_bekir_sami
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_hasan_mazhar = { #governor of aleppo, talats faction, talats choice, protected armenians
+		name = "Hasan Mazhar Bey"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/TUR_hasan_mazhar.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_hasan_mazhar
+			allowed = { tag = TRS }
+			available = {
+				OR = {
+					has_completed_focus = TUR_governor_of_aleppo
+					TUR_hasan_mazhar = { is_hired_as_advisor = yes }
+				}
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_governor_of_aleppo
+					NOT = {
+						has_idea = TUR_bekir_sami
+						has_idea = TUR_huseyin_kazim_kadri
+						has_idea = TUR_abdulhalik_renda
+					}
+				}
+			}
+			traits = {
+				TUR_governor_of_aleppo_hasan_mazhar
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.3
+						}
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.3
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_huseyin_kazim_kadri = { #governor of aleppo, cemals faction
+		name = "Hüseyin Kazım Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_huseyin_kazim_kadri.png"
+				small = "gfx/interface/ideas/TUR/TUR_huseyin_kazim_kadri.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_huseyin_kazim_kadri
+			allowed = { tag = TRS }
+			available = {
+				OR = {
+					has_completed_focus = TUR_governor_of_aleppo
+					TUR_huseyin_kazim_kadri = { is_hired_as_advisor = yes }
+				}
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_governor_of_aleppo
+					NOT = {
+						has_idea = TUR_bekir_sami
+						has_idea = TUR_hasan_mazhar
+						has_idea = TUR_abdulhalik_renda
+					}
+				}
+			}
+			traits = {
+				TUR_governor_of_aleppo_huseyin_kazim_kadri
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.3
+						}
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.3
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_abdulhalik_renda = { #governor of aleppo, talats faction, compromise candidate
+		name = "Mustafa Abdülhalik Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_abdulhalik_renda.png"
+				small = "gfx/interface/ideas/TUR/TUR_abdulhalik_renda.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_abdulhalik_renda
+			allowed = { tag = TRS }
+			available = {
+				OR = {
+					has_completed_focus = TUR_governor_of_aleppo
+					TUR_abdulhalik_renda = { is_hired_as_advisor = yes }
+				}
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_governor_of_aleppo
+					NOT = {
+						has_idea = TUR_bekir_sami
+						has_idea = TUR_hasan_mazhar
+						has_idea = TUR_huseyin_kazim_kadri
+					}
+				}
+			}
+			traits = {
+				TUR_governor_of_aleppo_abdulhalik_renda
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.05
+						}
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.05
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_yusuf_franko_pasha = { #mutasarrif of mount lebanon
+		name = "Yusuf Franko Paşa"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_yusuf_franko_pasha.png"
+				small = "gfx/interface/ideas/TUR/TUR_yusuf_franko_pasha.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_yusuf_franko_pasha
+			allowed = { tag = TRS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_mutasarrif_of_mount_lebanon
+					NOT = {
+						has_idea = TUR_ohannes_kuyumcuyan
+						has_idea = TUR_ali_munif_yegenaga
+						has_idea = TUR_ismail_hakki_bey
+					}
+				}
+				553 = {
+					OR = {
+						has_dynamic_modifier = { modifier = TUR_autonomous_vilayet_lebanon }
+						has_state_flag = TUR_autonomous_vilayet_lebanon_no_control
+						has_dynamic_modifier = { modifier = TUR_autonomous_vilayet }
+						has_state_flag = TUR_autonomous_vilayet_no_control
+					}
+				}
+			}
+			traits = {
+				TUR_mutasarrif_of_mount_lebanon_yusuf_pasha
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_ohannes_kuyumcuyan = { #mutasarrif of mount lebanon
+		name = "Ohannes Paşa"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_ohannes_kuyumcuyan.png"
+				small = "gfx/interface/ideas/TUR/TUR_ohannes_kuyumcuyan.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ohannes_kuyumcuyan
+			allowed = { tag = TRS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_mutasarrif_of_mount_lebanon
+					NOT = {
+						has_idea = TUR_yusuf_franko_pasha
+						has_idea = TUR_ali_munif_yegenaga
+						has_idea = TUR_ismail_hakki_bey
+					}
+				}
+				553 = {
+					OR = {
+						has_dynamic_modifier = { modifier = TUR_autonomous_vilayet_lebanon }
+						has_state_flag = TUR_autonomous_vilayet_lebanon_no_control
+						has_dynamic_modifier = { modifier = TUR_autonomous_vilayet }
+						has_state_flag = TUR_autonomous_vilayet_no_control
+					}
+				}
+			}
+			traits = {
+				TUR_mutasarrif_of_mount_lebanon_ohannes_kuyumcuyan
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_decrease_arab_opposition = yes }
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_increase_arab_opposition = yes }
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_ali_munif_yegenaga = { #mutasarrif of mount lebanon turkish against cemal
+		name = "Ali Münif Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_ali_munif_yegenaga.png"
+				small = "gfx/interface/ideas/TUR/TUR_ali_munif_yegenaga.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ali_munif_yegenaga
+			allowed = { tag = TRS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_mutasarrif_of_mount_lebanon
+					NOT = {
+						has_idea = TUR_ohannes_kuyumcuyan
+						has_idea = TUR_yusuf_franko_pasha
+						has_idea = TUR_ismail_hakki_bey
+					}
+				}
+				553 = {
+					OR = {
+						has_dynamic_modifier = { modifier = TUR_autonomous_vilayet_lebanon }
+						has_state_flag = TUR_autonomous_vilayet_lebanon_no_control
+						has_dynamic_modifier = { modifier = TUR_autonomous_vilayet }
+						has_state_flag = TUR_autonomous_vilayet_no_control
+					}
+				}
+			}
+			traits = {
+				TUR_mutasarrif_of_mount_lebanon_ali_munif_yegenaga
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.1
+						}
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.1
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_ismail_hakki_bey = { #mutasarrif of mount lebanon turkish
+		name = "İsmail Hakkı Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_ismail_hakki_bey.png"
+				small = "gfx/interface/ideas/TUR/TUR_ismail_hakki_bey.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ismail_hakki_bey
+			allowed = { tag = TRS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_mutasarrif_of_mount_lebanon
+					NOT = {
+						has_idea = TUR_ohannes_kuyumcuyan
+						has_idea = TUR_yusuf_franko_pasha
+						has_idea = TUR_ali_munif_yegenaga
+					}
+				}
+				553 = {
+					OR = {
+						has_dynamic_modifier = { modifier = TUR_autonomous_vilayet_lebanon }
+						has_dynamic_modifier = { modifier = TUR_autonomous_vilayet }
+					}
+				}
+			}
+			traits = {
+				TUR_mutasarrif_of_mount_lebanon_ismail_hakki_bey
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_shakib_arslan = { #cemals faction
+		name = "Shakib Arslan"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_shakib_arslan.png"
+				small = "gfx/interface/ideas/TUR/TUR_shakib_arslan.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_shakib_arslan
+			allowed = { tag = TRS }
+			traits = {
+				TUR_pro_ottoman_pan_islamist
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.05
+						}
+					}
+				}
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_decrease_arab_opposition = yes }
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.05
+						}
+					}
+				}
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_increase_arab_opposition = yes }
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_as_ad_shukeiri = { #cemals faction
+		name = "Sheikh As'ad Shukeiri"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_as_ad_shukeiri.png"
+				small = "gfx/interface/ideas/TUR/TUR_as_ad_shukeiri.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_as_ad_shukeiri
+			allowed = { tag = TRS }
+			traits = {
+				TUR_pro_ottoman_mufti
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.1
+						}
+					}
+				}
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_decrease_arab_opposition = yes }
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.1
+						}
+					}
+				}
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_increase_arab_opposition = yes }
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_abdul_raman_al_yusuf = { #cemals faction
+		name = "Abdul Rahman al-Yusuf"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_abdul_raman_al_yusuf.png"
+				small = "gfx/interface/ideas/TUR/TUR_abdul_raman_al_yusuf.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_abdul_raman_al_yusuf
+			allowed = { tag = TRS }
+			traits = {
+				TUR_pro_ottoman_land_owner
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.1
+						}
+					}
+				}
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_decrease_arab_opposition = yes }
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.1
+						}
+					}
+				}
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_increase_arab_opposition = yes }
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_muhammad_kurd_ali = { #cemals faction
+		name = "Muhammad Kurd Ali"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_muhammad_kurd_ali.png"
+				small = "gfx/interface/ideas/TUR/TUR_muhammad_kurd_ali.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_muhammad_kurd_ali
+			allowed = { tag = TRS }
+			traits = {
+				education_reformer
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.1
+						}
+					}
+				}
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_decrease_arab_opposition = yes }
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.1
+						}
+					}
+				}
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_increase_arab_opposition = yes }
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_hulusi_bey = { #governor of damascus, talats faction
+		name = "Hulusi Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_hulusi_bey.png"
+				small = "gfx/interface/ideas/TUR/TUR_hulusi_bey.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_hulusi_bey
+			allowed = { tag = TRS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_governor_of_damascus
+					NOT = { has_idea = TUR_hasan_tahsin_bey }
+				}
+			}
+			traits = {
+				TUR_governor_of_damascus_hulusi_bey
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.2
+						}
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.2
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_hasan_tahsin_bey = { #governor of damascus, cemals faction
+		name = "Hasan Tahsin Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_hasan_tahsin_bey.png"
+				small = "gfx/interface/ideas/TUR/TUR_hasan_tahsin_bey.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_hasan_tahsin_bey
+			allowed = { tag = TRS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_governor_of_damascus
+					NOT = { has_idea = TUR_hulusi_bey }
+				}
+			}
+			traits = {
+				TUR_governor_of_damascus_hasan_tahsin
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.2
+						}
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.2
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_ahmed_macid_goren = { #governor of jerusalem, cemal doesnt like him
+		name = "Ahmed Macid Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_ahmed_macid_goren.png"
+				small = "gfx/interface/ideas/TUR/TUR_ahmed_macid_goren.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ahmed_macid_goren
+			allowed = { tag = TRS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_governor_of_jerusalem
+					NOT = { has_idea = TUR_hussein_bey_al_husayni }
+				}
+			}
+			traits = {
+				TUR_governor_of_jerusalem_ahmed_macid_goren
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.1
+						}
+					}
+				}
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_decrease_arab_opposition = yes }
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.1
+						}
+					}
+				}
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_increase_arab_opposition = yes }
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_hussein_bey_al_husayni = { #governor of jerusalem, jewish-arab reconciliation
+		name = "Hussein Bey al-Husayni"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_hussein_bey_al_husayni.png"
+				small = "gfx/interface/ideas/TUR/TUR_hussein_bey_al_husayni.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_hussein_bey_al_husayni
+			allowed = { tag = TRS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = TUR_only_one_governor_of_jerusalem
+					NOT = { has_idea = TUR_ahmed_macid_goren }
+				}
+			}
+			traits = {
+				TUR_governor_of_jerusalem_hussein_bey_al_husayni
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_decrease_arab_opposition = yes }
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_completed_focus = TUR_reward_and_persuasion } }
+					owner = { TRS_increase_arab_opposition = yes }
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_hasan_bey = { #governor of jaffa, cemals faction
+		name = "Hasan Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_hasan_bey.png"
+				small = "gfx/interface/ideas/TUR/TUR_hasan_bey.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_hasan_bey
+			allowed = { tag = TRS }
+			traits = {
+				TUR_policy_executer
+			}
+			on_add = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = -0.1
+						}
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { owner = { has_power_balance = { id = TUR_local_central_rule } } }
+					owner = {
+						add_power_balance_value = {
+							id = TUR_local_central_rule
+							value = 0.1
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_heinrich_august_meissner = { #german railway engineer
+		name = "Heinrich August Meissner"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_heinrich_august_meissner.png"
+				small = "gfx/interface/ideas/TUR/TUR_heinrich_august_meissner.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_heinrich_august_meissner
+			allowed = { tag = TRS }
+			available = { is_in_faction_with = GER }
+			traits = {
+				railway_engineer
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+	}
+	TUR_ali_roshen_bey = { #can be military high command
+		name = "Ali Roshen Bey"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/TUR_ali_roshen_bey.png"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = TUR_ali_roshen_bey
+			ledger = army 
+			allowed = { tag = TRS }
+			traits = {
+				military_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_falih_rifki_atay = { #officer, can be military high command
+		name = "Falih Rıfkı Bey"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/TUR_falih_rifki_atay.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = TUR_falih_rifki_atay
+			ledger = army
+			allowed = { tag = TRS }
+			traits = {
+				army_regrouping_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_galatali_sevket_bey = { #officer, can be military high command
+		name = "Galatalı Şevket Bey"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/TUR_galatali_sevket_bey.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = TUR_galatali_sevket_bey
+			ledger = army 
+			allowed = { tag = TRS }
+			traits = { army_infantry_1 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_yasin_el_hasimi = { #officer, can be military high command
+		name = "Yasin Hilmi Paşa"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_yasin_el_hasimi.png"
+				small = "gfx/interface/ideas/TUR/TUR_yasin_el_hasimi.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = TUR_yasin_el_hasimi
+			ledger = army 
+			allowed = { tag = TRS }
+			traits = {
+				army_logistics_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TUR_ali_fuat_erden = { #syria chief of staff
+		name = "Ali Fuat Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_ali_fuat_erden.png"
+				small = "gfx/interface/ideas/TUR/TUR_ali_fuat_erden.png"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = TUR_ali_fuat_erden
+			allowed = { tag = TRS }
+			traits = {
+				army_chief_organizational_1 
+			}
+			ai_will_do = {
+				factor = 5.000
+			}
+		}
+		corps_commander = {
+			traits = { career_officer desert_fox }
+			visible = { tag = TRS }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	#izmir
+	TUR_mustafa_rahmi = {
+		name = "Mustafa Rahmi Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_mustafa_rahmi.png"
+				small = "gfx/interface/ideas/TUR/TUR_mustafa_rahmi.png"
+			}
+		}
+	}
+	TUR_muhittin_birgen = {
+		name = "Muhittin Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_muhittin_birgen.png"
+				small = "gfx/interface/ideas/TUR/TUR_muhittin_birgen.png"
+			}
+		}
+	}
+	#trabzon
+	TUR_cemal_azmi = {
+		name = "Cemal Azmi Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_cemal_azmi.png"
+				small = "gfx/interface/ideas/TUR/TUR_cemal_azmi.png"
+			}
+		}
+	}
+	#diyarbakir
+	TUR_mehmed_resid = {
+		name = "Mehmed Reşid Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_mehmed_resid.png"
+				small = "gfx/interface/ideas/TUR/TUR_mehmed_resid.png"
+			}
+		}
+	}
+	TUR_huseyin_nesimi = { #protected armenians, shot dead
+		name = "Hüseyin Nesimi Bey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_huseyin_nesimi.png"
+				small = "gfx/interface/ideas/TUR/TUR_huseyin_nesimi.png"
 			}
 		}
 	}

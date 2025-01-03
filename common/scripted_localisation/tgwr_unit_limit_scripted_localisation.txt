@@ -26,9 +26,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_desc_above_limit
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -42,9 +40,34 @@ defined_text = {
 		}
 		localization_key = unit_limit_noncore_population_desc
 	}
+    text = { localization_key = empty }
+}
+
+defined_text = {
+	name = unit_limit_50_unit_bonus
 	text = {
-		localization_key = empty
+		trigger = { has_idea = TRS_bedouin_support_1 }
+		localization_key = unit_limit_6_unit_bonus_desc
 	}
+	text = { localization_key = empty }
+}
+
+defined_text = {
+	name = unit_limit_50_unit_bonus
+	text = {
+		trigger = { has_idea = TRS_bedouin_support_2 }
+		localization_key = unit_limit_12_unit_bonus_desc
+	}
+	text = { localization_key = empty }
+}
+
+defined_text = {
+	name = unit_limit_50_unit_bonus
+	text = {
+		trigger = { has_idea = TRS_bedouin_support_3 }
+		localization_key = unit_limit_18_unit_bonus_desc
+	}
+	text = { localization_key = empty }
 }
 
 defined_text = {
@@ -61,9 +84,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_50_unit_bonus_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -78,7 +99,6 @@ defined_text = {
 				# has_idea = CHI_idea_national_protection
 				# has_idea = CHI_idea_constitutional_movement
 				# has_idea = CHI_idea_liberated_zone
-				# has_idea = TUR_war_of_independence
 				# has_idea = FRA_red_national_guards
 				# has_idea = FRA_red_national_guards_cw
 				# has_idea = FRA_idea_disunited_french_front
@@ -88,9 +108,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_100_unit_bonus_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -110,8 +128,24 @@ defined_text = {
 		}
 		localization_key = unit_limit_250_unit_bonus_desc
 	}
+    text = { localization_key = empty }
+}
+
+defined_text = {
+	name = unit_limit_bonus_TUR_ottoman_4th_army
 	text = {
-		localization_key = empty
+		trigger = {
+			has_dynamic_modifier = { modifier = TUR_ottoman_4th_army }
+			NOT = { has_completed_focus = TUR_form_yildirim_army_group }
+		}
+		localization_key = unit_limit_TUR_ottoman_4th_army_150_unit_bonus_desc
+	}
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = TUR_ottoman_4th_army }
+			has_completed_focus = TUR_form_yildirim_army_group
+		}
+		localization_key = unit_limit_TUR_ottoman_4th_army_250_unit_bonus_desc
 	}
 }
 
@@ -142,9 +176,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_demobilization_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -155,9 +187,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_balkan_unit_bonus_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -168,9 +198,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_chinese_unit_bonus_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 
@@ -185,9 +213,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_puppet_base_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -198,9 +224,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_modifier_was_capped_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -214,13 +238,13 @@ defined_text = {
 				has_idea = partial_economic_mobilisation
 				has_idea = war_economy
 				has_idea = tot_economic_mobilisation
+				has_idea = tot_economic_mobilisation_tur_1
+				has_idea = tot_economic_mobilisation_tur_2
 			}
 		}
 		localization_key = tooltip_white_line
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -229,9 +253,7 @@ defined_text = {
 		trigger = { is_faction_leader = yes }
 		localization_key = unit_limit_faction_leader_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -248,9 +270,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_is_low_level_puppet_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -261,9 +281,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_red_guard_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -272,9 +290,7 @@ defined_text = {
 		trigger = { OR = { is_major = yes tag = TUR } }
 		localization_key = unit_limit_is_major_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -290,9 +306,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_has_civil_war_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -301,9 +315,7 @@ defined_text = {
 		trigger = { NOT = { has_global_flag = great_war_ends } }
 		localization_key = unit_limit_great_war_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -312,9 +324,7 @@ defined_text = {
 		trigger = { has_war = yes }
 		localization_key = unit_limit_has_war_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -347,9 +357,7 @@ defined_text = {
 		trigger = { has_idea = total_economic_bonus }
 		localization_key = unit_limit_tot_economic_mobilisation
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -360,9 +368,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_was_capped_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -380,9 +386,7 @@ defined_text = {
 		}
 		localization_key = unit_limit_default_used_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }
 
 defined_text = {
@@ -393,7 +397,5 @@ defined_text = {
 		}
 		localization_key = unit_limit_bonus_used_desc
 	}
-	text = {
-		localization_key = empty
-	}
+    text = { localization_key = empty }
 }

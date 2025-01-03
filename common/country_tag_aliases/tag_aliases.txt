@@ -84,16 +84,47 @@ BRE = {
 }
 OTT = {
 	original_tag = TUR
-	OR = {
-		has_country_flag = TUR_revolter_flag
-		has_country_flag = TUR_kostantiniye_government_tag
+	NOT = {
+		has_country_flag = TUR_ottoman_syria
+		has_country_flag = TUR_ottoman_cemal
 	}
-	NOT = { has_country_flag = TUR_national_movement_tag }
+}
+TRS = {
+	original_tag = TUR
+	OR = {
+		has_country_flag = TUR_ottoman_syria
+		has_country_flag = TUR_ottoman_cemal
+	}
+}
+TRT = {
+	original_tag = TUR
+	has_country_flag = TUR_ottoman_selanik
+}
+TRM = {
+	original_tag = TUR
+	has_country_flag = TUR_ottoman_manastir
+}
+TRO = {
+	original_tag = TUR
+	has_country_flag = TUR_ottoman_kosova
+}
+TRY = {
+	original_tag = TUR
+	has_country_flag = TUR_ottoman_yanya
+}
+TRH = {
+	original_tag = TUR
+	has_country_flag = TUR_ottoman_iskodra
 }
 TRR = {
 	original_tag = TUR
 	has_country_flag = TUR_national_movement_tag
 	NOT = { has_country_flag = TUR_kostantiniye_government_tag }
+}
+
+ARA = {
+	original_tag = ARM
+	has_country_flag = anatolian_armenia
 }
 CHR = {
 	original_tag = CHI

@@ -1861,7 +1861,8 @@ leader_traits = {
 
 		stability_factor = -0.1
 		war_support_factor = 0.05
-		conscription = 0.02
+		research_speed_factor = 0.05
+		conscription_factor = 0.05
 	}
 
 	pan_turkic_doyen = {
@@ -1873,7 +1874,7 @@ leader_traits = {
 		non_core_manpower = 0.05
 	}
 
-	vatan_ideologue = {
+	TUR_vatan_ideologue = {
 		random = no
 		sprite = 13
 
@@ -4101,7 +4102,6 @@ leader_traits = {
 		random = no
 		max_command_power = 30
 		training_time_factor = -0.1
-
 	}
 
 	SWE_landsfader = {
@@ -9145,10 +9145,22 @@ leader_traits = {
 
 	linchpin_of_infrastructure = {
 		random = no
-		sprite = 10
 
 		production_speed_infrastructure_factor = 0.15
 		production_speed_rail_way_factor = 0.15
+		industry_repair_factor = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linchpin_of_infrastructure2 = {
+		random = no
+
+		production_speed_infrastructure_factor = 0.15
+		production_speed_rail_way_factor = 0.2
+		production_speed_supply_node_factor = 0.05
 		industry_repair_factor = 0.2
 
 		ai_will_do = {

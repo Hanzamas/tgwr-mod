@@ -721,7 +721,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_elections_1912
-		icon = GFX_TUR_end_martial_law
+		icon = GFX_TUR_elections_of_1912
 		cost = 5
 		available = {
 			has_country_flag = elections_1912
@@ -1420,7 +1420,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_radical_victory
-		icon = GFX_focus_SOV_rebuild_the_savior_cathedral
+		icon = GFX_focus_SOV_rebuild_the_saviour_cathedral
 		cost = 10
 		ai_will_do = {
 			factor = 100
@@ -2704,7 +2704,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_first_man_of_the_country
-		icon = GFX_TUR_end_martial_law
+		icon = GFX_TUR_elections_of_1912
 		cost = 5
 		relative_position_id = SER_reinforce_military_state
 		prerequisite = {

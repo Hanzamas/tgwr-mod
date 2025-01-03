@@ -2,7 +2,19 @@
 state={
 	id=679
 	name="STATE_679"
-	history={
+	history = {
+		add_dynamic_modifier = { modifier = TUR_arab_minority }
+		set_variable = { TUR_ottoman_local_supplies_for_controller_arab = -0.25 }
+		set_variable = { TUR_ottoman_non_core_manpower_arab = 0.25 }
+		set_variable = { TUR_ottoman_resistance_target_arab = 0.3 }
+		set_variable = { TUR_arab_state_level = 5 }
+		set_variable = { TUR_arab_population_stability_factor = -0.005 }
+		set_variable = { TUR_arab_population_war_support_factor = -0.005 }
+		add_dynamic_modifier = { modifier = TUR_autonomous_vilayet }
+		set_state_flag = TUR_autonomous_vilayet
+
+		set_state_flag = TUR_hejaz
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		victory_points = {
 			12883 1 
 		}
@@ -10,8 +22,8 @@ state={
 			5037 5 
 		}
 		owner = TUR
-		#add_core_of = TUR changed on state modifier
 		add_core_of = HJZ
+		add_claim_by = TUR
 		buildings = {
 			infrastructure = 1
 			12883 = {

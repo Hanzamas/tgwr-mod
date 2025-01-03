@@ -364,9 +364,7 @@ country_event = {
 		name = ww1_secondbalkan.7.a
 		set_country_flag = kis_secondbalkan_war_winner
 		if = {
-			limit = {
-				has_global_flag = kis_secondbalkanwar_lose
-			}
+			limit = { has_global_flag = kis_secondbalkanwar_lose }
 			every_state = {
 				limit = {
 					is_owned_by = BUL
@@ -379,34 +377,15 @@ country_event = {
 			}
 		}
 		if = {
-			limit = {
-				country_exists = WTH
-			}
+			limit = { country_exists = WTH }
 			hidden_effect = {
 				every_state = {
-					limit = {
-						is_core_of = WTH
-					}
+					limit = { is_core_of = WTH }
 					remove_core_of = WTH
 				}
 			}
-			BUL = {
-				annex_country = {
-					target = WTH
-				}
-			}
+			BUL = { annex_country = { target = WTH } }
 		}
-		#hidden_effect = {
-		#	if = {
-		#		limit = {
-		#			has_war = no
-		#		}
-		#		news_event = {
-		#			id = ww1_secondbalkan.20
-		#			hours = 3
-		#		}
-		#	}
-		#}
 	}
 }
 #Serbia and Greece surrender
@@ -532,7 +511,7 @@ country_event = {
 	desc = ww1_secondbalkan.10.d
 	picture = GFX_report_event_tur_turkish_soldiers
 	is_triggered_only = yes
-	option = {
+	option = { #bye bye western thrace
 		name = ww1_secondbalkan.10.a
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = historical_tt
@@ -549,34 +528,21 @@ country_event = {
 				transfer_state_to = FROM
 			}
 			if = {
-				limit = {
-					country_exists = WTH
-				}
-				BUL = {
-					annex_country = {
-						target = WTH
-					}
-				}
+				limit = { country_exists = WTH }
+				BUL = { annex_country = { target = WTH } }
 			}
 		}
-		hidden_effect = {
-			country_event = {
-				id = ww1_secondbalkan.7
-				days = 5
-			}
-		}
+		hidden_effect = { country_event = { id = ww1_secondbalkan.7 days = 5 } }
 	}
-	# no peace
-	option = {
+	option = { #no peace
 		name = ww1_secondbalkan.10.b
-		trigger = {
-			NOT = { has_global_flag = TUR_BUL_separated_peace }
-		}
+		trigger = { NOT = { has_global_flag = TUR_BUL_separated_peace } }
 		add_political_power = -50
 		declare_war_on = {
 			target = BUL
 			type = take_claimed_state
 		}
+		set_global_flag = war_on_western_thrace
 		custom_effect_tooltip = ww1_secondbalkan.10.b.tt
 		hidden_effect = {
 			set_country_flag = tur_no_peace_bw2
@@ -594,14 +560,10 @@ country_event = {
 						}
 					}
 				}
-				RUS = {
-					country_event = ww1_secondbalkan.11
-				}
+				RUS = { country_event = { id = ww1_secondbalkan.11 hours = 8 } }
 			}
 			if = {
-				limit = {
-					has_subject = WTH
-				}
+				limit = { has_subject = WTH }
 				WTH = {
 					add_to_war = {
 						targeted_alliance = ROOT
@@ -623,22 +585,13 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_secondbalkan.11.a
-		add_war_support = 0.05
-		custom_effect_tooltip = ww1_secondbalkan.11.a.tt
-		effect_tooltip = {
-			create_wargoal = {
-				target = TUR
-				type = take_claimed_state
-			}
+		#custom_effect_tooltip = ww1_secondbalkan.11.a.tt
+		declare_war_on = {
+			target = TUR
+			type = take_state_focus
+			generator = { 353 1022 352 881 350 1025 1026 349 }
 		}
-		hidden_effect = {
-			TUR = {
-				country_event = {
-					id = ww1_secondbalkan.12
-					hours = 3
-				}
-			}
-		}
+		#hidden_effect = { TUR = { country_event = { id = ww1_secondbalkan.12 hours = 3 } } }
 	}
 	option = {
 		name = ww1_secondbalkan.11.b
@@ -673,13 +626,7 @@ country_event = {
 		white_peace = BUL
 		effect_tooltip = {
 			if = {
-				limit = {
-					756 = {
-						NOT = {
-							is_fully_controlled_by = BUL
-						}
-					}
-				}
+				limit = { 756 = { NOT = { is_fully_controlled_by = BUL } } }
 				every_state = {
 					limit = {
 						is_owned_by = BUL
@@ -692,21 +639,11 @@ country_event = {
 				}
 			}
 			if = {
-				limit = {
-					country_exists = WTH
-				}
-				BUL = {
-					annex_country = {
-						target = WTH
-					}
-				}
+				limit = { country_exists = WTH }
+				BUL = { annex_country = { target = WTH } }
 			}
 		}
-		hidden_effect = {
-			country_event = {
-				id = ww1_secondbalkan.7
-				days = 5
-			}
+		hidden_effect = { country_event = { id = ww1_secondbalkan.7 days = 5 }
 		}
 		ai_chance = {
 			base = 0
@@ -767,9 +704,7 @@ country_event = {
 						ruling_party = neutrality
 						elections_allowed = no
 					}
-					set_popularities = {
-						neutrality = 100
-					}
+					set_popularities = { neutrality = 100 }
 					add_ideas = standing_alone	
 				}
 			}
@@ -807,12 +742,7 @@ country_event = {
 				custom_effect_tooltip = western_thrace_tt
 			}
 		}
-		hidden_effect = {
-			country_event = {
-				id = ww1_secondbalkan.7
-				days = 35
-			}
-		}
+		hidden_effect = { country_event = { id = ww1_secondbalkan.7 days = 35 } }
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -858,9 +788,7 @@ country_event = {
 	option = {
 		name = ww1_secondbalkan.13.a
 		add_war_support = 0.01
-		hidden_effect = {
-			news_event = ww1_secondbalkan.14
-		}
+		hidden_effect = { news_event = { id = ww1_secondbalkan.14 hours = 6 } }
 	}
 	option = {
 		name = ww1_secondbalkan.13.b
@@ -918,8 +846,6 @@ country_event = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 184
-						state = 345
 						state = 451
 						state = 757
 					}
@@ -927,12 +853,13 @@ country_event = {
 				add_core_of = WTH
 			}
 		}
-		every_state = {
-			limit = {
-				is_owned_by = FROM
-				is_core_of = WTH
-			}
-			transfer_state_to = WTH
+		if = {
+			limit = { BUL = { owns_state = 451 } }
+			451 = { transfer_state_to = WTH }
+		}
+		if = {
+			limit = { BUL = { owns_state = 757 } }
+			757 = { transfer_state_to = WTH }
 		}
 		puppet = WTH
 		hidden_effect = {
@@ -945,9 +872,7 @@ country_event = {
 					ruling_party = neutrality
 					elections_allowed = no
 				}
-				set_popularities = {
-					neutrality = 100
-				}
+				set_popularities = { neutrality = 100 }
 				add_ideas = standing_alone	
 			}
 		}

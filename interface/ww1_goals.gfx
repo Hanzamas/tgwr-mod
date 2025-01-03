@@ -1101,8 +1101,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_tur_balkan_war.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_otto_bahriye"
-		texturefile = "gfx/interface/goals/focus_otto_bahriye.png"
+		name = "GFX_TUR_bahriye_nezareti"
+		texturefile = "gfx/interface/goals/TUR_bahriye_nezareti.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_otto_uniform"
@@ -1121,16 +1121,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_tur_herkeshazir.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_tur_erkaniharbiye"
-		texturefile = "gfx/interface/goals/focus_tur_erkaniharbiye.png"
+		name = "GFX_TUR_harbiye_nezareti"
+		texturefile = "gfx/interface/goals/TUR_harbiye_nezareti.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_otto_coat_of_arms"
 		texturefile = "gfx/interface/goals/focus_otto_coat_of_arms.png"
-	}
-	SpriteType = {
-		name = "GFX_focus_legacy_of_march"
-		texturefile = "gfx/interface/goals/focus_legacy_of_march.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_yildiz_ferman"
@@ -1165,10 +1161,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_sharia.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_TUR_restore_caliphate_authority"
-		texturefile = "gfx/interface/goals/focus_tur_restore_caliphate_authority.png"
-	}
-	SpriteType = {
 		name = "GFX_focus_pak_india"
 		texturefile = "gfx/interface/goals/focus_pak_india.png"
 	}
@@ -1177,24 +1169,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_tur_strike_at_the_shia_base.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_turan_road"
-		texturefile = "gfx/interface/goals/focus_turan_road.png"
-	}
-	SpriteType = {
 		name = "GFX_focus_ottoman_flag"
 		texturefile = "gfx/interface/goals/focus_ottoman_flag.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_tur_triumvirate_dictatorship"
-		texturefile = "gfx/interface/goals/focus_tur_triumvirate_dictatorship.png"
+		name = "GFX_TUR_three_pasha_government"
+		texturefile = "gfx/interface/goals/TUR_three_pasha_government.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_tur_triumvirate"
-		texturefile = "gfx/interface/goals/focus_tur_triumvirate.png"
-	}
-	SpriteType = {
-		name = "GFX_focus_sevket_pasha"
-		texturefile = "gfx/interface/goals/focus_sevket_pasha.png"
+		name = "GFX_TUR_grand_vizier_mahmud_sevket"
+		texturefile = "gfx/interface/goals/TUR_grand_vizier_mahmud_sevket.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_otto_investment"
@@ -1245,8 +1229,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_tur_follow_the_dreams_of_great_mehmed.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_TUR_Constantinople_Accord"
-		texturefile = "gfx/interface/goals/focus_TUR_Constantinople_Accord.png"
+		name = "GFX_TUR_constantinople_accord"
+		texturefile = "gfx/interface/goals/TUR_constantinople_accord.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_TUR_Enver_Pasha"
@@ -1285,8 +1269,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TUR_empower_the_special_organization.png"
 	}
 	spriteType = {
-		name = "GFX_TUR_continuing_ottomanism_efforts"
-		texturefile = "gfx/interface/goals/TUR_continuing_ottomanism_efforts.png"
+		name = "GFX_TUR_revive_the_ottomanism_dream"
+		texturefile = "gfx/interface/goals/TUR_revive_the_ottomanism_dream.png"
 	}
 	spriteType = {
 		name = "GFX_TUR_nationalism_and_centralization"
@@ -1357,8 +1341,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TUR_liberal_victory.png"
 	}
 	spriteType = { 
-		name = "GFX_TUR_end_martial_law"
-		texturefile = "gfx/interface/goals/TUR_end_martial_law.png"
+		name = "GFX_TUR_elections_of_1912"
+		texturefile = "gfx/interface/goals/TUR_elections_of_1912.png"
 	}
 	spriteType = { 
 		name = "GFX_TUR_ease_ethnic_tensions"
@@ -1373,8 +1357,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TUR_mosul_question.png"
 	}
 	spriteType = { 
-		name = "GFX_TUR_ottoman_debts"
-		texturefile = "gfx/interface/goals/TUR_ottoman_debts.png"
+		name = "GFX_TUR_ottoman_public_debt_administration"
+		texturefile = "gfx/interface/goals/TUR_ottoman_public_debt_administration.png"
 	}
 	spriteType = { 
 		name = "GFX_TUR_question_of_the_caliph"
@@ -1423,10 +1407,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_focus_TUR_vatan_ve_hurriyet_cemiyeti"
 		textureFile = "gfx/interface/goals/TUR_vatan_ve_hurriyet_cemiyeti.png"
-	}
-	spriteType = {
-		name = "GFX_focus_TUR_glory_to_the_action_army"
-		textureFile = "gfx/interface/goals/TUR_glory_to_the_action_army.png"
 	}
 
 ### Belgium
@@ -2404,7 +2384,10 @@ spriteTypes = {
 		name = "GFX_focus_early_tank"
 		texturefile = "gfx/interface/goals/focus_early_tank.png"
 	}
-	
+	SpriteType = {
+		name = "GFX_focus_generic_naval_ship"
+		texturefile = "gfx/interface/goals/generic_naval_ship.png"
+	}
 	SpriteType = {
 		name = "GFX_focus_generic_naval_ship_transfer"
 		texturefile = "gfx/interface/goals/generic_naval_ship_transfer.png"
@@ -2682,13 +2665,13 @@ spriteTypes = {
 		name = "GFX_focus_attack_senussi"
 		texturefile = "gfx/interface/goals/focus_attack_senussi.png"
 	}
+	SpriteType = {
+		name = "GFX_focus_attack_ottoman"
+		texturefile = "gfx/interface/goals/focus_attack_ottoman.png"
+	}
 	spriteType = { 
 		name = "GFX_focus_generic_attack_kurdistan2"
 		texturefile = "gfx/interface/goals/focus_generic_attack_kurdistan2.png"
-	}
-	SpriteType = {
-		name = "GFX_focus_tur_war_with_hejaz"
-		texturefile = "gfx/interface/goals/focus_tur_war_with_hejaz.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_attack_serbia"
@@ -3050,6 +3033,54 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SYR_Hawk_of_Syria.png"
 	}
 	spriteType = {
+		name = "GFX_TUR_found_the_aircraft_committee"
+		textureFile = "gfx/interface/goals/TUR_found_the_aircraft_committee.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_utilize_gendarmerie"
+		textureFile = "gfx/interface/goals/TUR_utilize_gendarmerie.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_aftermath_of_the_31_march_incident"
+		textureFile = "gfx/interface/goals/TUR_aftermath_of_the_31_march_incident.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_spirit_of_the_second_constitutional_era"
+		textureFile = "gfx/interface/goals/TUR_spirit_of_the_second_constitutional_era.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ratify_the_treaty_of_daan"
+		textureFile = "gfx/interface/goals/TUR_ratify_the_treaty_of_daan.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_law_on_churches"
+		textureFile = "gfx/interface/goals/TUR_law_on_churches.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_albania"
+		textureFile = "gfx/interface/goals/TUR_ottoman_albania.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_albanian_vilayet"
+		textureFile = "gfx/interface/goals/TUR_albanian_vilayet.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_search_for_investments"
+		textureFile = "gfx/interface/goals/TUR_search_for_investments.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ziraat_bankasi_kredi_programi"
+		textureFile = "gfx/interface/goals/TUR_ziraat_bankasi_kredi_programi.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_central_administration_in_syria"
+		textureFile = "gfx/interface/goals/TUR_central_administration_in_syria.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_entrench_rule_in_mesapotamia"
+		textureFile = "gfx/interface/goals/TUR_entrench_rule_in_mesapotamia.png"
+	}
+	spriteType = {
 		name = "GFX_generic_abolish_slavery"
 		textureFile = "gfx/interface/goals/generic_abolish_slavery.png"
 	}
@@ -3060,6 +3091,42 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_yugoslavia_friendship"
 		textureFile = "gfx/interface/goals/yugoslavia_friendship.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_mobilize_the_civilian_population"
+		textureFile = "gfx/interface/goals/TUR_mobilize_the_civilian_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_consolidate_military_positions"
+		textureFile = "gfx/interface/goals/TUR_consolidate_military_positions.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_the_third_front"
+		textureFile = "gfx/interface/goals/TUR_the_third_front.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_fourth_member_of_the_triumvirate"
+		textureFile = "gfx/interface/goals/TUR_fourth_member_of_the_triumvirate.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_appoint_fethi_bey"
+		textureFile = "gfx/interface/goals/TUR_appoint_fethi_bey.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_assign_cemal_to_syria"
+		textureFile = "gfx/interface/goals/TUR_assign_cemal_to_syria.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_inner_party_cult"
+		textureFile = "gfx/interface/goals/TUR_inner_party_cult.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_healing_the_sick_man"
+		textureFile = "gfx/interface/goals/TUR_healing_the_sick_man.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_end_of_an_era"
+		textureFile = "gfx/interface/goals/TUR_end_of_an_era.png"
 	}
 	spriteType = {
 		name = "GFX_SAU_Mecca"
@@ -3098,6 +3165,22 @@ spriteTypes = {
 		textureFile = "gfx/interface/goals/SAU_protect_caravan_merchants.png"
 	}
 	spriteType = {
+		name = "GFX_TUR_uncrowned_king_of_syria"
+		textureFile = "gfx/interface/goals/TUR_uncrowned_king_of_syria.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_prepare_for_the_egyptian_expedition"
+		textureFile = "gfx/interface/goals/TUR_prepare_for_the_egyptian_expedition.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_appoint_kucuk_cemal"
+		textureFile = "gfx/interface/goals/TUR_appoint_kucuk_cemal.png"
+	}
+	spriteType = {
+		name = "GFX_generic_crush_al_fatat"
+		textureFile = "gfx/interface/goals/generic_crush_al_fatat.png"
+	}
+	spriteType = {
 		name = "GFX_generic_allign_arab_revolt"
 		textureFile = "gfx/interface/goals/generic_allign_arab_revolt.png"
 	}
@@ -3106,16 +3189,64 @@ spriteTypes = {
 		textureFile = "gfx/interface/goals/generic_attack_jabal_shammar.png"
 	}
 	spriteType = {
+		name = "GFX_generic_catholic_cross"
+		textureFile = "gfx/interface/goals/generic_catholic_cross.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_appoint_mustafa_asim_bey"
+		textureFile = "gfx/interface/goals/TUR_appoint_mustafa_asim_bey.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_the_ideal_province"
+		textureFile = "gfx/interface/goals/TUR_the_ideal_province.png"
+	}
+	spriteType = {
 		name = "GFX_generic_champagne"
 		textureFile = "gfx/interface/goals/generic_champagne.png"
+	}
+	spriteType = {
+		name = "GFX_generic_attack_arab_revolt"
+		textureFile = "gfx/interface/goals/generic_attack_arab_revolt.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_uneasy_alliance_empty"
+		textureFile = "gfx/interface/goals/TUR_uneasy_alliance_empty.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_uneasy_alliance_entente"
+		textureFile = "gfx/interface/goals/TUR_uneasy_alliance_entente.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_uneasy_alliance_central_powers"
+		textureFile = "gfx/interface/goals/TUR_uneasy_alliance_central_powers.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_sultan_of_egypt"
+		textureFile = "gfx/interface/goals/TUR_sultan_of_egypt.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_provinces_in_egypt"
+		textureFile = "gfx/interface/goals/TUR_ottoman_provinces_in_egypt.png"
 	}
 	spriteType = {
 		name = "GFX_frontend_medal_dlc023"
 		texturefile = "gfx/interface/goals/focus_DLC_man_the_guns.dds"
 	}
 	spriteType = {
+		name = "GFX_TUR_retire_the_old_generation"
+		texturefile = "gfx/interface/goals/TUR_retire_the_old_generation.png"
+	}
+	spriteType = {
 		name = "GFX_ROM_king_carols_reign"
 		textureFile = "gfx/interface/goals/ROM_king_carols_reign.png"
+	}
+	spriteType = {
+		name = "GFX_focus_moldova_wrenches_reign"
+		textureFile = "gfx/interface/goals/ROM_moldova_wrenches.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_turkish_strength_association"
+		textureFile = "gfx/interface/goals/TUR_turkish_strength_association.png"
 	}
 	spriteType = {
 		name = "GFX_generic_isolation"
@@ -4257,5 +4388,21 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_generic_graveyard"
 		textureFile = "gfx/interface/goals/generic_graveyard.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_national_education"
+		textureFile = "gfx/interface/goals/TUR_national_education.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_secure_officer_loyalty"
+		textureFile = "gfx/interface/goals/TUR_secure_officer_loyalty.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_pursuit_of_a_unitary_state"
+		textureFile = "gfx/interface/goals/TUR_pursuit_of_a_unitary_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_progressive_entente"
+		textureFile = "gfx/interface/goals/TUR_progressive_entente.png"
 	}
 }

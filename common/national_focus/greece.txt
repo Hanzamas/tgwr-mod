@@ -1908,7 +1908,7 @@ focus = {
 }
 focus = {
 	id = GRE_declare_new_elections
-	icon = GFX_TUR_end_martial_law
+	icon = GFX_TUR_elections_of_1912
 	cost = 1
 	x = 1
 	y = 1
@@ -8821,11 +8821,7 @@ focus = {
 		prerequisite = {
 			focus = GRE_hold_inner_party_elections
 		}
-		available = {
-			has_country_leader = {
-				character = GRE_avraam_benaroya
-			}
-		}
+		available = { has_country_leader = { character = TUR_avraam_benaroya } }
 		x = 1
 		y = 1
 		cost = 5
@@ -10363,7 +10359,7 @@ focus = {
 	}
 	focus = {
 		id = GRE_negotiate_straits
-		icon = GFX_focus_TUR_Constantinople_Accord
+		icon = GFX_TUR_constantinople_accord
 		prerequisite = {
 			focus = GRE_integrate_new_holdings
 		}

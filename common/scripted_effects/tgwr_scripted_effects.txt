@@ -1709,16 +1709,20 @@ copy_laws_of_PREV = {
 			add_ideas = tot_economic_mobilisation
 		}
 		else_if = {
+			limit = { PREV = { has_idea = tot_economic_mobilisation_tur_1 } }
+			add_ideas = tot_economic_mobilisation
+		}
+		else_if = {
+			limit = { PREV = { has_idea = tot_economic_mobilisation_tur_2 } }
+			add_ideas = tot_economic_mobilisation
+		}
+		else_if = {
 			limit = { PREV = { has_idea = interwar_recovery } }
 			add_ideas = interwar_recovery
 		}
 		else_if = {
 			limit = { PREV = { has_idea = roaring_twenties } }
 			add_ideas = roaring_twenties
-		}
-		else_if = {
-			limit = { PREV = { has_idea = statism_economy } }
-			add_ideas = statism_economy
 		}
 		else_if = {
 			limit = { PREV = { has_idea = USA_collectivized_society } }

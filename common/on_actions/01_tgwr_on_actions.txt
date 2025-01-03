@@ -46,6 +46,13 @@
 						}
 					}
 					set_country_flag = great_war_loser
+					if = {
+						limit = {
+							tag = TUR
+							NOT = { has_completed_focus = TUR_end_of_an_era}
+						}
+						complete_national_focus = TUR_end_of_an_era
+					}
 					add_ideas = idea_armistice
 				}
 				every_country = {
@@ -60,6 +67,15 @@
 						}
 					}
 					set_country_flag = great_war_winner
+					hidden_effect = {
+						if = {
+							limit = {
+								tag = TUR
+								NOT = { has_completed_focus = TUR_healing_the_sick_man}
+							}
+							complete_national_focus = TUR_healing_the_sick_man
+						}
+					}
 					add_ideas = idea_armistice
 				}
 			}
@@ -106,6 +122,13 @@
 						}
 					}
 					set_country_flag = great_war_loser
+					if = {
+						limit = {
+							tag = TUR
+							NOT = { has_completed_focus = TUR_end_of_an_era}
+						}
+						complete_national_focus = TUR_end_of_an_era
+					}
 					add_ideas = idea_armistice
 				}
 				every_country = {
@@ -120,6 +143,15 @@
 						}
 					}
 					set_country_flag = great_war_winner
+					hidden_effect = {
+						if = {
+							limit = {
+								tag = TUR
+								NOT = { has_completed_focus = TUR_healing_the_sick_man}
+							}
+							complete_national_focus = TUR_healing_the_sick_man
+						}
+					}
 					add_ideas = idea_armistice
 				}
 			}
@@ -908,174 +940,168 @@
 		effect = {
 			### Brazil ###
 			if = {
-				limit = {
-					original_tag = BRA
-				}
-				country_event = ww1_brazil.1
-				country_event = ww1_brazil.2
-				country_event = ww1_brazil.3
-				country_event = ww1_brazil.5
-			}
-			### Ecuador ###
-			if = {
-				limit = {
-					original_tag = ECU
-				}
-				country_event = ww1_ecuador.5
-				country_event = ww1_ecuador.6
-			}
-			### Argentina ###
-			if = {
-				limit = {
-					original_tag = ARG
-				}
-				country_event = ww1_argentina.1
-				country_event = ww1_argentina.3
-			}
-
-			### Chile ###
-			if = {
-				limit = { original_tag = CHL }
-				country_event = ww1_chile.3 #1910
-				country_event = ww1_chile.5 #1915
-				country_event = ww1_chile.7 #1920
-			}
-
-			### Ottoman ###
-			if = {
-				limit = {
-					original_tag = TUR
-				}
-				country_event = ottoman.42
-				country_event = ottoman.45
-				country_event = ottoman.38
-				country_event = ottoman.118
-				country_event = ottoman.119
-				country_event = ottoman.151
-				country_event = ottoman.152
-				country_event = ottoman.153
-				country_event = ottoman.98
-				country_event = ottoman.164
-				country_event = ottoman.170
-			}
-			### Serbia ###
-			if = {
-				limit = {
-					original_tag = SER
-				}
-				country_event = ww1_serbia.2
-				country_event = ww1_serbia.44
-			}
-			### China ###
-			if = {
-				limit = { tag = CHI }
+				limit = { NOT = { has_country_flag = skip_elections } }
 				if = {
 					limit = {
-						has_global_flag = warlord_era
-						has_country_leader = {
-							character = CHI_li_yuanhong
-							ruling_only = yes
-						}
-						NOT = {
-							has_global_flag = warlord_era_end
-						}
+						original_tag = BRA
 					}
-					country_event = ww1_china.153
+					country_event = ww1_brazil.1
+					country_event = ww1_brazil.2
+					country_event = ww1_brazil.3
+					country_event = ww1_brazil.5
 				}
-				else_if = {
+				### Ecuador ###
+				if = {
 					limit = {
-						has_idea = CHI_idea_feng_guozhang_president
+						original_tag = ECU
 					}
-					country_event = ww1_china.149
+					country_event = ww1_ecuador.5
+					country_event = ww1_ecuador.6
 				}
-				else_if = {
+				### Argentina ###
+				if = {
 					limit = {
-						NOT = { has_government = fascism }
+						original_tag = ARG
 					}
-					country_event = ww1_china.123
+					country_event = ww1_argentina.1
+					country_event = ww1_argentina.3
 				}
-			}
 
-			### Canada ###
-			if = {
-				limit = { original_tag = CAN }
-				country_event = canada.67
-			}
-			
-			### Germany ###
-			if = {
-				limit = {
-					tag = GER
-				}
+				### Chile ###
 				if = {
-					limit = {
-						has_global_flag = weimar_republic
-					}
-					else = {
-						country_event = ww1_germany.99
+					limit = { original_tag = CHL }
+					country_event = ww1_chile.3 #1910
+					country_event = ww1_chile.5 #1915
+					country_event = ww1_chile.7 #1920
+				}
+
+				### Ottoman ###
+				if = {
+					limit = { original_tag = TUR }
+					if = {
+						limit = { NOT = { has_country_flag = TUR_hold_mock_elections } }
+						country_event = ottoman.5
 					}
 				}
-			}
-			
-			### Korea ###
-			if = {
-				limit = {
-					tag = KOR
-				}
+				### Serbia ###
 				if = {
 					limit = {
-						OR = {
-							has_idea = KOR_idea_gwangmu
-							has_idea = KOR_idea_yunghui
-							has_idea = KOR_idea_uimin
-							has_idea = KOR_idea_uihwa
+						original_tag = SER
+					}
+					country_event = ww1_serbia.2
+					country_event = ww1_serbia.44
+				}
+				### China ###
+				if = {
+					limit = { tag = CHI }
+					if = {
+						limit = {
+							has_global_flag = warlord_era
+							has_country_leader = {
+								character = CHI_li_yuanhong
+								ruling_only = yes
+							}
+							NOT = {
+								has_global_flag = warlord_era_end
+							}
 						}
+						country_event = ww1_china.153
 					}
-					#constitutional elections; will do later
-					else = {
-						country_event = ww1_korea.17
+					else_if = {
+						limit = {
+							has_idea = CHI_idea_feng_guozhang_president
+						}
+						country_event = ww1_china.149
+					}
+					else_if = {
+						limit = {
+							NOT = { has_government = fascism }
+						}
+						country_event = ww1_china.123
+					}
+				}
+
+				### Canada ###
+				if = {
+					limit = { original_tag = CAN }
+					country_event = canada.67
+				}
+				
+				### Germany ###
+				if = {
+					limit = {
+						tag = GER
+					}
+					if = {
+						limit = {
+							has_global_flag = weimar_republic
+						}
+						else = {
+							country_event = ww1_germany.99
+						}
 					}
 				}
 				
-			}
-
-			### Bolivia ###
-			if = {
-				limit = {
-					tag = BOL
-				}
+				### Korea ###
 				if = {
 					limit = {
-						has_government = neutrality
+						tag = KOR
 					}
-					country_event = bolivia.1 #1913
-					country_event = bolivia.2 #1917
-				}
-			}
-
-			### Austria ###
-			if = {
-				limit = {
-					tag = AUR
-				}
-				if = {
-					limit = {
-						has_country_leader = {
-							character = AUS_michael_hainisch
+					if = {
+						limit = {
+							OR = {
+								has_idea = KOR_idea_gwangmu
+								has_idea = KOR_idea_yunghui
+								has_idea = KOR_idea_uimin
+								has_idea = KOR_idea_uihwa
+							}
+						}
+						#constitutional elections; will do later
+						else = {
+							country_event = ww1_korea.17
 						}
 					}
-					country_event = ww1_austria.10
-					country_event = ww1_austria.2
+					
+				}
+
+				### Bolivia ###
+				if = {
+					limit = {
+						tag = BOL
+					}
+					if = {
+						limit = {
+							has_government = neutrality
+						}
+						country_event = bolivia.1 #1913
+						country_event = bolivia.2 #1917
+					}
+				}
+
+				### Austria ###
+				if = {
+					limit = {
+						tag = AUR
+					}
+					if = {
+						limit = {
+							has_country_leader = {
+								character = AUS_michael_hainisch
+							}
+						}
+						country_event = ww1_austria.10
+						country_event = ww1_austria.2
+					}
+				}
+
+				### Hungary ###
+				if = {
+					limit = {
+						tag = HUN
+					}
+					country_event = ww1_hungary_auh.1
 				}
 			}
-
-			### Hungary ###
-			if = {
-				limit = {
-					tag = HUN
-				}
-				country_event = ww1_hungary_auh.1
-			}		
 		}
 		# USA EVENTS	
 		random_events = {
@@ -1593,7 +1619,7 @@
 					original_tag = TUR
 					NOT = {
 						has_country_flag = TUR_national_movement_tag
-						has_cosmetic_tag = TUR_REP
+						has_cosmetic_tag = TUR_republic
 					}
 					FROM = {
 						tag = RUS
@@ -3343,7 +3369,7 @@
 					original_tag = TUR
 					NOT = {
 						has_country_flag = TUR_national_movement_tag
-						has_cosmetic_tag = TUR_REP
+						has_cosmetic_tag = TUR_republic
 					}
 					FROM = {
 						tag = RUS
@@ -4960,11 +4986,6 @@
 					}
 					random_list = {
 						15 = { TUR = { set_country_flag = HISTORICAL_TRIUMVIRATE } }
-						15 = { TUR = { set_country_flag = AI_TUR_empower_the_sultan_path } }
-						15 = { TUR = { set_country_flag = TUR_HURRIYET_VE_ITILAF } }
-						15 = { TUR = { set_country_flag = TUR_PROTECT_DEMOCRACY } }
-						15 = { TUR = { set_country_flag = TUR_VATAN_VE_HURRIYET_CEMIYETI } }
-						15 = { TUR = { set_country_flag = TUR_FORM_A_LEFTIST_PARLIAMENT } }
 					}
 				}
 			}

@@ -21,8 +21,16 @@ spriteTypes = {
 	
 	#OTTOMAN
 	spriteType = {
-		name = "GFX_decision_category_tur_minorities"
-		texturefile = "gfx/interface/decisions/decision_category_tur_minorities.png"
+		name = "GFX_decision_category_TUR_management_of_minorities"
+		texturefile = "gfx/interface/decisions/decision_category_TUR_management_of_minorities.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_ALB_management_of_minorities"
+		texturefile = "gfx/interface/decisions/decision_category_ALB_management_of_minorities.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_minority_state_modifier_bg"
+		texturefile = "gfx/interface/decisions/TUR_minority_state_modifier_bg.png"
 	}
 	spriteType = {
 		name = "GFX_decision_TUR_minority_armenia"
@@ -45,8 +53,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_TUR_minority_albania.png"
 	}
 	spriteType = {
-		name = "GFX_decision_TUR_minority_southslav"
-		texturefile = "gfx/interface/decisions/decision_TUR_minority_southslav.png"
+		name = "GFX_decision_TUR_minority_south_slavic"
+		texturefile = "gfx/interface/decisions/decision_TUR_minority_south_slavic.png"
 	}
 	spriteType = {
 		name = "GFX_decision_TUR_minority_georgia"
@@ -77,8 +85,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_TUR_minority_albania_2.png"
 	}
 	spriteType = {
-		name = "GFX_decision_TUR_minority_southslav_2"
-		texturefile = "gfx/interface/decisions/decision_TUR_minority_southslav_2.png"
+		name = "GFX_decision_TUR_minority_south_slavic_2"
+		texturefile = "gfx/interface/decisions/decision_TUR_minority_south_slavic_2.png"
 	}
 	spriteType = {
 		name = "GFX_decision_TUR_minority_georgia_2"
@@ -89,12 +97,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_TUR_minority_romania_2.png"
 	}
 	spriteType = {
-		name = "GFX_TUR_libyanwar_decision"
-		texturefile = "gfx/interface/decisions/TUR_libyanwar_decision.png"
+		name = "GFX_decision_category_TUR_call_for_the_trablusgarp_war"
+		texturefile = "gfx/interface/decisions/decision_category_TUR_call_for_the_trablusgarp_war.png"
 	}
 	spriteType = {
-		name = "GFX_TUR_balkanwar_decision"
-		texturefile = "gfx/interface/decisions/TUR_balkanwar_decision.png"
+		name = "GFX_decision_category_TUR_call_for_the_balkan_war"
+		texturefile = "gfx/interface/decisions/decision_category_TUR_call_for_the_balkan_war.png"
 	}
 	spriteType = {
 		name = "GFX_decision_generic_fort"
@@ -117,16 +125,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/modifiers_tur_pan_turkic_propaganda.png"
 	}
 	SpriteType = {
-		name = "GFX_modifiers_TUR_azerbaijani_cooperation"
-		texturefile = "gfx/interface/ideas/TUR/TUR_azerbaijani_cooperation.png"
-	}
-	SpriteType = {
-		name = "GFX_modifiers_TUR_industry_minority"
-		texturefile = "gfx/interface/ideas/TUR/TUR_industry_minority.png"
-	}
-	SpriteType = {
-		name = "GFX_modifiers_TUR_ottoman_claimed_state"
-		texturefile = "gfx/interface/ideas/TUR/TUR_ottoman_claimed_state.png"
+		name = "GFX_modifiers_TUR_azerbaijani_minority"
+		texturefile = "gfx/interface/ideas/TUR/TUR_azerbaijani_minority.png"
 	}
 	spriteType = {
 		name = "GFX_decision_TUR_turkish_assimilation"
@@ -149,16 +149,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_protect_muslim_states.png"
 	}
 	spriteType = {
-		name = "GFX_decision_unite_with_muslim_brother"
-		texturefile = "gfx/interface/decisions/decision_unite_with_muslim_brother.png"
-	}
-	spriteType = {
 		name = "GFX_decision_seyhulislam_sultan"
 		texturefile = "gfx/interface/decisions/decision_seyhulislam_sultan.png"
 	}
 	spriteType = {
-		name = "GFX_TUR_officer_struggle_decision"
-		texturefile = "gfx/interface/decisions/TUR_officer_struggle_decision.png"
+		name = "GFX_decision_category_TUR_officer_struggle"
+		texturefile = "gfx/interface/decisions/decision_category_TUR_officer_struggle.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_cult_of_ittihat_ve_terakki"
+		texturefile = "gfx/interface/decisions/TUR_cult_of_ittihat_ve_terakki.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_cult_of_ittihat_ve_terakki_picture"
+		texturefile = "gfx/interface/decisions/TUR_cult_of_ittihat_ve_terakki_picture.png"
 	}
 	spriteType = {
 		name = "generic_ottoman_officer"
@@ -169,7 +173,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_TUR_support_islamists.png"
 	}
 	spriteType = {
-		name = "generic_crescent"
+		name = "GFX_decision_generic_crescent"
 		texturefile = "gfx/interface/decisions/generic_crescent.png"
 	}
 	spriteType = {
@@ -241,12 +245,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/parliament_sultan.png"
 	}
 	spriteType = {
-		name = "GFX_TUR_principles_of_the_people_decision"
-		texturefile = "gfx/interface/decisions/TUR_principles_of_the_people_decision.png"
-	}
-	spriteType = {
-		name = "GFX_TUR_literacy_campaigns_in_states"
-		texturefile = "gfx/interface/decisions/TUR_literacy_campaigns_in_states.png"
+		name = "GFX_decision_category_generic_research"
+		texturefile = "gfx/interface/decisions/decision_category_generic_research.png"
 	}
 	spriteType = {
 		name = "GFX_decision_greektrain"
@@ -288,24 +288,68 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ottoman_minority_konstantiniyye"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_konstantiniyye.dds"
-        noOfFrames = 4
+        noOfFrames = 5
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_konstantiniyye_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_konstantiniyye_ahd_i_milli.dds"
+        noOfFrames = 5
         transparencecheck = yes
 	}
 	SpriteType = {
 		name = "GFX_ottoman_minority_catalca"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_catalca.dds"
         noOfFrames = 3
-        transparencecheck = yes
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_catalca_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_catalca_ahd_i_milli.dds"
+        noOfFrames = 3
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_catalca_autonomy"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_catalca_autonomy.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_catalca_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_catalca_autonomy_ahd_i_milli.dds"
+        allwaystransparent = yes
 	}
 	SpriteType = {
 		name = "GFX_ottoman_minority_izmit"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_izmit.dds"
-        noOfFrames = 4
+		noOfFrames = 4
         transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_izmit_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_izmit_ahd_i_milli.dds"
+        noOfFrames = 4
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_izmit_autonomy"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_izmit_autonomy.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_izmit_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_izmit_autonomy_ahd_i_milli.dds"
+        allwaystransparent = yes
 	}
 	SpriteType = {
 		name = "GFX_ottoman_minority_tekirdag"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_tekirdag.dds"
+        noOfFrames = 4
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_tekirdag_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_tekirdag_ahd_i_milli.dds"
         noOfFrames = 4
         transparencecheck = yes
 	}
@@ -316,8 +360,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_gelibolu_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_gelibolu_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_edirne"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_edirne.dds"
+        noOfFrames = 4
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_edirne_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_edirne_ahd_i_milli.dds"
         noOfFrames = 4
         transparencecheck = yes
 	}
@@ -328,8 +384,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_orestiada_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_orestiada_ahd_i_milli.dds"
+        noOfFrames = 4
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_tirnovacik"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_tirnovacik.dds"
+        noOfFrames = 4
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_tirnovacik_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_tirnovacik_ahd_i_milli.dds"
         noOfFrames = 4
         transparencecheck = yes
 	}
@@ -340,8 +408,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_western_thrace_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_western_thrace_ahd_i_milli.dds"
+        noOfFrames = 4
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_rumelia"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_rumelia.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_rumelia_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_rumelia_ahd_i_milli.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -360,13 +440,13 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ottoman_minority_selanik"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_selanik.dds"
-        noOfFrames = 3
+        noOfFrames = 4
         transparencecheck = yes
 	}
 	SpriteType = {
 		name = "GFX_ottoman_minority_selanik_albania"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_selanik_albania.dds"
-        noOfFrames = 3
+        noOfFrames = 4
         transparencecheck = yes
 	}
 	SpriteType = {
@@ -490,8 +570,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_aegean_islands_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_aegean_islands_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_samos"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_samos.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_samos_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_samos_ahd_i_milli.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -501,8 +593,19 @@ spriteTypes = {
         allwaystransparent = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_samos_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_samos_autonomy_ahd_i_milli.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_ikaria"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_ikaria.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_ikaria_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_ikaria_ahd_i_milli.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -512,14 +615,31 @@ spriteTypes = {
         allwaystransparent = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_ikaria_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_ikaria_autonomy_ahd_i_milli.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_dodecanese"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_dodecanese.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_dodecanese_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_dodecanese_ahd_i_milli.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_rhodes"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_rhodes.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_rhodes_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_rhodes_ahd_i_milli.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -809,8 +929,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_bandirma_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_bandirma_ahd_i_milli.dds"
+        noOfFrames = 4
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_karesi"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_karesi.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_karesi_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_karesi_ahd_i_milli.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -821,13 +953,36 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_canakkale_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_canakkale_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_canakkale_autonomy"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_canakkale_autonomy.dds"
         allwaystransparent = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_canakkale_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_canakkale_autonomy_ahd_i_milli.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_izmir"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_izmir.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_izmir_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_izmir_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_izmir_izmir"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_izmir_izmir.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -838,8 +993,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_aydin_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_aydin_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_antalya"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_antalya.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_antalya_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_antalya_ahd_i_milli.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -850,8 +1017,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_mentese_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_mentese_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_denizli"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_denizli.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_denizli_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_denizli_ahd_i_milli.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -862,8 +1041,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_bursa_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_bursa_ahd_i_milli.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_kutahya"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_kutahya.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_kutahya_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_kutahya_ahd_i_milli.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -874,8 +1065,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_kastamonu_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_kastamonu_ahd_i_milli.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_ankara"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_ankara.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_ankara_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_ankara_ahd_i_milli.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -886,8 +1089,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_yozgat_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_yozgat_ahd_i_milli.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_afyon"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_afyon.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_afyon_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_afyon_ahd_i_milli.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -898,8 +1113,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_konya_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_konya_ahd_i_milli.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_adana"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_adana.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_adana_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_adana_ahd_i_milli.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -910,8 +1137,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_cyprus_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_cyprus_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_kayseri"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_kayseri.dds"
+        noOfFrames = 4
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_kayseri_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_kayseri_ahd_i_milli.dds"
         noOfFrames = 4
         transparencecheck = yes
 	}
@@ -921,8 +1160,19 @@ spriteTypes = {
         allwaystransparent = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_kayseri_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_kayseri_autonomy_ahd_i_milli.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_sivas"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_sivas.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_sivas_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_sivas_ahd_i_milli.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -932,8 +1182,19 @@ spriteTypes = {
         allwaystransparent = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_sivas_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_sivas_autonomy_ahd_i_milli.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_samsun"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_samsun.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_samsun_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_samsun_ahd_i_milli.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -944,8 +1205,26 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_trebizond_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_trebizond_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_trebizond_trabzon"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_trebizond_trabzon.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_erzurum"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_erzurum.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_erzurum_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_erzurum_ahd_i_milli.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -955,8 +1234,25 @@ spriteTypes = {
         allwaystransparent = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_erzurum_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_erzurum_autonomy_ahd_i_milli.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_diyarbakir"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_diyarbakir.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_diyarbakir_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_diyarbakir_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_diyarbakir_diyarbakir"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_diyarbakir_diyarbakir.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -966,8 +1262,36 @@ spriteTypes = {
         allwaystransparent = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_diyarbakir_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_diyarbakir_autonomy_ahd_i_milli.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_diyarbakir_autonomy_diyarbakir"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_diyarbakir_autonomy_diyarbakir.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_osmaniye"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_osmaniye.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_osmaniye_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_osmaniye_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_osmaniye_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_osmaniye_syria.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_osmaniye_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_osmaniye_syria_egypt.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -978,8 +1302,38 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_antakya_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_antakya_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_antakya_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_antakya_syria.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_antakya_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_antakya_syria_egypt.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_urfa"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_urfa.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_urfa_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_urfa_ahd_i_milli.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_urfa_diyarbakir"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_urfa_diyarbakir.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -990,8 +1344,19 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_van_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_van_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_van_autonomy"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_van_autonomy.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_van_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_van_autonomy_ahd_i_milli.dds"
         allwaystransparent = yes
 	}
 	SpriteType = {
@@ -1001,8 +1366,19 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_hakkari_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_hakkari_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_hakkari_autonomy"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_hakkari_autonomy.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_hakkari_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_hakkari_autonomy_ahd_i_milli.dds"
         allwaystransparent = yes
 	}
 	SpriteType = {
@@ -1012,8 +1388,19 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_kars_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_kars_ahd_i_milli.dds"
+        noOfFrames = 4
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_kars_autonomy"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_kars_autonomy.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_kars_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_kars_autonomy_ahd_i_milli.dds"
         allwaystransparent = yes
 	}
 	SpriteType = {
@@ -1023,8 +1410,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_artvin_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_artvin_ahd_i_milli.dds"
+        noOfFrames = 4
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_batumi"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_batumi.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_batumi_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_batumi_ahd_i_milli.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -1108,8 +1507,44 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_aleppo_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_aleppo_ahd_i_milli.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_aleppo_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_aleppo_syria.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_aleppo_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_aleppo_syria_egypt.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_ayn_al_arab"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_ayn_al_arab.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_ayn_al_arab_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_ayn_al_arab_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_ayn_al_arab_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_ayn_al_arab_syria.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_ayn_al_arab_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_ayn_al_arab_syria_egypt.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -1120,8 +1555,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_mosul_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_mosul_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_erbil"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_erbil.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_erbil_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_erbil_ahd_i_milli.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -1138,8 +1585,19 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_mamuret_ul_aziz_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_mamuret_ul_aziz_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_mamuret_ul_aziz_autonomy"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_mamuret_ul_aziz_autonomy.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_mamuret_ul_aziz_autonomy_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_mamuret_ul_aziz_autonomy_ahd_i_milli.dds"
         allwaystransparent = yes
 	}
 	SpriteType = {
@@ -1155,8 +1613,26 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_kirkuk_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_kirkuk_ahd_i_milli.dds"
+        noOfFrames = 4
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_al_hasakah"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_al_hasakah.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_al_hasakah_ahd_i_milli"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_al_hasakah_ahd_i_milli.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_al_hasakah_diyarbakir"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_al_hasakah_diyarbakir.dds"
         noOfFrames = 3
         transparencecheck = yes
 	}
@@ -1263,8 +1739,32 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_latakia_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_latakia_syria.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_latakia_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_latakia_syria_egypt.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_damascus"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_damascus.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_damascus_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_damascus_syria.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_damascus_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_damascus_syria_egypt.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -1281,14 +1781,48 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_mount_lebanon_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_mount_lebanon_syria.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_mount_lebanon_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_mount_lebanon_syria_egypt.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_mount_lebanon_autonomy"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_mount_lebanon_autonomy.dds"
         allwaystransparent = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_mount_lebanon_autonomy_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_mount_lebanon_autonomy_syria.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_mount_lebanon_autonomy_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_mount_lebanon_autonomy_syria_egypt.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_palestine"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_palestine.dds"
-        noOfFrames = 2
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_palestine_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_palestine_syria.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_palestine_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_palestine_syria_egypt.dds"
+        noOfFrames = 3
         transparencecheck = yes
 	}
 	SpriteType = {
@@ -1297,9 +1831,31 @@ spriteTypes = {
         allwaystransparent = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_palestine_autonomy_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_palestine_autonomy_syria.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_palestine_autonomy_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_palestine_autonomy_syria_egypt.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_haifa"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_haifa.dds"
-        noOfFrames = 2
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_haifa_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_haifa_syria.dds"
+        noOfFrames = 3
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_haifa_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_haifa_syria_egypt.dds"
+        noOfFrames = 3
         transparencecheck = yes
 	}
 	SpriteType = {
@@ -1309,13 +1865,47 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_beersheba_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_beersheba_syria.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_beersheba_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_beersheba_syria_egypt.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_beersheba_autonomy"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_beersheba_autonomy.dds"
         allwaystransparent = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_beersheba_autonomy_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_beersheba_autonomy_syria.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_beersheba_autonomy_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_beersheba_autonomy_syria_egypt.dds"
+        allwaystransparent = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_moab"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_moab.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_moab_syria"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_moab_syria.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_moab_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_moab_syria_egypt.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -1328,6 +1918,12 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ottoman_minority_sinai"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_sinai.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_sinai_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_sinai_syria_egypt.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -1444,8 +2040,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_suez_canal_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_suez_canal_syria_egypt.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_cairo"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_cairo.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_cairo_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_cairo_syria_egypt.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -1456,8 +2064,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_marsa_matruh_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_marsa_matruh_syria_egypt.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_eastern_desert"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_eastern_desert.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_eastern_desert_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_eastern_desert_syria_egypt.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -1468,14 +2088,32 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_aswan_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_aswan_syria_egypt.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_khartoum"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_khartoum.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_khartoum_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_khartoum_syria_egypt.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_sudanese_desert"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_sudanese_desert.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_sudanese_desert_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_sudanese_desert_syria_egypt.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -1492,20 +2130,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_western_desert_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_western_desert_syria_egypt.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_dscharabub"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_dscharabub.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
 	SpriteType = {
-		name = "GFX_ottoman_minority_northern_chad"
-		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_northern_chad.dds"
-        noOfFrames = 2
-        transparencecheck = yes
-	}
-	SpriteType = {
-		name = "GFX_ottoman_minority_tibesti"
-		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_tibesti.dds"
+		name = "GFX_ottoman_minority_dscharabub_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_dscharabub_syria_egypt.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -1516,8 +2154,20 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
+		name = "GFX_ottoman_minority_kufra_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_kufra_syria_egypt.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
 		name = "GFX_ottoman_minority_south_dscharabub"
 		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_south_dscharabub.dds"
+        noOfFrames = 2
+        transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_ottoman_minority_south_dscharabub_syria_egypt"
+		texturefile = "gfx/interface/decisions/ottoman_minority_gui/ottoman_minority_south_dscharabub_syria_egypt.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
@@ -1590,14 +2240,8 @@ spriteTypes = {
         transparencecheck = yes
 	}
 	SpriteType = {
-		name = "GFX_TUR_opda_decision_icon"
-		texturefile = "gfx/interface/decisions/TUR_opda_decision_icon.png"
-        transparencecheck = yes
-	}
-	SpriteType = {
-		name = "GFX_TUR_army_modernization"
-		texturefile = "gfx/interface/decisions/TUR_army_modernization.png"
-        transparencecheck = yes
+		name = "GFX_decision_categpry_TUR_harbiye_nezareti"
+		texturefile = "gfx/interface/decisions/decision_categpry_TUR_harbiye_nezareti.png"
 	}
 
 	# QING/CHINA
@@ -1634,12 +2278,333 @@ spriteTypes = {
 		name = "GFX_decision_SRA_kuban_rada_category"
 		texturefile = "gfx/interface/decisions/kuban_rada.png"
 	}
+
+	SpriteType = {
+		name = "GFX_TUR_ittihadist_faction"
+		texturefile = "gfx/interface/decisions/TUR_ittihadist_faction.png"
+	}
+	SpriteType = {
+		name = "GFX_TUR_itilafist_faction"
+		texturefile = "gfx/interface/decisions/TUR_itilafist_faction.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_category_TUR_management_of_minorities_picture"
+		texturefile = "gfx/interface/decisions/TUR_management_of_minorities_picture.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_category_ALB_management_of_minorities_picture"
+		texturefile = "gfx/interface/decisions/ALB_management_of_minorities_picture.png"
+	}
+	SpriteType = {
+		name = "GFX_TUR_action_army_31_march"
+		texturefile = "gfx/interface/decisions/TUR_action_army_31_march.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_ittihadist_coup"
+		texturefile = "gfx/interface/decisions/decision_ittihadist_coup.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_itilafist_coup"
+		texturefile = "gfx/interface/decisions/decision_itilafist_coup.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_generic_army_support_ittihadist"
+		texturefile = "gfx/interface/decisions/decision_generic_army_support_ittihadist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_generic_police_action_ittihadist"
+		texturefile = "gfx/interface/decisions/decision_generic_police_action_ittihadist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_eng_trade_unions_support_ittihadist"
+		texturefile = "gfx/interface/decisions/decision_eng_trade_unions_support_ittihadist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_oppression_ittihadist"
+		texturefile = "gfx/interface/decisions/decision_oppression_ittihadist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_generic_arrest_ittihadist"
+		texturefile = "gfx/interface/decisions/decision_generic_arrest_ittihadist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_generic_break_treaty_ittihadist"
+		texturefile = "gfx/interface/decisions/decision_generic_break_treaty_ittihadist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_SOV_place_hq_ittihadist"
+		texturefile = "gfx/interface/decisions/decision_SOV_place_hq_ittihadist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_generic_army_support_itilafist"
+		texturefile = "gfx/interface/decisions/decision_generic_army_support_itilafist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_generic_police_action_itilafist"
+		texturefile = "gfx/interface/decisions/decision_generic_police_action_itilafist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_eng_trade_unions_support_itilafist"
+		texturefile = "gfx/interface/decisions/decision_eng_trade_unions_support_itilafist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_oppression_itilafist"
+		texturefile = "gfx/interface/decisions/decision_oppression_itilafist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_generic_arrest_itilafist"
+		texturefile = "gfx/interface/decisions/decision_generic_arrest_itilafist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_generic_break_treaty_itilafist"
+		texturefile = "gfx/interface/decisions/decision_generic_break_treaty_itilafist.png"
+	}
+	SpriteType = {
+		name = "GFX_decision_SOV_place_hq_itilafist"
+		texturefile = "gfx/interface/decisions/decision_SOV_place_hq_itilafist.png"
+	}
 	spriteType = {
 		name = "GFX_decision_kuban_rada"
 		texturefile = "gfx/interface/decisions/decision_kuban_government.png"
 	}
 	spriteType = {
+		name = "GFX_decision_category_TRS_arabist_movement"
+		texturefile = "gfx/interface/decisions/decision_category_TRS_arabist_movement.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_armenian_population"
+		texturefile = "gfx/interface/decisions/TUR_armenian_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_armenian_state"
+		texturefile = "gfx/interface/decisions/TUR_armenian_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_arab_population"
+		texturefile = "gfx/interface/decisions/TUR_arab_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_arab_state"
+		texturefile = "gfx/interface/decisions/TUR_arab_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_greek_population"
+		texturefile = "gfx/interface/decisions/TUR_greek_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_greek_state"
+		texturefile = "gfx/interface/decisions/TUR_greek_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_jewish_population"
+		texturefile = "gfx/interface/decisions/TUR_jewish_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_jewish_state"
+		texturefile = "gfx/interface/decisions/TUR_jewish_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_south_slavic_population"
+		texturefile = "gfx/interface/decisions/TUR_south_slavic_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_south_slavic_state"
+		texturefile = "gfx/interface/decisions/TUR_south_slavic_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_albanian_population"
+		texturefile = "gfx/interface/decisions/TUR_albanian_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_albanian_state"
+		texturefile = "gfx/interface/decisions/TUR_albanian_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_kurdish_population"
+		texturefile = "gfx/interface/decisions/TUR_kurdish_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_kurdish_state"
+		texturefile = "gfx/interface/decisions/TUR_kurdish_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_assyrian_population"
+		texturefile = "gfx/interface/decisions/TUR_assyrian_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_assyrian_state"
+		texturefile = "gfx/interface/decisions/TUR_assyrian_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_georgian_population"
+		texturefile = "gfx/interface/decisions/TUR_georgian_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_georgian_state"
+		texturefile = "gfx/interface/decisions/TUR_georgian_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_romanian_population"
+		texturefile = "gfx/interface/decisions/TUR_romanian_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_romanian_state"
+		texturefile = "gfx/interface/decisions/TUR_romanian_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_azerbaijani_population"
+		texturefile = "gfx/interface/decisions/TUR_azerbaijani_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_azerbaijani_state"
+		texturefile = "gfx/interface/decisions/TUR_azerbaijani_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_turkish_population"
+		texturefile = "gfx/interface/decisions/TUR_turkish_population.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_turkish_state"
+		texturefile = "gfx/interface/decisions/TUR_turkish_state.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_millet_mode_frame"
+		texturefile = "gfx/interface/decisions/TUR_millet_mode_frame.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_millet_mode_bg"
+		texturefile = "gfx/interface/decisions/TUR_millet_mode_bg.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_millet_mode_bar"
+		texturefile = "gfx/interface/decisions/TUR_millet_mode_bar.png"
+		allwaystransparent = yes
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_TUR_millet_mode_switch"
+		texturefile = "gfx/interface/decisions/TUR_millet_mode_switch.png"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_decision_category_TUR_management_of_minorities_picture"
+		texturefile = "gfx/interface/decisions/decision_category_TUR_management_of_minorities_picture.png"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_decision_category_ALB_management_of_minorities_picture"
+		texturefile = "gfx/interface/decisions/decision_category_ALB_management_of_minorities_picture.png"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_TUR_millet_system_population_icon"
+		texturefile = "gfx/interface/decisions/TUR_millet_system_population_icon.png"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_TUR_millet_system_onmap_icon"
+		texturefile = "gfx/interface/decisions/TUR_millet_system_onmap_icon.png"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_TUR_millet_system_description_icon"
+		texturefile = "gfx/interface/decisions/TUR_millet_system_description_icon.png"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_TUR_arab_brainwash"
+		texturefile = "gfx/interface/decisions/TUR_arab_brainwash.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_jewish_brainwash"
+		texturefile = "gfx/interface/decisions/TUR_jewish_brainwash.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_armenian_brainwash"
+		texturefile = "gfx/interface/decisions/TUR_armenian_brainwash.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_south_slavic_brainwash"
+		texturefile = "gfx/interface/decisions/TUR_south_slavic_brainwash.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_greek_brainwash"
+		texturefile = "gfx/interface/decisions/TUR_greek_brainwash.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_turkish_brainwash"
+		texturefile = "gfx/interface/decisions/TUR_turkish_brainwash.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_kurdish_brainwash"
+		texturefile = "gfx/interface/decisions/TUR_kurdish_brainwash.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_assyrian_brainwash"
+		texturefile = "gfx/interface/decisions/TUR_assyrian_brainwash.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_romanian_brainwash"
+		texturefile = "gfx/interface/decisions/TUR_romanian_brainwash.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_georgian_brainwash"
+		texturefile = "gfx/interface/decisions/TUR_georgian_brainwash.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_azerbaijani_brainwash"
+		texturefile = "gfx/interface/decisions/TUR_azerbaijani_brainwash.png"
+	}	
+	spriteType = {	
 		name = "GFX_decision_eng_send_weaponry"
 		texturefile = "gfx/interface/decisions/decision_eng_send_weaponry.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_generic_skull"
+		texturefile = "gfx/interface/decisions/decision_category_generic_skull.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_coat_of_arms"
+		texturefile = "gfx/interface/decisions/TUR_ottoman_coat_of_arms.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_ottoman_coat_of_arms"
+		texturefile = "gfx/interface/decisions/decision_category_ottoman_coat_of_arms.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_government_guided_democracy"
+		texturefile = "gfx/interface/decisions/TUR_ottoman_government_guided_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_government_fascism_group"
+		texturefile = "gfx/interface/decisions/TUR_ottoman_government_fascism_group.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_government_TUR_autocracy"
+		texturefile = "gfx/interface/decisions/TUR_ottoman_government_TUR_autocracy.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_government_democratic_group"
+		texturefile = "gfx/interface/decisions/TUR_ottoman_government_democratic_group.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_government_vanguardism"
+		texturefile = "gfx/interface/decisions/TUR_ottoman_government_vanguardism.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_government_market_socialism"
+		texturefile = "gfx/interface/decisions/TUR_ottoman_government_market_socialism.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_government_reformist_socialism"
+		texturefile = "gfx/interface/decisions/TUR_ottoman_government_reformist_socialism.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_government_despotism"
+		texturefile = "gfx/interface/decisions/TUR_ottoman_government_despotism.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_ottoman_government_classical_liberalism"
+		texturefile = "gfx/interface/decisions/TUR_ottoman_government_classical_liberalism.png"
 	}
 }

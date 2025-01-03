@@ -26,7 +26,7 @@ technologies = {
 		path = {
 			leads_to_tech = early_grenades
 			research_cost_coeff = 1
-		}	
+		}
 		research_cost = 1.5
 		start_year = 1904
 		folder = {
@@ -40,6 +40,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1000
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	infantry_weapons1 = {
 		enable_equipments = {
@@ -66,6 +67,7 @@ technologies = {
 				date > 1910.1.3
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	infantry_weapons2 = {
 		category_light_infantry = {
@@ -102,6 +104,7 @@ technologies = {
 				date > 1913.1.1
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	improved_infantry_weapons_2 = {
 		category_light_infantry = {
@@ -141,6 +144,7 @@ technologies = {
 				date < 1915.1.1
 			}		
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}		
 	improved_infantry_weapons = {
 		enable_equipments = {
@@ -175,6 +179,7 @@ technologies = {
 				factor = 0.5
 			}			
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	infantry_at = {
 		category_all_infantry = {
@@ -213,6 +218,7 @@ technologies = {
 				date > 1920.1.1
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	infantry_at2 = {
 		category_all_infantry = {
@@ -244,6 +250,7 @@ technologies = {
 				date > 1922.1.1
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	advanced_infantry_weapons2 = {
 		category_light_infantry = {
@@ -288,6 +295,7 @@ technologies = {
 				date > 1918.1.1
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	advanced_infantry_weapons = {
 		enable_equipments = {
@@ -323,6 +331,7 @@ technologies = {
 				factor = 0.5
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	advanced_infantry_weapons3 = {
 		category_light_infantry = {
@@ -363,6 +372,7 @@ technologies = {
 				date > 1924.1.1
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	advanced_infantry_weapons4 = {
 		category_light_infantry = {
@@ -399,8 +409,9 @@ technologies = {
 				date > 1926.1.1
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
-	support_weapons = {		
+	support_weapons = {
 		category_light_infantry = {
 			defense = 0.02
 			breakthrough = 0.02
@@ -458,8 +469,9 @@ technologies = {
 				factor = 2
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
-	early_grenades = {		
+	early_grenades = {
 		category_all_infantry = {
 			breakthrough = 0.05
 		}
@@ -504,8 +516,8 @@ technologies = {
 				factor = 2
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}	
-
 
 	support_weapons2 = {
 		category_light_infantry = {
@@ -557,6 +569,7 @@ technologies = {
 				factor = 2
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	basic_grenades = {		
 		category_all_infantry = {
@@ -599,8 +612,8 @@ technologies = {
 				factor = 2
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
-
 
 	support_weapons3 = {
 		category_light_infantry = {
@@ -659,6 +672,7 @@ technologies = {
 				factor = 2
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 
 	improved_grenades = {		
@@ -706,6 +720,7 @@ technologies = {
 				factor = 2
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 
 	support_weapons4 = {
@@ -764,6 +779,7 @@ technologies = {
 				factor = 2
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 
 	advanced_grenades = {		
@@ -803,8 +819,8 @@ technologies = {
 				factor = 2
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
-
 
 	support_weapons5 = {
 		category_light_infantry = {
@@ -856,6 +872,7 @@ technologies = {
 				factor = 2
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	support_weapons6 = {
 		category_light_infantry = {
@@ -907,6 +924,7 @@ technologies = {
 				factor = 2
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 	support_weapons7 = {
 		category_light_infantry = {
@@ -954,6 +972,7 @@ technologies = {
 				factor = 2
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_infantry = yes }
 	}
 
 	motorised_infantry = {
@@ -1003,6 +1022,7 @@ technologies = {
 				date > 1918.1.1
 			}
 		}
+		on_research_complete = { TUR_domestic_weapon_research_motorized = yes }
 	}
 	motorised_infantry2 = {
 		enable_subunits = {
@@ -1010,19 +1030,18 @@ technologies = {
 			mot_recon
 			mot_artillery_brigade
 		}
-		on_research_complete_limit = {
-			NOT = {
-				has_template_containing_unit = motorized
-			}
-			NOT = {
-				has_completed_focus = USA_maneuver_divison
-			}
-		}
 		on_research_complete = {
-			hidden_effect = {
-				load_oob = "unlock_motorized"
-			}			
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			if = {
+				limit = {
+					NOT = { has_template_containing_unit = motorized }
+					NOT = { has_completed_focus = USA_maneuver_divison }
+				}
+				hidden_effect = {
+					load_oob = "unlock_motorized"
+				}
+				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			}
+			TUR_domestic_weapon_research_motorized = yes
 		}
 		research_cost = 1
 		start_year = 1920
@@ -1614,6 +1633,35 @@ technologies = {
 		engineer = {
 			fort = {
 				attack = 0.20				
+			}
+		}
+	}
+	TUR_camelry_recon = {
+		research_cost = 1
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			camelry_recon
+		}
+		#If you change these
+		infantry = {
+			desert = {
+				attack = 0.05
+				movement = 0.1
+			}
+		}
+		cavalry = {
+			desert = {
+				attack = 0.05
+				movement = 0.1
+			}
+		}
+		camelry = {
+			desert = {
+				attack = 0.05
+				movement = 0.1
 			}
 		}
 	}

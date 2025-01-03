@@ -2176,7 +2176,7 @@ shared_focus = {
 
 shared_focus = {
 	id = fortification_effort
-	icon = GFX_focus_fortification
+	icon = GFX_goal_generic_construct_military
 	relative_position_id = new_canons
 	prerequisite = {
 		focus = capital_manoeuvers
@@ -2204,7 +2204,7 @@ shared_focus = {
 
 shared_focus = {
 	id = fortification_focus
-	icon = GFX_focus_fortification
+	icon = GFX_goal_generic_fortify_city
 	relative_position_id = fortification_effort
 	prerequisite = {
 		focus = fortification_effort

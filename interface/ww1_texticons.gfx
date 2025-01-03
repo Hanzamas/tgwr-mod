@@ -64,6 +64,18 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2		
 	}
+
+	spriteType = {
+		name = "GFX_nato_support_unit_camelry_recon_icon_small"
+		texturefile = "gfx/texticons/nato_unit_recon_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_unit_support_camelry_recon_icon_small"
+		texturefile = "gfx/texticons/support_unit_camelry_recon_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
 	#Heavy Artillery (early howitzer)
 	spriteType = {
 		name = "GFX_unit_heavy_artillery_brigade_icon_small"
@@ -247,6 +259,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_ww1_flag_ISR"
+		texturefile = "gfx/flags/small/ISR_neutrality.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_ww1_flag_ALB"
 		texturefile = "gfx/flags/small/ALB_democratic.tga"
 		legacy_lazy_load = no
@@ -283,18 +300,38 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_ww1_flag_TUR"
-		texturefile = "gfx/flags/small/TUR_REP.tga"
+		texturefile = "gfx/flags/small/TUR_republic.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_ww1_flag_autonomy"
-		texturefile = "gfx/interface/decisions/decision_generic_autonomy_texticon.png"
+		name = "GFX_sabotaged_resource_texticon"
+		texturefile = "gfx/texticons/sabotaged_resource_texticon.png"
 		legacy_lazy_load = no
 	}
 	# what in the god damn?!
 	spriteType = {
 		name = "GFX_war_support"
 		texturefile = "gfx/texticons/war_support_text.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TUR_mustafa_rahmi_texticon"
+		texturefile = "gfx/leaders/TUR/TUR_mustafa_rahmi.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TUR_cemal_azmi_texticon"
+		texturefile = "gfx/leaders/TUR/TUR_cemal_azmi.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TUR_mehmed_resid_texticon"
+		texturefile = "gfx/leaders/TUR/TUR_mehmed_resid.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TUR_haci_adil_texticon"
+		texturefile = "gfx/leaders/TUR/TUR_haci_adil.png"
 		legacy_lazy_load = no
 	}
 }

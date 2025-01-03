@@ -35,10 +35,16 @@ TUR_alone = {
 	}
 	ai_strategy = {
 		type = alliance
+		id = "GER"
+		value = -200
+	}
+	ai_strategy = {
+		type = alliance
 		id = "SER"
 		value = -200
 	}
 }
+
 TUR_dangerous_to_stay_in_revolting_balkans = {
 	allowed = {
 		original_tag = TUR
@@ -122,7 +128,6 @@ TUR_dangerous_to_stay_in_revolting_balkans = {
 		value = 100
 	}
 }
-
 
 TUR_avoid_troops_movement_while_serbia_is_justifing_war = {
 	allowed = {
@@ -214,6 +219,7 @@ balkans_contain_ottomans = {
 		value = 50
 	}
 }
+
 TUR_prepare_for_great_war = {
 	allowed = {
 		original_tag = TUR
@@ -242,6 +248,7 @@ TUR_prepare_for_great_war = {
 		value = 50
 	}
 }
+
 TUR_focus_on_caucasus_front = {
 	allowed = {
 		original_tag = TUR
@@ -278,6 +285,7 @@ TUR_focus_on_caucasus_front = {
 		execution_type = balanced
 	}
 }
+
 TUR_focus_on_middle_east = {
 	allowed = {
 		original_tag = TUR
@@ -301,18 +309,13 @@ TUR_focus_on_middle_east = {
 	}
 	ai_strategy = {
 		type = front_unit_request
-		tag = FRA
-		value = 100
-	}
-	ai_strategy = {
-		type = front_unit_request
 		tag = EGY
 		value = 100
 	}
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
-		value = -60
+		value = -40
 	}
 	ai_strategy = {
 		type = conquer
@@ -334,44 +337,8 @@ TUR_focus_on_middle_east = {
 		ordertype = front
 		execution_type = balanced
 	}
-	ai_strategy = {
-		type = front_control
-		tag = ENG
-		priority = 100
-		ordertype = front
-		execution_type = balanced
-	}
 }
-# TUR_prepare_sinai_front = {
-# 	allowed = {
-# 		OR = {
-# 			original_tag = TUR
-# 		}
-# 		is_historical_focus_on = yes
-# 	}
-# 	enable = {
-# 		date > 1914.1.1
-# 		NOT = {
-# 			has_global_flag = great_war_ends
-# 			has_war_with = ENG
-# 		}
-# 	}
-# 	abort_when_not_enabled = yes
 
-# 	ai_strategy = {
-# 		type = put_unit_buffers
-# 		ratio = 0.35
-# 		states = {
-# 			856
-# 		}
-# 		subtract_fronts_from_need = yes
-# 	}
-# 	ai_strategy = {
-# 		type = front_unit_request
-# 		tag = EGY
-# 		value = 50
-# 	}
-# }
 TUR_prepare_russian_front = {
 	allowed = {
 		original_tag = TUR
@@ -405,6 +372,7 @@ TUR_prepare_russian_front = {
 		value = 50
 	}
 }
+
 TUR_take_sinai = {
 	allowed = {
 		original_tag = TUR
@@ -454,10 +422,9 @@ TUR_take_sinai = {
 				owns_state = 447
 			}
     	}
-		ratio = 0.4
 		priority = 50
 		ordertype = front
-		execution_type = rush
+		execution_type = balanced
 		execute_order = yes
 	}
 }
@@ -961,176 +928,6 @@ TUR_dont_garrison_thessaloniki_in_bw1_war = {
 	}
 }
 
-TUR_befriend_major_investors = {
-	allowed = {
-		original_tag = TUR
-	}
-	enable = {
-		focus_progress = {
-			focus = TUR_welcome_western_investments
-			progress > 0.01
-		}
-		GER = {
-			has_opinion	= {
-				target = ROOT
-				value < 75
-			}
-			has_capitulated = no
-			is_subject = no
-		}
-		ENG = {
-			has_opinion	= {
-				target = ROOT
-				value < 75
-			}
-			has_capitulated = no
-			is_subject = no
-		}
-		FRA = {
-			has_opinion	= {
-				target = ROOT
-				value < 75
-			}
-			has_capitulated = no
-			is_subject = no
-		}
-		AUS = {
-			has_opinion	= {
-				target = ROOT
-				value < 75
-			}
-			has_capitulated = no
-			is_subject = no
-		}
-	}
-	abort = {
-		OR = {
-			NOT = { country_exists = GER }
-			has_war_with = GER
-			GER = {
-				OR = {
-					has_opinion	= {
-						target = ROOT
-						value > 80
-					}
-					has_capitulated = yes
-					is_subject = yes
-				}
-			}
-			NOT = { country_exists = ENG }
-			has_war_with = ENG
-			ENG = {
-				OR = {
-					has_opinion	= {
-						target = ROOT
-						value > 80
-					}
-					has_capitulated = yes
-					is_subject = yes
-				}
-			}
-			NOT = { country_exists = FRA }
-			has_war_with = FRA
-			FRA = {
-				OR = {
-					has_opinion	= {
-						target = ROOT
-						value > 80
-					}
-					has_capitulated = yes
-					is_subject = yes
-				}
-			}
-			NOT = { country_exists = AUS }
-			has_war_with = AUS
-			AUS = {
-				OR = {
-					has_opinion	= {
-						target = ROOT
-						value > 80
-					}
-					has_capitulated = yes
-					is_subject = yes
-				}
-			}
-			has_completed_focus = TUR_welcome_western_investments
-		}
-	}
-
-	ai_strategy = {
-		type = diplo_action_desire
-		id = GER
-		target = improve_relation
-		value = 200
-	}
-	ai_strategy = {
-		type = diplo_action_desire
-		id = ENG
-		target = improve_relation
-		value = 200
-	}
-	ai_strategy = {
-		type = diplo_action_desire
-		id = FRA
-		target = improve_relation
-		value = 200
-	}
-	ai_strategy = {
-		type = diplo_action_desire
-		id = AUS
-		target = improve_relation
-		value = 200
-	}
-}
-
-TUR_deal_with_exceptionnal_albanian_revolts = {
-	allowed = {
-		tag = TUR
-	}
-	enable = {
-		TUR = {
-			has_active_mission = enforce_martial_law_in_albania
-		}
-		44 = {
-			is_owned_and_controlled_by = ROOT
-		}
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = put_unit_buffers
-		ratio = 0.3
-		states = {
-			44
-		}
-		subtract_invasions_from_need = no
-		subtract_fronts_from_need = no
-	}
-}
-
-TUR_deal_with_exceptionnal_albanian_revolts_growing = {
-	allowed = {
-		tag = TUR
-	}
-	enable = {
-		TUR = {
-			has_active_mission = reinforce_the_local_army
-		}
-		44 = {
-			is_owned_and_controlled_by = ROOT
-		}
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = put_unit_buffers
-		ratio = 0.5
-		states = {
-			44
-		}
-		subtract_invasions_from_need = no
-		subtract_fronts_from_need = no
-	}
-}
-
 TUR_ignore_najran = {
 	allowed = {
 		original_tag = TUR
@@ -1296,49 +1093,189 @@ TUR_ignore_AMR = {
 }
 
 
-TUR_ignore_russian_civil_war_iw = {
+TUR_market_access = {
 	allowed = {
-		original_tag = TUR
-	}
-	enable = {
-		has_global_flag = russian_civil_war
-	}
-	abort = {
 		OR = {
-			has_government = communism
-			has_global_flag = russian_civil_war_ends
+			tag = ENG
+			tag = FRA
+			tag = GER
+			tag = BEL
+			tag = HOL
+			tag = ITA
+			tag = AUS
+			tag = RUS
+			tag = USA
 		}
 	}
+	enable = {
+		country_exists = TUR
+		has_dynamic_modifier = { modifier = TUR_OPDA_foreign_power }
+		NOT = { has_war_with = TUR }
+	}
 	abort_when_not_enabled = yes
+
 	ai_strategy = {
-		type = ignore
-		id = BUK
-		value = 99999
+		type = equipment_market_trade_desire
+		id = TUR
+		value = 100
+	}
+}
+
+TUR_market_access = {
+	allowed = {
+		OR = {
+			tag = ENG
+			tag = FRA
+			tag = GER
+			tag = BEL
+			tag = HOL
+			tag = ITA
+			tag = AUS
+			tag = RUS
+			tag = USA
+		}
+	}
+	enable = {
+		country_exists = TUR
+		has_dynamic_modifier = { modifier = TUR_OPDA_foreign_power }
+		NOT = { has_war_with = TUR }
+	}
+	enable_reverse = {
+        NOT = { has_completed_focus = TUR_domestic_weapon_companies }
+    }
+    reversed = yes
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = TUR
+		value = 100
+	}
+}
+
+TUR_buy_more_equipment = {
+	allowed = { tag = TUR }
+	enable = { NOT = { has_completed_focus = TUR_domestic_weapon_companies } }
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_buying_threshold
+		id = infantry_equipment
+		value = 1500
 	}
 	ai_strategy = {
-		type = befriend
-		id = BUK
+		type = equipment_market_buying_threshold
+		id = support_equipment
+		value = 350
+	}
+	ai_strategy = {
+		type = equipment_market_buying_threshold
+		id = artillery_equipment
+		value = 300
+	}
+	ai_strategy = {
+		type = equipment_market_buying_threshold
+		id = howitzer_equipment
+		value = 100
+	}
+}
+
+TUR_trade_for_equipment_with_country = {
+	allowed = { tag = TUR }
+	enable = { NOT = { has_completed_focus = TUR_domestic_weapon_companies } }
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = ENG
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = FRA
+		value = 150
+	}
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = GER
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = BEL
+		value = 30
+	}
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = ITA
+		value = -30
+	}
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = AUS
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = RUS
+		value = -100
+	}
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = USA
+		value = 40
+	}
+}
+
+TRS_dont_push_towards_syria = {
+	allowed = { always = yes }
+	enable = {
+		is_in_faction_with = global.TRS_country_cemal_negotiating
+		has_global_flag = TRS_cemal_entente_negotiations_success
+		NOT = { has_global_flag = great_war_ends }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = TRS
+		value = 100
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = TRS
+		value = 50
+	}
+	ai_strategy = {
+		type = conquer
+		id = TRS
 		value = -99999
 	}
 	ai_strategy = {
-		type = ignore
-		id = TRK
-		value = 99999
+		type = front_unit_request
+		id = TRS
+		value = -100
 	}
 	ai_strategy = {
-		type = befriend
-		id = TRK
+		type = invade
+		id = TRS
 		value = -99999
 	}
-	ai_strategy = {
-		type = ignore
-		id = KHI
-		value = 99999
+}
+
+TRS_man_ottoman_front = {
+	allowed = { always = yes }
+	enable = {
+		tag = TRS
+		has_global_flag = TRS_cemal_entente_negotiations_success
+		NOT = { has_global_flag = great_war_ends }
 	}
+	abort_when_not_enabled = yes
+
 	ai_strategy = {
-		type = befriend
-		id = KHI
-		value = -99999
+		type = front_unit_request
+		id = TUR
+		value = 200
 	}
 }
 

@@ -8414,6 +8414,18 @@ country_event = {
 		}
 		diplomatic_relation = {
 			country = FROM
+			relation = guarantee
+			active = yes
+		}
+		FROM = {
+			diplomatic_relation = {
+				country = ROOT
+				relation = guarantee
+				active = yes
+			}
+		}
+		diplomatic_relation = {
+			country = FROM
 			relation = docking_rights
 			active = yes
 		}

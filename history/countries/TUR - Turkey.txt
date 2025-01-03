@@ -1,17 +1,92 @@
 capital = 347
-set_research_slots = 3
+set_research_slots = 2
 set_stability = 0.75
-set_war_support = 0.47
+set_war_support = 0.68
 set_convoys = 112
-add_manpower = 300000
+add_manpower = 350000
 
 oob = "TUR_1910"
 
-set_variable = { TUR_ottoman_autonomy_local_resources_factor = -0.15 }
-set_variable = { TUR_ottoman_autonomy_local_factories = -0.15 }
-set_variable = { TUR_ottoman_autonomy_resistance_target = -0.30 }
-set_variable = { TUR_ottoman_autonomy_recruitable_population_factor = -0.15 }
-set_variable = { TUR_autonomous_state_stability_value = 0.005 }
+set_country_flag = TUR_millet_system_onmap_selected
+set_variable = { TUR_millet_system_onmap_button = 2 }
+set_country_flag = TUR_millet_system_description_selected
+set_variable = { TUR_millet_system_description_button = 2 }
+
+set_variable = { global.TUR_konstantiniyye_centralization = 1 }
+set_variable = { global.TUR_catalca_centralization = 1 }
+set_variable = { global.TUR_izmit_centralization = 1 }
+set_variable = { global.TUR_edirne_centralization = 0.85 }
+set_variable = { global.TUR_selanik_centralization = 0.75 }
+set_variable = { global.TUR_manastir_centralization = 0.6 }
+set_variable = { global.TUR_yanya_centralization = 0.5 }
+set_variable = { global.TUR_iskodra_centralization = 0.45 }
+set_variable = { global.TUR_kosova_centralization = 0.4 }
+set_variable = { global.TUR_montenegro_centralization = 0 }
+set_variable = { global.TUR_bosnia_centralization = 0.1 }
+set_variable = { global.TUR_crete_centralization = 0.05 }
+set_variable = { global.TUR_thessaly_centralization = 0.05 }
+set_variable = { global.TUR_sofia_centralization = 0 }
+set_variable = { global.TUR_danube_centralization = 0 }
+set_variable = { global.TUR_serbia_centralization = 0 }
+set_variable = { global.TUR_eflak_centralization = 0 }
+set_variable = { global.TUR_bogdan_centralization = 0 }
+set_variable = { global.TUR_attika_centralization = 0 }
+set_variable = { global.TUR_transylvania_centralization = 0 }
+set_variable = { global.TUR_banat_centralization = 0 }
+set_variable = { global.TUR_carniola_centralization = 0 }
+set_variable = { global.TUR_croatia_centralization = 0 }
+set_variable = { global.TUR_dalmatia_centralization = 0 }
+set_variable = { global.TUR_archipelago_centralization = 0.3 }
+set_variable = { global.TUR_cyprus_centralization = 0.2 }
+set_variable = { global.TUR_biga_centralization = 1 }
+set_variable = { global.TUR_hudavendigar_centralization = 0.9 }
+set_variable = { global.TUR_aydin_centralization = 0.9 }
+set_variable = { global.TUR_kastamonu_centralization = 0.8 }
+set_variable = { global.TUR_konya_centralization = 0.8 }
+set_variable = { global.TUR_ankara_centralization = 0.8 }
+set_variable = { global.TUR_trabzon_centralization = 0.7 }
+set_variable = { global.TUR_sivas_centralization = 0.65 }
+set_variable = { global.TUR_diyarbakir_centralization = 0.45 }
+set_variable = { global.TUR_erzurum_centralization = 0.6 }
+set_variable = { global.TUR_mamuret_ul_aziz_centralization = 0.5 }
+set_variable = { global.TUR_bitlis_centralization = 0.5 }
+set_variable = { global.TUR_van_centralization = 0.45 }
+set_variable = { global.TUR_adana_centralization = 0.75 }
+set_variable = { global.TUR_baku_centralization = 0 }
+set_variable = { global.TUR_kutaisi_centralization = 0 }
+set_variable = { global.TUR_tiflis_centralization = 0 }
+set_variable = { global.TUR_yelizavetpol_centralization = 0 }
+set_variable = { global.TUR_yerivan_centralization = 0 }
+set_variable = { global.TUR_tabriz_centralization = 0 }
+set_variable = { global.TUR_gilan_centralization = 0 }
+set_variable = { global.TUR_kermanshah_centralization = 0 }
+set_variable = { global.TUR_khuzestan_centralization = 0 }
+set_variable = { global.TUR_aleppo_centralization = 0.4 }
+set_variable = { global.TUR_deir_ez_zor_centralization = 0.15 }
+set_variable = { global.TUR_mosul_centralization = 0.5 }
+set_variable = { global.TUR_beirut_centralization = 0.25 }
+set_variable = { global.TUR_damascus_centralization = 0.35 }
+set_variable = { global.TUR_baghdad_centralization = 0.5 }
+set_variable = { global.TUR_jerusalem_centralization = 0.3 }
+set_variable = { global.TUR_basra_centralization = 0.25 }
+set_variable = { global.TUR_hejaz_centralization = 0.25 }
+set_variable = { global.TUR_yemen_centralization = 0.15 }
+set_variable = { global.TUR_al_jawf_centralization = 0 }
+set_variable = { global.TUR_hail_centralization = 0 }
+set_variable = { global.TUR_nejd_centralization = 0 }
+set_variable = { global.TUR_gulf_centralization = 0.05 }
+set_variable = { global.TUR_muscat_centralization = 0 }
+set_variable = { global.TUR_suez_centralization = 0 }
+set_variable = { global.TUR_cairo_centralization = 0 }
+set_variable = { global.TUR_marsa_matruh_centralization = 0 }
+set_variable = { global.TUR_aswan_centralization = 0 }
+set_variable = { global.TUR_khartoum_centralization = 0 }
+set_variable = { global.TUR_kordofan_centralization = 0 }
+set_variable = { global.TUR_darfur_centralization = 0 }
+set_variable = { global.TUR_western_desert_centralization = 0 }
+set_variable = { global.TUR_trablusgarp_centralization = 0.1 }
+set_variable = { global.TUR_tunis_centralization = 0 }
+set_variable = { global.TUR_algeria_centralization = 0 }
 
 # Russo-Turkish Wars
 add_opinion_modifier = {
@@ -74,50 +149,77 @@ set_autonomy = {
 
 give_guarantee = KUW
 
-recruit_character = TUR_ismail_kemal
-recruit_character = TUR_refik_nevzat
+recruit_character = ALB_ismail_qemali
+recruit_character = TUR_avraam_benaroya
 recruit_character = TUR_ibrahim_hakki
-recruit_character = TUR_ismail_enver
+recruit_character = TUR_mehmed_talat
+TUR_mehmed_talat = {
+	set_character_flag = TUR_talats_faction
+	set_character_flag = TUR_radical_ittihadist
+}
 
+recruit_character = TUR_mehmed_kamil
+recruit_character = TUR_refik_nevzat
 recruit_character = TUR_prens_sabahattin
 recruit_character = TUR_huseyin_hilmi
 recruit_character = TUR_mustafa_suphi
 recruit_character = TUR_ali_ihsan_iloglu
+TUR_ali_ihsan_iloglu = { set_character_flag = TUR_radical_ittihadist }
 recruit_character = TUR_ethem_nejat
+recruit_character = TUR_ahmet_kemal
+recruit_character = TUR_kara_vasif
+recruit_character = TUR_mithat_sukru_bleda
+recruit_character = TUR_huseyin_cahit_yalcin
+TUR_huseyin_cahit_yalcin = { set_character_flag = TUR_cemals_faction }
 recruit_character = TUR_ahmet_izzet
 recruit_character = TUR_ahmet_tevfik
 recruit_character = TUR_riza_nur
+recruit_character = TUR_ahmet_ferit_tek
 recruit_character = TUR_riza_tevfik
 recruit_character = TUR_abdulaziz_mecdi
-recruit_character = TUR_mehmet_sadik
+recruit_character = TUR_miralay_sadik
 recruit_character = TUR_mehmed_said
 recruit_character = TUR_ali_riza
+recruit_character = TUR_ali_kemal
+recruit_character = TUR_refik_halit_karay
 recruit_character = TUR_salih_hulusi
 
 #Sultans
-recruit_character = TUR_abdulhamid_ii
+recruit_character = TUR_abdulhamid_II
 recruit_character = TUR_mehmed_v
 recruit_character = TUR_yusuf_izzet
-recruit_character = TUR_mehmed_vi
-recruit_character = TUR_abdulmecid_ii
+recruit_character = TUR_mehmed_VI
+recruit_character = TUR_abdulmecid_II
 recruit_character = TUR_ahmed_nihad
 recruit_character = TUR_osman_iv
 
-recruit_character = TUR_meclisi_mebusan
 recruit_character = TUR_ahmed_muhtar
-recruit_character = TUR_mehmed_kamil
 recruit_character = TUR_damad_ferid
 recruit_character = TUR_mahmud_sevket
-recruit_character = TUR_mehmed_talat
+recruit_character = TUR_ismail_enver
+TUR_ismail_enver = {
+	set_character_flag = TUR_envers_faction
+	set_character_flag = TUR_radical_ittihadist
+}
+recruit_character = TUR_nuri_killigil
 recruit_character = TUR_seyh_said_efendi
 recruit_character = TUR_mustafa_kemal
+TUR_mustafa_kemal = { set_character_flag = TUR_cemals_faction }
 recruit_character = TUR_mehmed_esad
 recruit_character = TUR_hasan_tahsin
-recruit_character = TUR_kolemen_abdullah
+recruit_character = TUR_ismail_fazil
+recruit_character = TUR_hasan_izzet
 recruit_character = TUR_ahmed_cemal
+TUR_ahmed_cemal = {
+	set_character_flag = TUR_cemals_faction
+	set_character_flag = TUR_radical_ittihadist
+}
+recruit_character = TUR_halil_mentese
 recruit_character = TUR_mustafa_fevzi
 recruit_character = TUR_cevat_cobanli
 recruit_character = TUR_halil_kut
+TUR_halil_kut = { set_character_flag = TUR_radical_ittihadist }
+recruit_character = TUR_kolemen_abdullah
 recruit_character = TUR_suleyman_sefik
 recruit_character = TUR_ahmet_fevzi
 recruit_character = TUR_ali_fuat
@@ -127,13 +229,21 @@ recruit_character = TUR_mustafa_ismet
 recruit_character = TUR_izzettin_calislar
 recruit_character = TUR_musa_kazim
 recruit_character = TUR_vecihi_hurkus
-recruit_character = TUR_nurettin_ibrahim
+recruit_character = TUR_nurettin_konyar
+recruit_character = TUR_mahmud_kamil
+recruit_character = TUR_mustafa_hilmi_altinoklu
 recruit_character = TUR_omer_fahreddin
 recruit_character = TUR_ibrahim_refet
 recruit_character = TUR_selahattin_adil
 recruit_character = TUR_kazim_orbay
 recruit_character = TUR_hafiz_hakki
 TUR_hafiz_hakki = { set_character_flag = unit_leader_can_die_from_sickness }
+recruit_character = TUR_ali_galip_pasiner
+recruit_character = TUR_suleyman_faik
+TUR_suleyman_faik = { set_character_flag = unit_leader_can_be_KIA }
+recruit_character = TUR_ali_sait_akbaytogan
+recruit_character = TUR_abdulkerim_pasha
+recruit_character = TUR_muhittin_akyuz
 recruit_character = TUR_mehmed_vehip
 recruit_character = TUR_mahmud_muhtar
 recruit_character = TUR_huseyin_rauf
@@ -141,24 +251,44 @@ recruit_character = TUR_henry_felix_woods
 recruit_character = TUR_tevfik_fikret
 recruit_character = TUR_cemil_ucman
 recruit_character = TUR_nazim_pasha
+recruit_character = TUR_deli_fuad_pasa
+recruit_character = TUR_kazim_alpan
+recruit_character = TUR_mehmed_sukru
+recruit_character = TUR_hasan_riza
 recruit_character = TUR_zeki_pasha
 recruit_character = TUR_bahattin_bey
 recruit_character = TUR_ziya_gokalp
+recruit_character = TUR_mahmud_halil_el_husari
+recruit_character = TUR_abdullah_cevdet
 recruit_character = TUR_gabriel_noradunkyan
-recruit_character = TUR_avraam_benaroya
-recruit_character = TUR_mekertich_portukalian
-recruit_character = TUR_dimo_hadzhidimov
+recruit_character = TUR_avnullah_kazimi
+recruit_character = TUR_sava_stojanovic
+recruit_character = TUR_todor_pavlof
+recruit_character = TUR_dimitar_vlahov
+recruit_character = TUR_hampartsoum_boyadjian
+recruit_character = TUR_nazaret_daghavarian
+recruit_character = TUR_karakin_pastermadjian
 recruit_character = TUR_ahmet_riza
 recruit_character = TUR_ahmed_nessimy
 recruit_character = TUR_sureyya_ilmen
 recruit_character = TUR_celal_bayar
 recruit_character = TUR_mehmet_emin_yurdakul
+TUR_mehmet_emin_yurdakul = { set_character_flag = TUR_cemals_faction }
 recruit_character = TUR_nazim_bey
+recruit_character = TUR_ismail_canbolat
 recruit_character = TUR_ali_ihsan
 recruit_character = TUR_said_halim
+recruit_character = TUR_hamdullah_suphi_tanriover
+TUR_hamdullah_suphi_tanriover = { set_character_flag = TUR_cemals_faction }
+recruit_character = TUR_halide_edib_adivar
+TUR_halide_edib_adivar = { set_character_flag = TUR_cemals_faction }
+recruit_character = TUR_mustafa_asim
 recruit_character = TUR_said_i_nursi
 recruit_character = TUR_cavid_bey
+TUR_cavid_bey = { set_character_flag = TUR_cemals_faction }
 recruit_character = TUR_mehemmed_naby
+recruit_character = TUR_suleyman_askeri
+recruit_character = TUR_yakub_cemil
 recruit_character = TUR_esref_kuscu_basi
 recruit_character = TUR_mehmed_cemal
 recruit_character = TUR_omer_faruk
@@ -166,8 +296,8 @@ recruit_character = TUR_mustafa_sabri
 recruit_character = TUR_yusuf_izzeddin
 recruit_character = TUR_arthur_limpus
 recruit_character = TUR_fethi_okyar
+TUR_fethi_okyar = { set_character_flag = TUR_cemals_faction }
 recruit_character = TUR_huseyin_husnu_pasha
-#recruit_character = TUR_yildiz_teskilati
 recruit_character = TUR_huseyin_hilmi_pasha
 recruit_character = TUR_rafiq_bey_bin_mahmud_al_azm
 recruit_character = TUR_nuri_al_said
@@ -178,6 +308,40 @@ recruit_character = TUR_abdul_ghafor_al_badri
 recruit_character = TUR_asad_khalil_daghir
 recruit_character = TUR_aref_al_aref
 recruit_character = TUR_abdul_karim_al_khalil
+#syria
+recruit_character = TUR_izzet_darwaza
+recruit_character = TUR_israel_shochat
+recruit_character = TUR_bekir_sami
+recruit_character = TUR_hasan_mazhar
+recruit_character = TUR_huseyin_kazim_kadri
+recruit_character = TUR_abdulhalik_renda
+recruit_character = TUR_yusuf_franko_pasha
+recruit_character = TUR_ohannes_kuyumcuyan
+recruit_character = TUR_ali_munif_yegenaga
+recruit_character = TUR_ismail_hakki_bey
+recruit_character = TUR_shakib_arslan
+recruit_character = TUR_as_ad_shukeiri
+recruit_character = TUR_abdul_raman_al_yusuf
+recruit_character = TUR_muhammad_kurd_ali
+recruit_character = TUR_hulusi_bey
+recruit_character = TUR_hasan_tahsin_bey
+recruit_character = TUR_ahmed_macid_goren
+recruit_character = TUR_hussein_bey_al_husayni
+recruit_character = TUR_hasan_bey
+recruit_character = TUR_heinrich_august_meissner
+recruit_character = TUR_ali_roshen_bey
+recruit_character = TUR_falih_rifki_atay
+recruit_character = TUR_galatali_sevket_bey
+recruit_character = TUR_yasin_el_hasimi
+recruit_character = TUR_ali_fuat_erden
+#izmir
+recruit_character = TUR_mustafa_rahmi
+recruit_character = TUR_muhittin_birgen
+#trabzon
+recruit_character = TUR_cemal_azmi
+#diyarbakir
+recruit_character = TUR_mehmed_resid
+recruit_character = TUR_huseyin_nesimi
 
 #AGENTS
 if = {
@@ -196,114 +360,19 @@ if = {
 			TUR
 		}
 	}
-	create_operative_leader = {
-		name = "Yakub Cemil Paşa"
-		GFX = GFX_TUR_yakup_cemil
-		traits = {
-			operative_demolition_expert
-		}
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = {
-			TUR
-			MOU
-		}
-	}
-}
-
-every_state = {
-	limit = {
-		is_TUR_armenian_state = yes
-	}
-	set_state_flag = TUR_armenian_state
-	set_state_flag = TUR_armenian_state_legacy
-}
-every_state = {
-	limit = {
-		is_TUR_armenian_uprising_state = yes
-	}
-	set_state_flag = TUR_armenian_uprising_state
-}
-every_state = {
-	limit = {
-		is_TUR_arab_state = yes
-	}
-	set_state_flag = TUR_arab_state
-	set_state_flag = TUR_arab_state_legacy
-}
-every_state = {
-	limit = {
-		is_TUR_greek_state = yes
-	}
-	set_state_flag = TUR_greek_state
-	set_state_flag = TUR_greek_state_legacy
-}
-every_state = {
-	limit = {
-		is_TUR_southslav_state = yes
-	}
-	set_state_flag = TUR_southslav_state
-	set_state_flag = TUR_southslav_state_legacy
-}
-every_state = {
-	limit = {
-		is_TUR_albanian_state = yes
-	}
-	set_state_flag = TUR_albanian_state
-	set_state_flag = TUR_albanian_state_legacy
-}
-every_state = {
-	limit = {
-		is_TUR_kurd_state = yes
-	}
-	set_state_flag = TUR_kurd_state
-	set_state_flag = TUR_kurd_state_legacy
-}
-every_state = {
-	limit = {
-		is_TUR_georgian_state = yes
-	}
-	set_state_flag = TUR_georgian_state
-	set_state_flag = TUR_georgian_state_legacy
-}
-every_state = {
-	limit = {
-		is_TUR_romanian_state = yes
-	}
-	set_state_flag = TUR_romanian_state
-	set_state_flag = TUR_romanian_state_legacy
-}
-every_state = {
-	limit = {
-		is_TUR_assyrian_state = yes
-	}
-	set_state_flag = TUR_assyrian_state
-	set_state_flag = TUR_assyrian_state_legacy
-}
-every_state = {
-	limit = {
-		OR = {
-			is_TUR_armenian_state = yes
-			is_TUR_arab_state = yes
-			is_TUR_greek_state = yes
-			is_TUR_southslav_state = yes
-			is_TUR_albanian_state = yes
-			is_TUR_kurd_state = yes
-			is_TUR_georgian_state = yes
-			is_TUR_romanian_state = yes
-			is_TUR_assyrian_state = yes
-			state = 356
-			state = 854
-			state = 340
-			state = 911
-			state = 830
-			state = 346
-			state = 49
-			state = 344
-			state = 857
-		}
-	}
-	set_state_flag = TUR_ottoman_minority_state
+#	create_operative_leader = {
+#		name = "Yakub Cemil Paşa"
+#		GFX = GFX_TUR_yakup_cemil
+#		traits = {
+#			operative_demolition_expert
+#		}
+#		bypass_recruitment = no
+#		available_to_spy_master = yes
+#		nationalities = {
+#			TUR
+#			MOU
+#		}
+#	}
 }
 
 1910.1.1 = {
@@ -340,9 +409,9 @@ every_state = {
 		airship = 1
 		basic_train = 1
         basic_railways = 1
-    construction0 = 1
-    powder_type_b = 1
-	fortification1 = 1
+    	construction0 = 1
+    	powder_type_b = 1
+		fortification1 = 1
         
 	}
 	set_politics = {
@@ -352,68 +421,272 @@ every_state = {
 		elections_allowed = yes
 	}
 	set_popularities = {
-		democratic = 28
-		fascism = 12
-		communism = 6
-		neutrality = 54
+		democratic = 35
+		fascism = 7
+		communism = 2
+		neutrality = 56
 	}
+	set_variable = { TUR_neutrality_popularity = 0.63 }
+	set_variable = { TUR_democratic_popularity = 0.35 }
+	set_variable = { TUR_fascism_popularity = 0.63 }
+	set_variable = { TUR_communism_popularity = 0.2 }
 	set_party_name = {
 		ideology = democratic
 		name = TUR_early_democratic_party
 		long_name = TUR_early_democratic_party_long
 	}
-	
-    set_variable = { var = opda_lira value = 8.260 }
-    set_variable = { var = opda_civilian_intel_to_others value = 0.2 }
-    set_variable = { var = opda_political_power_cost value = 0.05 }
 
-	set_variable = { opda_consumer_goods = 0.64 } #2752666667
-
-	set_variable = { opda_resources_to_market = 0.2 } #1376333333
+	set_variable = { opda_consumer_goods = 0.64 }
+	set_variable = { opda_consumer_goods_opposite = -0.64 }
+	set_variable = { opda_resources_to_market = 0.2 }
+	set_variable = { opda_improve_relations_maintain_cost_factor = -0.1 }
+	set_variable = { opda_civilian_intel_to_others = 0.2 }
+    set_variable = { opda_political_power_cost = 0.05 }
+	FRA = {
+		add_dynamic_modifier = { modifier = TUR_OPDA_foreign_power }
+		set_variable = { opda_consumer_goods = -0.32 }
+		set_variable = { opda_consumer_goods_opposite = 0.32 }
+		give_market_access = TUR
+		set_country_flag = TUR_OPDA_foreign_power
+	}
+	ENG = {
+		add_dynamic_modifier = { modifier = TUR_OPDA_foreign_power }
+		set_variable = { opda_consumer_goods = -0.08 }
+		set_variable = { opda_consumer_goods_opposite = 0.08 }
+		give_market_access = TUR
+		set_country_flag = TUR_OPDA_foreign_power
+	}
+	GER = {
+		add_dynamic_modifier = { modifier = TUR_OPDA_foreign_power }
+		set_variable = { opda_consumer_goods = -0.14 }
+		set_variable = { opda_consumer_goods_opposite = 0.14 }
+		give_market_access = TUR
+		set_country_flag = TUR_OPDA_foreign_power
+	}
+	BEL = {
+		add_dynamic_modifier = { modifier = TUR_OPDA_foreign_power }
+		set_variable = { opda_consumer_goods = -0.1 }
+		set_variable = { opda_consumer_goods_opposite = 0.1 }
+		give_market_access = TUR
+		set_country_flag = TUR_OPDA_foreign_power
+	}
+	HOL = {
+		add_dynamic_modifier = { modifier = TUR_OPDA_foreign_power }
+		set_variable = { opda_consumer_goods = 0 }
+		set_variable = { opda_consumer_goods_opposite = 0 }
+		give_market_access = TUR
+		set_country_flag = TUR_OPDA_foreign_power
+	}
+	ITA = {
+		add_dynamic_modifier = { modifier = TUR_OPDA_foreign_power }
+		set_variable = { opda_consumer_goods = 0 }
+		set_variable = { opda_consumer_goods_opposite = 0 }
+		give_market_access = TUR
+		set_country_flag = TUR_OPDA_foreign_power
+	}
+	AUS = {
+		add_dynamic_modifier = { modifier = TUR_OPDA_foreign_power }
+		set_variable = { opda_consumer_goods = 0 }
+		set_variable = { opda_consumer_goods_opposite = 0 }
+		give_market_access = TUR
+		set_country_flag = TUR_OPDA_foreign_power
+	}
+	RUS = {
+		add_dynamic_modifier = { modifier = TUR_OPDA_foreign_power }
+		set_variable = { opda_consumer_goods = 0 }
+		set_variable = { opda_consumer_goods_opposite = 0 }
+		give_market_access = TUR
+		set_country_flag = TUR_OPDA_foreign_power
+		
+	}
+	USA = {
+		add_dynamic_modifier = { modifier = TUR_OPDA_foreign_power }
+		set_variable = { opda_consumer_goods = 0 }
+		set_variable = { opda_consumer_goods_opposite = 0 }
+		give_market_access = TUR
+		set_country_flag = TUR_OPDA_foreign_power
+	}
+	give_market_access = FRA
+	give_market_access = ENG
+	give_market_access = GER
+	give_market_access = BEL
+	give_market_access = HOL
+	give_market_access = ITA
+	give_market_access = AUS
+	give_market_access = RUS
+	give_market_access = USA
+	TUR_debt_value_check = yes
 
 	set_variable = { TUR_harbiyeli_officer_loyalty = 2 }
-
 	set_variable = { TUR_harbiyeli_officer_power = 4 }
 
-	add_dynamic_modifier = {
-		modifier = TUR_OPDA
-	}
+	set_variable = { TUR_sce_democratic_drift = 0.03 }
+	set_variable = { TUR_sce_political_power_factor = -0.15 }
+	set_variable = { TUR_sce_stability_factor = 0.1 }
+	set_variable = { TUR_sce_war_support_factor = 0 }
+	set_variable = { TUR_sce_party_popularity_stability_factor = -0.15 }
+	set_variable = { TUR_sce_fascism_drift = 0 }
+	set_variable = { TUR_sce_command_power_gain_mult = 0 }
+	set_variable = { TUR_sce_democratic_acceptance = 0 }
+	set_variable = { TUR_sce_neutrality_acceptance = 0 }
+	set_variable = { TUR_sce_trade_laws_cost_factor = 0 }
+	set_variable = { TUR_sce_mobilization_laws_cost_factor = 0 }
+	set_variable = { TUR_sce_economy_cost_factor = 0 }
+	set_variable = { TUR_sce_government_stability = 0 }
+	set_variable = { TUR_sce_maximum_government_stability_limit = 0 }
 
-	add_dynamic_modifier = {
-		modifier = TUR_minorities
-	}
+	set_variable = { TUR_aoabe_training_time_factor = 0.2 }
+	set_variable = { TUR_aoabe_army_attack_factor = -0.25 }
+	set_variable = { TUR_aoabe_army_defence_factor = -0.25 }
+	set_variable = { TUR_aoabe_army_attack_factor_tt = 0.25 }
+	set_variable = { TUR_aoabe_army_defence_factor_tt = 0.25 }
+	set_variable = { TUR_aoabe_experience_gain_army_factor = -0.2 }
+	set_variable = { TUR_aoabe_experience_gain_army_unit_factor = -0.3 }
+	set_variable = { TUR_aoabe_army_org_factor = -0.35 }
+	set_variable = { TUR_aoabe_army_morale_factor = -0.15 }
+	set_variable = { TUR_aoabe_conscription_factor = -0.3 }
+	set_variable = { TUR_aoabe_army_artillery_attack_factor = -0.05 }
+	set_variable = { TUR_aoabe_army_artillery_defence_factor = -0.05 }
+	set_variable = { TUR_aoabe_land_bunker_effectiveness_factor = 0 }
+	set_variable = { TUR_aoabe_non_core_manpower = 0 }
+	set_variable = { TUR_aoabe_mobilization_speed = 0 }
+	set_variable = { TUR_aoabe_conscription = 0 }
+	set_variable = { TUR_aoabe_resistance_damage_to_garrison = 0 }
+	set_variable = { TUR_aoabe_heat_attrition_factor = 0 }
+	set_variable = { TUR_aoabe_acclimatization_hot_climate_gain_factor = 0 }
+	set_variable = { TUR_aoabe_air_doctrine_cost_factor = 0 }
+	set_variable = { TUR_aoabe_land_doctrine_cost_factor = 0 }
+	set_variable = { TUR_aoabe_naval_doctrine_cost_factor = 0 }
 
-	654 = {
-		set_compliance = 57
-	    set_resistance = 24
-	}
-	293 = {
-		set_compliance = 45
-	    set_resistance = 34
-	}
-	747 = {
-		set_compliance = 64
-	    set_resistance = 5
-	}
-	662 = {
-		set_compliance = 56
-	    set_resistance = 8
-	}
+	set_variable = { TUR_dh_naval_coordination = -0.15 }
+	set_variable = { TUR_dh_naval_critical_score_chance_factor = -0.3 }
+	set_variable = { TUR_dh_naval_accidents_chance = 0.3 }
+	set_variable = { TUR_dh_naval_damage_factor = -0.1 }
+	set_variable = { TUR_dh_experience_gain_navy_factor = -0.1 }
+	set_variable = { TUR_dh_naval_hit_chance = -0.1 }
+	set_variable = { TUR_hk_experience_gain_air = 0.05 }
+	set_variable = { TUR_dh_coastal_bunker_effectiveness_factor = 0 }
+
+	set_variable = { TUR_hk_air_agility_factor = 0 }
+
+	set_variable = { TUR_hamidiye_cap = 0 }
+
+	set_variable = { TUR_ci_monthly_population = 0.15 }
+	set_variable = { TUR_ci_conscription_factor = 0.05 }
+	set_variable = { TUR_ci_research_speed_factor = -0.25 }
+	set_variable = { TUR_ci_industrial_capacity_factory = -0.1 }
+
+	set_variable = { TUR_ottoman_autonomy_lebanon_local_resources_factor = -0.5 }
+	set_variable = { TUR_ottoman_autonomy_lebanon_local_factories = -0.5 }
+	set_variable = { TUR_ottoman_autonomy_lebanon_compliance_growth = 0.05 }
+	set_variable = { TUR_ottoman_autonomy_lebanon_recruitable_population_factor = -0.5 }
+	set_variable = { TUR_ottoman_autonomy_lebanon_resistance_target = -0.8 }
+	set_variable = { TUR_ottoman_autonomy_lebanon_factor = 0.02 }
+
+	set_variable = { TUR_ottoman_autonomy_local_resources_factor = -0.15 }
+	set_variable = { TUR_ottoman_autonomy_local_factories = -0.15 }
+	set_variable = { TUR_ottoman_autonomy_compliance_growth = 0.02 }
+	set_variable = { TUR_ottoman_autonomy_recruitable_population_factor = -0.15 }
+	set_variable = { TUR_ottoman_autonomy_resistance_target = -0.3 }
+	set_variable = { TUR_ottoman_autonomy_factor = 0.01 }
+
+	set_variable = { TUR_ottoman_semi_autonomy_local_resources_factor = -0.05 }
+	set_variable = { TUR_ottoman_semi_autonomy_local_factories = -0.05 }
+	set_variable = { TUR_ottoman_semi_autonomy_compliance_growth = 0.01 }
+	set_variable = { TUR_ottoman_semi_autonomy_recruitable_population_factor = -0.05 }
+	set_variable = { TUR_ottoman_semi_autonomy_resistance_target = -0.15 }
+	set_variable = { TUR_ottoman_semi_autonomy_factor = 0.005 }
+
+	set_variable = { TUR_ne_production_speed_buildings_factor = 0.05 }
+	set_variable = { TUR_ne_production_speed_infrastructure_factor = 0 }
+	set_variable = { TUR_ne_supply_node_range = 0 }
+	set_variable = { TUR_ne_production_lack_of_resource_penalty_factor = 0 }
+	set_variable = { TUR_ne_production_factory_max_efficiency_factor = 0 }
+	set_variable = { TUR_ne_economy_cost_factor = 0 }
+	set_variable = { TUR_ae_consumer_goods_factor = -0.2 }
+	set_variable = { TUR_ae_supply_consumption_factor = -0.1 }
+	set_variable = { TUR_ae_global_building_slots_factor = 0 }
+
+	set_variable = { TUR_naval_blockade = 20 }
+
+	set_variable = { TUR_cup_drift_defence_factor = 0 }
+	set_variable = { TUR_cup_army_morale_factor = 0 }
+	set_variable = { TUR_cup_war_support_factor = 0 }
+	set_variable = { TUR_cup_command_power_gain_mult = 0 }
+	set_variable = { TUR_cup_communism_acceptance = 0 }
+	set_variable = { TUR_cup_industrial_capacity_dockyard = 0 }
+	set_variable = { TUR_cup_industrial_capacity_factory = 0 }
+	set_variable = { TUR_cup_production_factory_max_efficiency_factor = 0 }
+	set_variable = { TUR_cup_equipment_capture_factor = 0 }
+	set_variable = { TUR_cup_defensive_war_stability_factor = 0 }
+	set_variable = { TUR_cup_supply_combat_penalties_on_core_factor = 0 }
+	set_variable = { TUR_cup_resistance_damage_to_garrison_on_our_occupied_states = 0 }
+	set_variable = { TUR_cup_resistance_target_on_our_occupied_states = 0 }
+	set_variable = { TUR_cup_agency_upgrade_time = 0 }
+	set_variable = { TUR_cup_political_power_gain = 0 }
+	set_variable = { TUR_cup_subversive_activites_upkeep = 0 }
+	set_variable = { TUR_cup_foreign_subversive_activites = 0 }
+	set_variable = { TUR_cup_stability_factor = 0 }
+	set_variable = { TUR_cup_fascism_drift = 0 }
+	set_variable = { TUR_cup_democratic_acceptance = 0 }
+	set_variable = { TUR_cup_consumer_goods_factor = 0 }
+	set_variable = { TUR_cup_research_speed_factor = 0 }
+	set_variable = { TUR_cup_resistance_damage_to_garrison = 0 }
+	set_variable = { TUR_cup_resistance_decay = 0 }
+	set_variable = { TUR_cup_resistance_garrison_penetration_chance = 0 }
+	set_variable = { TUR_cup_improve_relations_maintain_cost_factor = 0 }
+	set_variable = { TUR_cup_opinion_gain_monthly_factor = 0 }
+	set_variable = { TUR_cup_party_popularity_stability_factor = 0 }
+	set_variable = { TUR_cup_experience_loss_factor = 0 }
+	set_variable = { TUR_cup_political_power_factor = 0 }
+	set_variable = { TUR_cup_neutrality_acceptance = 0 }
+	set_variable = { TUR_cup_fascism_acceptance = 0 }
+	set_variable = { TUR_cup_production_speed_buildings_factor = 0 }
+	set_variable = { TUR_cup_justify_war_goal_time = 0 }
+	set_variable = { TUR_cup_root_out_resistance_effectiveness_factor = 0 }
+	set_variable = { TUR_cup_production_factory_efficiency_gain_factor = 0 }
+	set_variable = { TUR_cup_license_purchase_cost = 0 }
+	set_variable = { TUR_cup_monthly_population = 0 }
+	set_variable = { TUR_cup_conscription_factor = 0 }
+	set_variable = { TUR_cup_resistance_growth_on_our_occupied_states = 0 }
+	set_variable = { TUR_cup_army_core_defence_factor = 0 }
+	set_variable = { TUR_cup_modifier_army_sub_unit_militia_attack_factor = 0 }
+	set_variable = { TUR_cup_modifier_army_sub_unit_militia_defence_factor = 0 }
+	set_variable = { TUR_cup_required_garrison_factor = 0 }
+	set_variable = { TUR_cup_recruitable_population_factor = 0 }
+	set_variable = { TUR_cup_compliance_growth = 0 }
+	set_variable = { TUR_cup_political_power_cost = 0 }
+	set_variable = { TUR_cup_army_org_regain = 0 }
+
+	add_dynamic_modifier = { modifier = TUR_OPDA }
+	add_dynamic_modifier = { modifier = TUR_crippling_illiteracy_dm }
+	add_dynamic_modifier = { modifier = TUR_second_constitutional_era }
+	add_dynamic_modifier = { modifier = TUR_army_of_a_bygone_era }
+	add_dynamic_modifier = { modifier = TUR_donanma_i_humayun }
+	add_dynamic_modifier = { modifier = TUR_the_sublime_realm }
+	add_dynamic_modifier = { modifier = TUR_tax_collection_dm }
+
+	set_country_flag = TUR_neutrality_itf
+	set_country_flag = TUR_fascism_itf
 
 	add_ideas = {
-		TUR_sick_man
-		TUR_harbiyeli_officers_extended_power_neutral
-		TUR_army_of_bygone_era
-		TUR_sultan_mehmed_v
+		TUR_sick_man_of_europe
+		TUR_mehmed_V
 		limited_conscription
 		export_focus
 		TUR_diplomatic_isolation
 		TUR_crippling_illiteracy
-		TUR_minorities_idea
-		TUR_ittihadist_academy_spirit_no_remove
+		TUR_army_factionalism_2
+		TUR_OPDA_idea
+		TUR_second_constitutional_era
+		TUR_army_of_a_bygone_era_idea
+		TUR_donanma_i_humayun_idea
+		TUR_sublime_realm_idea
+		TUR_mahmud_sevket
 	}
-	#now scripted GUI
-	setup_minorities = yes
+
+	set_variable = { TUR_government_stability_var = 70 }
+	set_variable = { TUR_government_stability_max = 80 }
 }
 1914.1.1 = {
 	set_oob = TUR_1914
@@ -435,15 +708,15 @@ every_state = {
 
 	complete_national_focus = TUR_call_for_the_trablusgarp_war
 	complete_national_focus = TUR_call_for_the_balkan_war
-	complete_national_focus = TUR_erkan_i_harbiye_reforms
-	complete_national_focus = TUR_picardie_maneuvers
+	complete_national_focus = TUR_harbiye_nezareti
+	complete_national_focus = TUR_lessons_of_the_picardie_maneuvers
 	complete_national_focus = TUR_uniform_reforms
 	complete_national_focus = TUR_bahriye_nezareti
-	complete_national_focus = TUR_naval_reorganization
+	complete_national_focus = TUR_mektep_i_bahriye
 	complete_national_focus = TUR_import_foreign_advisors
 	complete_national_focus = TUR_yesilkoy_airbase
-	unlock_national_focus = TUR_tayyare_commission
-	complete_national_focus = TUR_aftermath_of_31_march_incident
+	unlock_national_focus = TUR_aircraft_commission
+	complete_national_focus = TUR_aftermath_of_the_31_march_incident
 	complete_national_focus = TUR_glory_to_the_action_army
 	complete_national_focus = TUR_harbiyeli_officers
 	complete_national_focus = TUR_reaffirm_loyalty_of_the_army
@@ -452,15 +725,11 @@ every_state = {
 	complete_national_focus = TUR_ottoman_public_debt_administration
 	complete_national_focus = TUR_study_european_navies
 	complete_national_focus = TUR_elections_of_1912
-	# complete_national_focus = TUR_savior_officer_coup
+	# complete_national_focus = TUR_saviour_officer_coup
 	complete_national_focus = TUR_ittihat_ve_terakki_victory
-	# unlock_national_focus = TUR_raid_on_sublime_porte
+	# unlock_national_focus = TUR_raid_on_the_sublime_porte
 	complete_national_focus = TUR_undermine_democracy
 	complete_national_focus = TUR_three_pasha_government
-	swap_ideas = {
-		remove_idea = tur_harbiyeli_officers_powerful_loyal
-		add_idea = tur_harbiyeli_officers_powerful_neutral
-	}
 	complete_national_focus = TUR_our_place_in_the_world
 	complete_national_focus = TUR_continue_german_cooperation
 	unlock_national_focus = TUR_berlin_baghdad_railway
@@ -477,16 +746,15 @@ every_state = {
 	unlock_national_focus = TUR_industrial_development
 	complete_national_focus = TUR_construct_hindiya_barrage
 	unlock_national_focus = TUR_black_sea_steel_mills
-	complete_national_focus = TUR_chemins_de_fer_ottomans_d_anatolie
+	complete_national_focus = TUR_intensify_railway_construction
 	unlock_national_focus = TUR_search_for_investments
 	complete_national_focus = TUR_invigorate_turkish_nationalism
 	complete_national_focus = TUR_one_language_one_religion_one_nation
 	complete_national_focus = TUR_greek_deportations
-	complete_national_focus = TUR_destruction_of_the_thracian_bulgarians
 
 
 	add_power_balance_value = {
-		id = TUR_army_civilian_struggle
+		id = TUR_unionist_struggle
 		value = -0.60
 	}
 
@@ -550,9 +818,7 @@ every_state = {
 		popularity = 0.2
 	}
 	every_unit_leader = {
-		limit = {
-			has_trait = trait_TUR_halaskar_zabitan_member
-		}
+		limit = { has_trait = trait_TUR_itilafist_sympathies }
 		remove_unit_leader_role = yes
 	}
 	
@@ -565,26 +831,22 @@ every_state = {
 		election_frequency = 48
 		elections_allowed = yes
 	}
-	TUR_damad_ferid = {
-		promote_character = classical_liberalism
-	}
-	TUR_said_halim = {
-		promote_character = civilian_dictatorship
-	}
+	TUR_damad_ferid = { promote_character = classical_liberalism }
+	TUR_said_halim = { promote_character = civilian_dictatorship }
 
 	set_country_flag = daan_treaty_signed
 	set_country_flag = TUR_treaty_of_daan_ratified
-	set_country_flag = TUR_muhtar_deposed
+	set_country_flag = TUR_ahmed_muhtar_resigned
 	set_country_flag = TUR_three_pasha_government
 
 	remove_ideas = {
-		TUR_minorities_idea
+		TUR_sublime_realm_idea
 		TUR_diplomatic_isolation
 	}	
 	
-	add_ideas = { 
+	add_ideas = {
 		TUR_diplomatic_isolation_1
-		TUR_minorities_idea_2
+		TUR_sublime_realm_idea_2
 		low_economic_mobilisation
 	}
 	
@@ -623,183 +885,20 @@ every_state = {
 		ideology = democratic
 		popularity = 0.05
 	}
-	set_country_flag = osf_formed
 	set_party_name = {
 		ideology = communism
 		name = TUR_socialist_party
 		long_name = TUR_socialist_party_long
 	}
 	promote_character = TUR_huseyin_hilmi
-	add_popularity = {
-		ideology = communism
-		popularity = 0.02
-	}
+	set_country_flag = TUR_ottoman_socialist_party_formed
 	
 	add_popularity = {
 		ideology = fascism
 		popularity = 0.25
 	}
 
-	set_variable = { opda_lira = 6.195 }
-
-	set_variable = { opda_consumer_goods = 0.43 }
-
-	set_variable = { opda_resources_to_market = 0.2 }
-
-	every_controlled_state = {
-		limit = {
-			has_state_flag = TUR_armenian_state_nocontrol
-		}
-		add_dynamic_modifier = { modifier = TUR_armenian_minority }
-        clr_state_flag = TUR_armenian_state_nocontrol
-	}
-	every_controlled_state = {
-		limit = {
-			has_state_flag = TUR_arab_state_nocontrol
-		}
-		add_dynamic_modifier = { modifier = TUR_arab_minority }
-        clr_state_flag = TUR_arab_state_nocontrol
-	}
-	every_controlled_state = {
-		limit = {
-			has_state_flag = TUR_greek_state_nocontrol
-		}
-		add_dynamic_modifier = { modifier = TUR_greek_minority }
-        clr_state_flag = TUR_greek_state_nocontrol
-	}
-	every_controlled_state = {
-		limit = {
-			has_state_flag = TUR_southslav_state_nocontrol
-		}
-		add_dynamic_modifier = { modifier = TUR_southslav_minority }
-        clr_state_flag = TUR_southslav_state_nocontrol
-	}
-	every_controlled_state = {
-		limit = {
-			has_state_flag = TUR_albanian_state_nocontrol
-		}
-		add_dynamic_modifier = { modifier = TUR_albanian_minority }
-        clr_state_flag = TUR_albanian_state_nocontrol
-	}
-	every_controlled_state = {
-		limit = {
-			has_state_flag = TUR_kurd_state_nocontrol
-		}
-		add_dynamic_modifier = { modifier = TUR_kurd_minority }
-        clr_state_flag = TUR_kurd_state_nocontrol
-	}
-	every_controlled_state = {
-		limit = {
-			has_state_flag = TUR_georgian_state_nocontrol
-		}
-		add_dynamic_modifier = { modifier = TUR_georgian_minority }
-        clr_state_flag = TUR_georgian_state_nocontrol
-	}
-	every_controlled_state = {
-		limit = {
-			has_state_flag = TUR_romanian_state_nocontrol
-		}
-		add_dynamic_modifier = { modifier = TUR_romanian_minority }
-        clr_state_flag = TUR_romanian_state_nocontrol
-	}
-	every_controlled_state = {
-		limit = {
-			has_state_flag = TUR_assyrian_state_nocontrol
-		}
-		add_dynamic_modifier = { modifier = TUR_assyrian_minority }
-        clr_state_flag = TUR_assyrian_state_nocontrol
-	}
-
-	every_state = {
-		limit = {
-			NOT = {
-				is_controlled_by = ROOT
-			}
-			has_dynamic_modifier = { modifier = TUR_armenian_minority }
-		}
-		remove_dynamic_modifier = { modifier = TUR_armenian_minority } 
-		set_state_flag = TUR_armenian_state_nocontrol
-	}
-	every_state = {
-		limit = {
-			NOT = {
-				is_controlled_by = ROOT
-			}
-			has_dynamic_modifier = { modifier = TUR_arab_minority }
-		}
-		remove_dynamic_modifier = { modifier = TUR_arab_minority } 
-		set_state_flag = TUR_arab_state_nocontrol
-	}
-	every_state = {
-		limit = {
-			NOT = {
-				is_controlled_by = ROOT
-			}
-			has_dynamic_modifier = { modifier = TUR_greek_minority }
-		}
-		remove_dynamic_modifier = { modifier = TUR_greek_minority } 
-		set_state_flag = TUR_greek_state_nocontrol
-	}
-	every_state = {
-		limit = {
-			NOT = {
-				is_controlled_by = ROOT
-			}
-			has_dynamic_modifier = { modifier = TUR_southslav_minority }
-		}
-		remove_dynamic_modifier = { modifier = TUR_southslav_minority } 
-		set_state_flag = TUR_southslav_state_nocontrol
-	}
-	every_state = {
-		limit = {
-			NOT = {
-				is_controlled_by = ROOT
-			}
-			has_dynamic_modifier = { modifier = TUR_albanian_minority }
-		}
-		remove_dynamic_modifier = { modifier = TUR_albanian_minority } 
-		set_state_flag = TUR_albanian_state_nocontrol
-	}
-	every_state = {
-		limit = {
-			NOT = {
-				is_controlled_by = ROOT
-			}
-			has_dynamic_modifier = { modifier = TUR_kurd_minority }
-		}
-		remove_dynamic_modifier = { modifier = TUR_kurd_minority } 
-		set_state_flag = TUR_kurd_state_nocontrol
-	}
-	every_state = {
-		limit = {
-			NOT = {
-				is_controlled_by = ROOT
-			}
-			has_dynamic_modifier = { modifier = TUR_georgian_minority }
-		}
-		remove_dynamic_modifier = { modifier = TUR_georgian_minority } 
-		set_state_flag = TUR_georgian_state_nocontrol
-	}
-	every_state = {
-		limit = {
-			NOT = {
-				is_controlled_by = ROOT
-			}
-			has_dynamic_modifier = { modifier = TUR_romanian_minority }
-		}
-		remove_dynamic_modifier = { modifier = TUR_romanian_minority } 
-		set_state_flag = TUR_romanian_state_nocontrol
-	}
-	every_state = {
-		limit = {
-			NOT = {
-				is_controlled_by = ROOT
-			}
-			has_dynamic_modifier = { modifier = TUR_assyrian_minority }
-		}
-		remove_dynamic_modifier = { modifier = TUR_assyrian_minority } 
-		set_state_flag = TUR_assyrian_state_nocontrol
-	}
+	set_variable = { opda_consumer_goods = 0.6 }
 
 	QAT = {
 		if = {

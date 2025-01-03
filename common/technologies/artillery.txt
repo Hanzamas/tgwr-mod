@@ -970,7 +970,7 @@ technologies = {
 				tag = JAP
 				not = {
 					OR = {
-						has_War_with = SOV
+						has_war_with = SOV
 						has_war_with = USA
 					}
 				}
@@ -1041,7 +1041,7 @@ technologies = {
 				tag = JAP
 				not = {
 					OR = {
-						has_War_with = SOV
+						has_war_with = SOV
 						has_war_with = USA
 					}
 				}
@@ -1053,7 +1053,7 @@ technologies = {
 			}
 			modifier = {
 				tag = USA
-				has_War = no
+				has_war = no
 				factor = 0.5 #this tank nonsense will never catch on
 			}
 			modifier = {
@@ -1117,7 +1117,7 @@ technologies = {
 				tag = JAP
 				not = {
 					OR = {
-						has_War_with = SOV
+						has_war_with = SOV
 						has_war_with = USA
 					}
 				}

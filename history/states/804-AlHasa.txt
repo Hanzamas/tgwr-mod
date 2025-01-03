@@ -2,7 +2,16 @@ state={
 	id=804
 	name="STATE_804"
 
-	history={
+	history = {
+		add_dynamic_modifier = { modifier = TUR_arab_minority }
+		set_variable = { TUR_ottoman_local_supplies_for_controller_arab = -0.25 }
+		set_variable = { TUR_ottoman_non_core_manpower_arab = 0.1 }
+		set_variable = { TUR_arab_state_level = 5 }
+		set_variable = { TUR_arab_population_stability_factor = -0.005 }
+		set_variable = { TUR_arab_population_war_support_factor = -0.005 }
+
+		set_state_flag = TUR_basra
+		add_dynamic_modifier = { modifier = TUR_vilayet_centralization }
 		victory_points = {
 			10791 1 
 		}
@@ -10,14 +19,14 @@ state={
 			12702 2 
 		}
 		owner = TUR
-		add_claim_by = SAU
+		add_core_of = SAU
 		buildings = {
 			infrastructure = 1
 		}
 		1913.4.1 = {
 			owner = SAU
 			controller = SAU
-			add_claim_by = TUR
+			add_core_of = TUR
 		}
 	}
 

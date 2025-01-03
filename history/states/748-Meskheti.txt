@@ -4,10 +4,29 @@ state={
 	manpower=58000
 	state_category=enclave
 	provinces={ 3656 6669 }
-	history={
+	history = {
+		set_variable = { TUR_ottoman_recruitable_population_factor_georgian = -0.15 }
+		set_variable = { TUR_ottoman_local_supplies_for_controller_georgian = -0.09 }
+		set_variable = { TUR_ottoman_army_speed_factor_for_controller_georgian = -0.09 }
+		set_variable = { TUR_georgian_state_level = 3 }
+		set_variable = { TUR_turkish_state_level = 2 }
+		set_variable = { TUR_georgian_population_stability_factor = -0.01 }
+		set_variable = { TUR_georgian_population_war_support_factor = -0.01 }
+		divide_variable = { TUR_georgian_population_stability_factor = 5 }
+		divide_variable = { TUR_georgian_population_war_support_factor = 5 }
+		divide_variable = { TUR_georgian_population_political_power_factor = 5 }
+		multiply_variable = { TUR_georgian_population_stability_factor = 3 }
+		multiply_variable = { TUR_georgian_population_war_support_factor = 3 }
+		multiply_variable = { TUR_georgian_population_political_power_factor = 3 }
+
+		set_state_flag = TUR_tiflis
+		set_state_flag = TUR_vilayet_centralization_no_control
 		owner = RUS
 		add_core_of = RUS
 		add_core_of = GEO
+		victory_points = {
+			3656 1
+		}
 		buildings={
 			infrastructure = 2
 		}

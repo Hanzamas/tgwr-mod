@@ -675,7 +675,6 @@ demobilization = {
 		}
 	}
 
-
 	demob_manpower_mission = {
 
 		icon = revolt
